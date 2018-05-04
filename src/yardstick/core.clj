@@ -1,6 +1,6 @@
 (ns yardstick.core
-  (require [clojure.tools.cli :as cli]
-           [gutenberg.markdown :as md])
+  (:require [clojure.tools.cli :as cli]
+           [yardstick.parse :as p])
   (:import (clojure.lang ExceptionInfo)
            (java.io File)))
 
@@ -46,7 +46,7 @@
      (try
        (before-suite handler)
        (doseq [test-file (reduce get-tests [] paths)
-               markdown (md/parse (slurp test-file))
+               markdown (p/parse-test-file (slurp test-file))
                ]
          (try
            (before-spec handler)
