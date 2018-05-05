@@ -111,10 +111,7 @@
                   :printer example-printer)
           output {:tag :results
                   :content (map #(fn [{:keys [event error] :as result}]
-                                   (let [error
-                                         (if (empty? error)
-                                           []
-                                           [(xmlify-exception error)])]
+                                   (let [error (if (empty? error) [] [(xmlify-exception error)])]
                                      {:tag event
                                       :attrs (dissoc result :event :error)
                                       :content error}))
