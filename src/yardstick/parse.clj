@@ -6,7 +6,8 @@
             [endophile.core :as e]
             [endophile.hiccup :refer [to-hiccup]]
             [clojure.spec.alpha :as s]
-            [yardstick.spec-model :as spec-model]))
+            [yardstick.spec-model :as spec-model])
+  (:import (clojure.lang ExceptionInfo)))
 
 (defn- parse-spec [line]
   (let [arg-count (atom 0)
@@ -38,10 +39,12 @@
         parsed (e/mp escaped)
         hiccupped (to-hiccup parsed)
         filtered (filter #(contains? #{:h1 :h2 :h4 :ul} (first %)) hiccupped)
-        conformed (s/conform ::spec-model/spec filtered)
-        {{spec-header :header} :spec-header {tags :tags} :tags {for-each :step} :for-each :keys [scenarios] :or {tags "" for-each []}} conformed
-        spec {:spec spec-header
-              :tags (spec-tags tags)
-              :for-each (mapv spec-step for-each)
-              :scenarios (mapv spec-scenario scenarios)}]
-    spec))
+        conformed (s/conform ::spec-model/spec filtered)]
+    (when (= ::s/invalid conformed)
+      (throw (ExceptionInfo. "" {:error (s/explain-data ::spec-model/spec filtered)})))
+        (let [{{spec-header :header} :spec-header {tags :tags} :tags {for-each :step} :for-each :keys [scenarios] :or {tags "" for-each []}} conformed
+              spec {:spec spec-header
+                    :tags (spec-tags tags)
+                    :for-each (mapv spec-step for-each)
+                    :scenarios (mapv spec-scenario scenarios)}]
+          spec)))

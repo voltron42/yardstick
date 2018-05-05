@@ -5,5 +5,5 @@
             :url "http://www.eclipse.org/legal/epl-v10.html"}
   :dependencies [[org.clojure/clojure "1.9.0"]
                  [org.clojure/tools.cli "0.3.5"]
-                 [markdown-clj "1.0.2"]
+                 [org.clojure/data.json "0.2.6"]
                  [endophile "0.2.1"]])
