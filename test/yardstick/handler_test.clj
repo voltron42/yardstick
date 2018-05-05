@@ -6,11 +6,6 @@
             [clojure.string :as s])
   (:import (clojure.lang ExceptionInfo)))
 
-(deftest test-command-break
-  (let [message "Hi, my name is \"kermit \\\"t\\\" frog\"! I am \"55\" years old!"
-        expected ["Hi, my name is %1s! I am %2s years old!" "kermit \"t\" frog" "55"]]
-    (is (= expected (parse-spec message)))))
-
 (deftest test-not-implemented
   (try
     (apply handle-action (parse-spec "Hi, my name is \"kermit \\\"t\\\" frog\"! I am \"55\" years old!"))

@@ -6,16 +6,27 @@
             [endophile.core :as e]
             [endophile.hiccup :refer [to-hiccup]]
             [clojure.spec.alpha :as s]
-            [yardstick.spec-model :as spec-model]
-            [yardstick.handler :as h])
-  (:import (java.io ByteArrayInputStream)))
+            [yardstick.spec-model :as spec-model]))
+
+(defn- parse-spec [line]
+  (let [arg-count (atom 0)
+        args (atom [])
+        all-args (into [(str/replace
+                          line
+                          #"([\"'])(?:\\\1|.)*?\1"
+                          (fn [match]
+                            (swap! arg-count inc)
+                            (swap! args conj (str/escape (first match) {\" "" \\ "\""}))
+                            (str "%" @arg-count "s")))]
+                       @args)]
+    all-args))
 
 (defn- spec-tags [tags]
   (let [tags (if (empty? tags) [] (str/split tags #","))]
-    (set (mapv str/trim []))))
+    (set (mapv str/trim tags))))
 
 (defn- spec-step [step]
-  (h/parse-spec (str/join (:step step))))
+  (parse-spec (str/join (:step step))))
 
 (defn- spec-scenario [{{header :header} :scenario-header {tags :tags} :tags {steps :step} :steps :or {tags ""}}]
   {:scenario header
