@@ -1,6 +1,5 @@
 (ns yardstick.parse
-  (:require [markdown.core :as md]
-            [clojure.xml :as xml]
+  (:require [clojure.xml :as xml]
             [clojure.string :as str]
             [clojure.pprint :as pp]
             [endophile.core :as e]
@@ -41,7 +40,7 @@
         filtered (filter #(contains? #{:h1 :h2 :h4 :ul} (first %)) hiccupped)
         conformed (s/conform ::spec-model/spec filtered)]
     (when (= ::s/invalid conformed)
-      (throw (ExceptionInfo. "" {:error (s/explain-data ::spec-model/spec filtered)})))
+      (throw (ExceptionInfo. "File does not conform to test structure:" {:error (s/explain-data ::spec-model/spec filtered)})))
         (let [{{spec-header :header} :spec-header {tags :tags} :tags {for-each :step} :for-each :keys [scenarios] :or {tags "" for-each []}} conformed
               spec {:spec spec-header
                     :tags (spec-tags tags)

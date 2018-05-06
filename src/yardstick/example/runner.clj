@@ -1,123 +1,66 @@
 (ns yardstick.example.runner
   (:require [yardstick.core :as y]
             [clojure.pprint :as pp]
-            [clojure.xml :as xml])
+            [clojure.xml :as xml]
+            [clojure.string :as str]
+            [yardstick.example.hooks :as hooks]
+            [yardstick.example.printer :as printer]
+            [clojure.data.json :as json]
+            [clojure.spec.alpha :as s])
   (:import (clojure.lang ExceptionInfo)))
 
-(defmulti print-event :event)
-
-(def ^:private example-printer
-  (reify y/Printer
-    (print [_ event]
-      (print-event event))))
-
-(defmethod print-event :bad-file [{:keys [file error]}]
-  ;TODO
-  )
-
-(defmethod print-event :step-before-each-scenario [{:keys [spec scenario step error]}]
-  ;TODO
-  )
-
-(defmethod print-event :step [{:keys [spec scenario step error]}]
-  ;TODO
-  )
-
-(defmethod print-event :before-scenario [{:keys [spec scenario error]}]
-  ;TODO
-  )
-
-(defmethod print-event :after-scenario [{:keys [spec scenario error]}]
-  ;TODO
-  )
-
-(defmethod print-event :before-spec [{:keys [spec error]}]
-  ;TODO
-  )
-
-(defmethod print-event :after-spec [{:keys [spec error]}]
-  ;TODO
-  )
-
-(defmethod print-event :before-suite [{:keys [error]}]
-  ;TODO
-  )
-
-(defmethod print-event :after-suite [{:keys [error]}]
-  ;TODO
-  )
-
-(def ^:private example-handler
-  (reify y/Handler
-    (before-suite [_]
-      ;TODO
-      )
-    (after-suite [_]
-      ;TODO
-      )
-    (before-spec [_]
-      ;TODO
-      )
-    (after-spec [_]
-      ;TODO
-      )
-    (before-scenario [_]
-      ;TODO
-      )
-    (after-scenario [_]
-      ;TODO
-      )))
-
-(defmethod y/handle-action "On the customer page" [_]
-  ;TODO
-  )
-
-(defmethod y/handle-action "Search for customer %1s" [_ customer-name]
-  ;TODO
-  )
-
-(defmethod y/handle-action "The customer %1s is listed" [_ customer-name]
-  ;TODO
-  )
-
-(defmethod y/handle-action "Find and Open product page for %1s" [_ product]
-  ;TODO
-  )
-
-(defmethod y/handle-action "Verify product %1s as %2s" [_ property value]
-  ;TODO
-  )
-
-(defmethod y/handle-action "Delete product %1s" [_ product]
-  ;TODO
-  )
-
-(defn- xmlify-exception [err]
-  {:tag (str (type err))
+(defn- build-exception [^Throwable err]
+  {:tag (.getSimpleName (type err))
    :attrs {:message (.getMessage err)}
-   :content (map (fn [^StackTraceElement ste]
-                   {:tag :stack-trace-element
-                    :attrs {:class-name (.getClassName ste)
-                            :file-name (.getFileName ste)
-                            :line-number (.getLineNumber ste)
-                            :method-name (.getMethodName ste)}})
-                 (.getStackTrace err))})
+   :content [{:tag :stack-trace
+              :content (mapv (fn [^StackTraceElement ste]
+                               {:tag :stack-trace-element
+                                :attrs {:class-name (.getClassName ste)
+                                        :file-name (.getFileName ste)
+                                        :line-number (.getLineNumber ste)
+                                        :method-name (.getMethodName ste)}})
+                             (.getStackTrace err))}]})
 
-(defn -main [& args]
+(defmulti xmlify-exception type)
+
+(defmethod xmlify-exception ExceptionInfo [^ExceptionInfo err]
+  (let [{{value ::s/value spec ::s/spec problems ::s/problems :as data} :error} (.getData err)
+        _ (pp/pprint data)
+        node {:tag :explain-data
+              :attrs {:spec (str spec)
+                      :value (pr-str value)}
+              :content (map (fn [{:keys [path pred val via in]}]
+                              {:tag :problem
+                               :attrs {:path (str/join "," path)
+                                       :pred (str pred)
+                                       :val (pr-str val)
+                                       :via (str/join "," via)
+                                       :in (str/join "," in)}})
+                            problems)}]
+    (update-in (build-exception err) [:content] conj node)))
+
+(defmethod xmlify-exception :default [^Throwable err]
+  (build-exception err))
+
+(defn -main [& _]
   (try
-    (let [{:keys [bad-files results]}
-          (y/-run "resources/examples"
-                  :handler example-handler
-                  :printer example-printer)
-          output {:tag :results
-                  :content (map #(fn [{:keys [event error] :as result}]
-                                   (let [error (if (empty? error) [] [(xmlify-exception error)])]
-                                     {:tag event
-                                      :attrs (dissoc result :event :error)
+    (let [results (y/-run ["resources/examples"]
+                          :hooks hooks/example-hooks
+                          :printer printer/example-printer)
+          output {:tag     :results
+                  :content (mapv (fn [{:keys [event error] :as result}]
+                                   (let [error (if (nil? error) [] [(xmlify-exception error)])]
+                                     {:tag     event
+                                      :attrs   (reduce-kv #(assoc %1 %2 (str/escape %3 {\" "&quot;" \' "&apos;"})) {} (dissoc result :event :error))
                                       :content error}))
-                                results)}]
+                                 results)}]
       (spit "resources/examples/results.xml"
-            (with-out-str (xml/emit output))))
+            (with-out-str
+              (xml/emit output))))
     (catch ExceptionInfo e
       (println (.getMessage e))
-      (pp/pprint (.getData e)))))
+      (pp/pprint (.getData e)))
+    (catch Throwable t
+      (println t)
+      (.printStackTrace t)
+      )))

@@ -1,7 +1,6 @@
 (ns yardstick.core
   (:require [clojure.tools.cli :as cli]
             [yardstick.parse :as p]
-            [yardstick.handler :as h]
             [clojure.string :as str]
             [clojure.set :as set]
             [clojure.pprint :as pp]
@@ -9,22 +8,25 @@
   (:import (clojure.lang ExceptionInfo)
            (java.io File)))
 
-(defmulti handle-action (fn [action & _] action))
+(defn- get-step [action args]
+  (apply format action (map json/write-str args)))
 
-(defmethod handle-action :default [action & args]
+(defmulti do-step (fn [action & _] action))
+
+(defmethod do-step :default [action & args]
   (throw (IllegalArgumentException.
            (str "Step Not Implemented: "
-                (format action (map json/write-str args))))))
+                (get-step action args)))))
 
 (defprotocol Printer
-  (print [this event]))
+  (print-to [this event]))
 
 (def ^:private default-printer
   (reify Printer
-    (print [_ event]
+    (print-to [_ event]
       (pp/pprint event))))
 
-(defprotocol Handler
+(defprotocol Hooks
   (before-suite [this])
   (after-suite [this])
   (before-spec [this])
@@ -32,8 +34,8 @@
   (before-scenario [this])
   (after-scenario [this]))
 
-(def ^:private default-handler
-  (reify Handler
+(def ^:private default-hooks
+  (reify Hooks
     (before-suite [_] nil)
     (after-suite [_] nil)
     (before-spec [_] nil)
@@ -61,7 +63,7 @@
 (defn- get-tests [file-list ^String test-file-or-folder]
   (let [file-obj (File. test-file-or-folder)]
     (if (.isDirectory file-obj)
-      (reduce get-tests file-list (.list file-obj))
+      (reduce get-tests file-list (map #(.getAbsolutePath %) (.listFiles file-obj)))
       (conj file-list test-file-or-folder))))
 
 (defn- resolve-tags [{:keys [include exclude]}]
@@ -75,83 +77,83 @@
 
 (defn -run
   ([] (-run []))
-  ([cli-args & {:keys [^Handler handler ^Printer printer]
-                :or {handler default-handler
+  ([cli-args & {:keys [^Hooks hooks ^Printer printer]
+                :or {hooks default-hooks
                      printer default-printer}}]
    (let [{:keys [paths] run-tags :tags} (parse-args cli-args)
-         files (reduce get-tests [] paths)
+         files (filter #(.endsWith ^String % ".spec") (reduce get-tests [] paths))
          {:keys [specs bad-files]} (reduce
                                      (fn [out file]
-                                       ((try
-                                          (update-in out :specs conj (p/parse-test-file (slurp file)))
+                                       (try
+                                          (update-in out [:specs] conj (p/parse-test-file (slurp file)))
                                           (catch Throwable t
-                                            (update-in out :bad-files {:event :bad-file :file file :error t})))))
+                                            (update-in out [:bad-files] conj {:event :bad-file :file file :error t}))))
                                      {:specs []
                                       :bad-files []}
                                      files)
          results-atom (atom bad-files)
          tag-resolve (resolve-tags run-tags)]
      (doseq [bad-file bad-files]
-       (print printer bad-file))
+       (print-to printer bad-file))
      (try
-       (before-suite handler)
+       (before-suite hooks)
        (doseq [{:keys [spec for-each scenarios]} (filter tag-resolve specs)]
          (try
-           (before-spec handler)
+           (before-spec hooks)
            (doseq [{:keys [scenario steps]} (filter tag-resolve scenarios)]
              (try
-               (before-scenario handler)
+               (before-scenario hooks)
                (doseq [step for-each]
-                 (let [event {:event :step-before-each-scenario :spec spec :scenario scenario :step (apply format step)}]
+                 (let [event {:event :step-before-each-scenario :spec spec :scenario scenario :step (get-step (first step) (rest step))}]
                    (try
-                     (apply handle-action step)
-                     (print printer event)
+                     (apply do-step step)
+                     (print-to printer event)
                      (swap! results-atom conj event)
                      (catch Throwable t
                        (let [event (assoc event :error t)]
-                         (print printer event)
+                         (print-to printer event)
                          (swap! results-atom conj event))))))
                (doseq [step steps]
-                 (let [event {:event :step :spec spec :scenario scenario :step (apply format step)}]
+                 (let [event {:event :step :spec spec :scenario scenario :step (get-step (first step) (rest step))}]
                    (try
-                     (apply handle-action step)
-                     (print printer event)
+                     (apply do-step step)
+                     (print-to printer event)
                      (swap! results-atom conj event)
                      (catch Throwable t
                        (let [event (assoc event :error t)]
-                         (print printer event)
+                         (print-to printer event)
                          (swap! results-atom conj event))))))
                (catch Throwable t
                  (let [event {:error t :event :before-scenario :spec spec :scenario scenario}]
-                   (print printer event)
+                   (print-to printer event)
                    (swap! results-atom conj event)))
                (finally
                  (try
-                   (after-scenario handler)
+                   (after-scenario hooks)
                    (catch Throwable t
                      (let [event {:error t :event :after-scenario :spec spec :scenario scenario}]
-                       (print printer event)
+                       (print-to printer event)
                        (swap! results-atom conj event)))))))
            (catch Throwable t
              (let [event {:error t :event :before-spec :spec spec}]
-               (print printer event)
+               (print-to printer event)
                (swap! results-atom conj event)))
            (finally
              (try
-               (after-spec handler)
+               (after-spec hooks)
                (catch Throwable t
                  (let [event {:error t :event :after-spec :spec spec}]
-                   (print printer event)
+                   (print-to printer event)
                    (swap! results-atom conj event)))))))
        (catch Throwable t
          (let [event {:error t :event :before-suite}]
-           (print printer event)
+           (print-to printer event)
            (swap! results-atom conj event)))
        (finally
          (try
-           (after-suite handler)
+           (after-suite hooks)
            (catch Throwable t
              (let [event {:error t :event :after-suite}]
-               (print printer event)
+               (print-to printer event)
                (swap! results-atom conj event))))))
      @results-atom)))
