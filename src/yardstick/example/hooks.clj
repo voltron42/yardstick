@@ -1,5 +1,7 @@
 (ns yardstick.example.hooks
-  (:require [yardstick.core :as y]))
+  (:require [yardstick.core :as y]
+            [clojure.test :refer :all])
+  (:import (org.junit Assert)))
 
 (def example-hooks
   (reify y/Hooks
@@ -15,7 +17,7 @@
       )
     (after-spec [_]
       ;TODO
-      (throw (Exception. "This is also an example exception"))
+      (Assert/assertTrue "This is also an example exception" false)
       )
     (before-scenario [_]
       ;TODO

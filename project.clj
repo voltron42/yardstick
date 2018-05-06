@@ -6,4 +6,5 @@
   :dependencies [[org.clojure/clojure "1.9.0"]
                  [org.clojure/tools.cli "0.3.5"]
                  [org.clojure/data.json "0.2.6"]
+                 [junit/junit "4.12"]
                  [endophile "0.2.1"]])

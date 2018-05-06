@@ -6,6 +6,7 @@
             [yardstick.example.hooks :as hooks]
             [yardstick.example.printer :as printer]
             [clojure.data.json :as json]
+            [yardstick.example.steps :refer :all]
             [clojure.spec.alpha :as s])
   (:import (clojure.lang ExceptionInfo)))
 
@@ -25,7 +26,6 @@
 
 (defmethod xmlify-exception ExceptionInfo [^ExceptionInfo err]
   (let [{{value ::s/value spec ::s/spec problems ::s/problems :as data} :error} (.getData err)
-        _ (pp/pprint data)
         node {:tag :explain-data
               :attrs {:spec (str spec)
                       :value (pr-str value)}
@@ -62,5 +62,4 @@
       (pp/pprint (.getData e)))
     (catch Throwable t
       (println t)
-      (.printStackTrace t)
-      )))
+      (.printStackTrace t))))
