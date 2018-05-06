@@ -7,56 +7,17 @@
             [yardstick.example.printer :as printer]
             [clojure.data.json :as json]
             [yardstick.example.steps :refer :all]
-            [clojure.spec.alpha :as s])
+            [clojure.spec.alpha :as s]
+            [yardstick.tools :as t])
   (:import (clojure.lang ExceptionInfo)))
-
-(defn- build-exception [^Throwable err]
-  {:tag (.getSimpleName (type err))
-   :attrs {:message (.getMessage err)}
-   :content [{:tag :stack-trace
-              :content (mapv (fn [^StackTraceElement ste]
-                               {:tag :stack-trace-element
-                                :attrs {:class-name (.getClassName ste)
-                                        :file-name (.getFileName ste)
-                                        :line-number (.getLineNumber ste)
-                                        :method-name (.getMethodName ste)}})
-                             (.getStackTrace err))}]})
-
-(defmulti xmlify-exception type)
-
-(defmethod xmlify-exception ExceptionInfo [^ExceptionInfo err]
-  (let [{{value ::s/value spec ::s/spec problems ::s/problems :as data} :error} (.getData err)
-        node {:tag :explain-data
-              :attrs {:spec (str spec)
-                      :value (pr-str value)}
-              :content (map (fn [{:keys [path pred val via in]}]
-                              {:tag :problem
-                               :attrs {:path (str/join "," path)
-                                       :pred (str pred)
-                                       :val (pr-str val)
-                                       :via (str/join "," via)
-                                       :in (str/join "," in)}})
-                            problems)}]
-    (update-in (build-exception err) [:content] conj node)))
-
-(defmethod xmlify-exception :default [^Throwable err]
-  (build-exception err))
 
 (defn -main [& _]
   (try
-    (let [results (y/-run ["resources/examples"]
-                          :hooks hooks/example-hooks
-                          :printer printer/example-printer)
-          output {:tag     :results
-                  :content (mapv (fn [{:keys [event error] :as result}]
-                                   (let [error (if (nil? error) [] [(xmlify-exception error)])]
-                                     {:tag     event
-                                      :attrs   (reduce-kv #(assoc %1 %2 (str/escape %3 {\" "&quot;" \' "&apos;"})) {} (dissoc result :event :error))
-                                      :content error}))
-                                 results)}]
-      (spit "resources/examples/results.xml"
-            (with-out-str
-              (xml/emit output))))
+    (let [results (y/run ["resources/examples"]
+                         :hooks hooks/example-hooks
+                         :printer printer/example-printer)
+          filename "resources/examples/results.xml"]
+      (t/print-results-as-xml results filename))
     (catch ExceptionInfo e
       (println (.getMessage e))
       (pp/pprint (.getData e)))

@@ -5,7 +5,7 @@
             [clojure.set :as set]
             [clojure.pprint :as pp]
             [clojure.data.json :as json])
-  (:import (clojure.lang ExceptionInfo)
+  (:import (clojure.lang ExceptionInfo PersistentVector)
            (java.io File)))
 
 (defn- get-step [action args]
@@ -43,30 +43,13 @@
     (before-scenario [_] nil)
     (after-scenario [_] nil)))
 
-(def ^:private cli-options
-  [["-i" "--include INCLUDE" "Include tags"
-    :default #{}
-    :parse-fn #(set (str/split % #","))]
-   ["-x" "--exclude EXCLUDE" "Exclude tags"
-    :default #{}
-    :parse-fn #(set (str/split % #","))]])
-
-(defn- parse-args [args]
-  (let [{:keys [arguments summary errors] {:keys [include exclude] :as options} :options} (cli/parse-opts args cli-options)]
-    (when-not (empty? errors)
-      (throw (ExceptionInfo. "Parsing Errors:" {:errors errors})))
-    (when (empty? arguments)
-      (throw (ExceptionInfo. "Missing Test Path(s):" {:summary summary
-                                                      :usage "[name] [options] file-paths"})))
-    (assoc options :paths arguments :tags {:include include :exclude exclude})))
-
 (defn- get-tests [file-list ^String test-file-or-folder]
   (let [file-obj (File. test-file-or-folder)]
     (if (.isDirectory file-obj)
       (reduce get-tests file-list (map #(.getAbsolutePath %) (.listFiles file-obj)))
       (conj file-list test-file-or-folder))))
 
-(defn- resolve-tags [{:keys [include exclude]}]
+(defn- resolve-tags [include exclude]
   (fn [tags]
     (and
       (empty? (set/intersection exclude tags))
@@ -75,24 +58,24 @@
         (empty? tags)
         (not (empty? (set/intersection include tags)))))))
 
-(defn -run
-  ([] (-run []))
-  ([cli-args & {:keys [^Hooks hooks ^Printer printer]
-                :or {hooks default-hooks
-                     printer default-printer}}]
-   (let [{:keys [paths] run-tags :tags} (parse-args cli-args)
+(defn run
+  ([^PersistentVector paths & {:keys [^Hooks hooks ^Printer printer include-tags exclude-tags]
+                               :or {hooks default-hooks
+                                    printer default-printer
+                                    include-tags #{}
+                                    exclude-tags #{}}}]
+   (let [tag-resolve (resolve-tags include-tags exclude-tags)
          files (filter #(.endsWith ^String % ".spec") (reduce get-tests [] paths))
          {:keys [specs bad-files]} (reduce
                                      (fn [out file]
                                        (try
-                                          (update-in out [:specs] conj (p/parse-test-file (slurp file)))
+                                         (update-in out [:specs] conj (p/parse-test-file (slurp file)))
                                           (catch Throwable t
                                             (update-in out [:bad-files] conj {:event :bad-file :file file :error t}))))
                                      {:specs []
                                       :bad-files []}
                                      files)
-         results-atom (atom bad-files)
-         tag-resolve (resolve-tags run-tags)]
+         results-atom (atom bad-files)]
      (doseq [bad-file bad-files]
        (print-to printer bad-file))
      (try
