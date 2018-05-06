@@ -74,69 +74,67 @@
                                             (update-in out [:bad-files] conj {:event :bad-file :file file :error t}))))
                                      {:specs []
                                       :bad-files []}
-                                     files)
-         results-atom (atom bad-files)]
+                                     files)]
      (doseq [bad-file bad-files]
        (print-to printer bad-file))
      (try
+       (print-to printer {:event :suite-start})
        (before-suite hooks)
        (doseq [{:keys [spec for-each scenarios]} (filter tag-resolve specs)]
          (try
+           (print-to printer {:event :spec-start :spec spec})
            (before-spec hooks)
            (doseq [{:keys [scenario steps]} (filter tag-resolve scenarios)]
              (try
+               (print-to printer {:event :scenario-start :spec spec :scenario scenario})
                (before-scenario hooks)
                (doseq [step for-each]
                  (let [event {:event :step-before-each-scenario :spec spec :scenario scenario :step (get-step (first step) (rest step))}]
                    (try
                      (apply do-step step)
                      (print-to printer event)
-                     (swap! results-atom conj event)
                      (catch Throwable t
                        (let [event (assoc event :error t)]
-                         (print-to printer event)
-                         (swap! results-atom conj event))))))
+                         (print-to printer event))))))
                (doseq [step steps]
                  (let [event {:event :step :spec spec :scenario scenario :step (get-step (first step) (rest step))}]
                    (try
                      (apply do-step step)
                      (print-to printer event)
-                     (swap! results-atom conj event)
                      (catch Throwable t
                        (let [event (assoc event :error t)]
-                         (print-to printer event)
-                         (swap! results-atom conj event))))))
+                         (print-to printer event))))))
                (catch Throwable t
                  (let [event {:error t :event :before-scenario :spec spec :scenario scenario}]
-                   (print-to printer event)
-                   (swap! results-atom conj event)))
+                   (print-to printer event)))
                (finally
                  (try
                    (after-scenario hooks)
                    (catch Throwable t
                      (let [event {:error t :event :after-scenario :spec spec :scenario scenario}]
-                       (print-to printer event)
-                       (swap! results-atom conj event)))))))
+                       (print-to printer event)))
+                   (finally
+                     (print-to printer {:event :scenario-end :spec spec :scenario scenario}))))))
            (catch Throwable t
              (let [event {:error t :event :before-spec :spec spec}]
-               (print-to printer event)
-               (swap! results-atom conj event)))
+               (print-to printer event)))
            (finally
              (try
                (after-spec hooks)
                (catch Throwable t
                  (let [event {:error t :event :after-spec :spec spec}]
-                   (print-to printer event)
-                   (swap! results-atom conj event)))))))
+                   (print-to printer event)))
+               (finally
+                 (print-to printer {:event :spec-end :spec spec}))))))
        (catch Throwable t
          (let [event {:error t :event :before-suite}]
-           (print-to printer event)
-           (swap! results-atom conj event)))
+           (print-to printer event)))
        (finally
          (try
            (after-suite hooks)
            (catch Throwable t
              (let [event {:error t :event :after-suite}]
-               (print-to printer event)
-               (swap! results-atom conj event))))))
-     @results-atom)))
+               (print-to printer event)))
+           (finally
+             (print-to printer {:event :suite-end})))))
+     nil)))

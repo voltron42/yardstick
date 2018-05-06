@@ -13,9 +13,11 @@
 
 (defn -main [& _]
   (try
-    (let [results (y/run ["resources/examples"]
+    (let [results-atom (atom [])
+          _ (y/run ["resources/examples"]
                          :hooks hooks/example-hooks
-                         :printer printer/example-printer)
+                         :printer (printer/example-printer results-atom))
+          results @results-atom
           filename "resources/examples/results.xml"]
       (t/print-results-as-xml results filename))
     (catch ExceptionInfo e
