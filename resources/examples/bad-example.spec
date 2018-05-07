@@ -1,1 +1,1 @@
-### This is a bad file and will fail parsing.
+# This is a bad file and will fail parsing.

@@ -15,7 +15,7 @@
                    ["The customer %1s is listed" "ScroogeMcduck"]]}
           {:scenario "Verify a bunch of customers",
            :tags #{"admin" "customer" "search"},
-           :steps [["Search for customers &lt;table:resources/user.csv&gt;"]]}]})))
+           :steps [["Search for customers <table:resources/user.csv>"]]}]})))
 
 (deftest test-parse-products
   (pp/pprint (parse-test-file (slurp "resources/examples/products.spec")))
@@ -26,7 +26,23 @@
           :scenarios
           [{:scenario "Create a new product",
             :tags #{"admin" "product" "create"},
-            :steps [["Create a product  |Title |Description |Author |Price|  |--------------|--------------------|--------------|-----|  |Go Programming|ISBN: 978-1453636671|John P. Baugh |25.00|  |The Way to Go |ISBN: 978-1469769165|Ivo Balbaert |20.00|  |Go In Action |ISBN: 9781617291784 |Brian Ketelsen|30.00|  |Learning Go |ebook |Miek Gieben |0.00 |"]]}
+            :steps [["Create a product %1s"
+                     [{:Author      "John P. Baugh"
+                       :Description "ISBN: 978-1453636671"
+                       :Price       "25.00"
+                       :Title       "Go Programming"}
+                      {:Author      "Ivo Balbaert"
+                       :Description "ISBN: 978-1469769165"
+                       :Price       "20.00"
+                       :Title       "The Way to Go"}
+                      {:Author      "Brian Ketelsen"
+                       :Description "ISBN: 9781617291784"
+                       :Price       "30.00"
+                       :Title       "Go In Action"}
+                      {:Author      "Miek Gieben"
+                       :Description "ebook"
+                       :Price       "0.00"
+                       :Title       "Learning Go"}]]]}
            {:scenario "Search for a product",
             :tags #{"admin" "product" "search"},
             :steps [["Find and Open product page for %1s" "Go Programming"]
@@ -34,8 +50,8 @@
            {:scenario "Search and edit and existing product",
             :tags #{"admin" "product" "edit"},
             :steps [["Open product edit page for stored productId"]
-                    ["Update product specifier to new value &lt;table:resources/product_data.csv&gt;"]
-                    ["Check product specifier has new value &lt;table:resources/product_data.csv&gt;"]]}
+                    ["Update product specifier to new value <table:resources/product_data.csv>"]
+                    ["Check product specifier has new value <table:resources/product_data.csv>"]]}
            {:scenario "Delete a product",
             :tags #{"delete" "admin" "product"},
             :steps [["Delete product %1s" "Learning Go"]]}]})))

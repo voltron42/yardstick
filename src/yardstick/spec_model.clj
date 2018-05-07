@@ -28,4 +28,39 @@
 
 (s/def ::step (s/and vector?
                      (s/cat :label #{:li}
-                            :step (s/+ string?))))
+                            :step (s/+ string?)
+                            :table (s/? ::table))))
+
+(s/def ::table (s/and vector?
+                      (s/cat :label #{:table}
+                             :head ::table-head
+                             :body ::table-body)))
+
+(s/def ::table-head (s/and vector?
+                           (s/cat :label #{:thead}
+                                  :row ::table-header-row)))
+
+(s/def ::table-header-row (s/and vector?
+                                 (s/cat :label #{:tr}
+                                        :headers (s/+ ::table-header))))
+
+(s/def ::table-header (s/and vector?
+                             (s/cat :label #{:th}
+                                    :attrs (s/? (s/keys :req-un [::align]))
+                                    :value string?)))
+
+(s/def ::table-body (s/and vector?
+                           (s/cat :label #{:tbody}
+                                  :rows (s/+ ::table-row))))
+
+
+(s/def ::table-row (s/and vector?
+                          (s/cat :label #{:tr}
+                                 :cells (s/+ ::table-cell))))
+
+(s/def ::table-cell (s/and vector?
+                           (s/cat :label #{:td}
+                                  :attrs (s/? (s/keys :req-un [::align]))
+                                  :value string?)))
+
+(s/def ::align #{"center" "right" "left"})
