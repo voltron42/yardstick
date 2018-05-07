@@ -14,12 +14,15 @@
 (defn -main [& _]
   (try
     (let [results-atom (atom [])
-          _ (y/run ["resources/examples"]
-                         :hooks hooks/example-hooks
-                         :printer (printer/example-printer results-atom))
+          log-data (with-out-str
+                     (y/run ["resources/examples"]
+                            :hooks hooks/example-hooks
+                            :printer (printer/example-printer results-atom)))
           results @results-atom
           filename "resources/examples/results.xml"]
-      (t/print-results-as-xml results filename))
+      (t/print-results-as-xml results filename)
+      (spit "resources/examples/runner.log" log-data)
+      )
     (catch ExceptionInfo e
       (println (.getMessage e))
       (pp/pprint (.getData e)))

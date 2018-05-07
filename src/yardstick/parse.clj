@@ -18,8 +18,7 @@
           records (mapv #(into {} (mapv vector
                                         headers
                                         (map :value (:cells %))))
-                        (:rows body))
-          step (str step " %" (inc (count args)) "s")]
+                        (:rows body))]
       (conj (vec (cons step args)) records)))
   ([line]
    (let [arg-count (atom 0)

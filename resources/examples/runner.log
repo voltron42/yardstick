@@ -1,0 +1,108 @@
+The following file could not be parsed due to the following reason:
+	C:\practice\code\yardstick\resources\examples\bad-example.spec
+	File does not conform to test structure:
+{:error
+ #:clojure.spec.alpha{:problems
+                      [{:path [:scenarios :scenario-header],
+                        :reason "Insufficient input",
+                        :pred :yardstick.spec-model/scenario-header,
+                        :val (),
+                        :via
+                        [:yardstick.spec-model/spec
+                         :yardstick.spec-model/scenario
+                         :yardstick.spec-model/scenario-header],
+                        :in []}],
+                      :spec :yardstick.spec-model/spec,
+                      :value
+                      ([:h1
+                        "This is a bad file and will fail parsing."])}}
+Beginning tests:
+# Customers
+## Search for a customer
+> On the customer page - SUCCESS!
+> Search for customer "ScroogeMcduck" - SUCCESS!
+> The customer "ScroogeMcduck" is listed - SUCCESS!
+
+## Verify a bunch of customers
+> On the customer page - SUCCESS!
+> Search for customers <table:resources/user.csv> - fails
+	java.lang.IllegalArgumentException: Step Not Implemented: Search for customers <table:resources/user.csv>
+([yardstick.core$eval3793$fn__3794 doInvoke "core.clj" 18]
+ [clojure.lang.RestFn invoke "RestFn.java" 410]
+ [clojure.lang.MultiFn invoke "MultiFn.java" 229])
+...
+
+
+
+# Products
+## Create a new product
+I have a table of stuff!
+[{:Title "Go Programming",
+  :Description "ISBN: 978-1453636671",
+  :Author "John P. Baugh",
+  :Price "25.00"}
+ {:Title "The Way to Go",
+  :Description "ISBN: 978-1469769165",
+  :Author "Ivo Balbaert",
+  :Price "20.00"}
+ {:Title "Go In Action",
+  :Description "ISBN: 9781617291784",
+  :Author "Brian Ketelsen",
+  :Price "30.00"}
+ {:Title "Learning Go",
+  :Description "ebook",
+  :Author "Miek Gieben",
+  :Price "0.00"}]
+> Create a product - SUCCESS!
+
+## Search for a product
+> Find and Open product page for "Go Programming" - SUCCESS!
+> Verify product "author" as "John P. Baugh" - SUCCESS!
+
+## Search and edit and existing product
+> Open product edit page for stored productId - fails
+	java.lang.IllegalArgumentException: Step Not Implemented: Open product edit page for stored productId
+([yardstick.core$eval3793$fn__3794 doInvoke "core.clj" 18]
+ [clojure.lang.RestFn invoke "RestFn.java" 410]
+ [clojure.lang.MultiFn invoke "MultiFn.java" 229])
+...
+
+> Update product specifier to new value <table:resources/product_data.csv> - fails
+	java.lang.IllegalArgumentException: Step Not Implemented: Update product specifier to new value <table:resources/product_data.csv>
+([yardstick.core$eval3793$fn__3794 doInvoke "core.clj" 18]
+ [clojure.lang.RestFn invoke "RestFn.java" 410]
+ [clojure.lang.MultiFn invoke "MultiFn.java" 229])
+...
+
+> Check product specifier has new value <table:resources/product_data.csv> - fails
+	java.lang.IllegalArgumentException: Step Not Implemented: Check product specifier has new value <table:resources/product_data.csv>
+([yardstick.core$eval3793$fn__3794 doInvoke "core.clj" 18]
+ [clojure.lang.RestFn invoke "RestFn.java" 410]
+ [clojure.lang.MultiFn invoke "MultiFn.java" 229])
+...
+
+
+## Delete a product
+> Delete product "Learning Go" - SUCCESS!
+
+
+# Signup
+## Register a customer
+> Sign up a new customer - fails
+	java.lang.IllegalArgumentException: Step Not Implemented: Sign up a new customer
+([yardstick.core$eval3793$fn__3794 doInvoke "core.clj" 18]
+ [clojure.lang.RestFn invoke "RestFn.java" 410]
+ [clojure.lang.MultiFn invoke "MultiFn.java" 229])
+...
+
+> On the customer page - SUCCESS!
+> Just registered customer is listed - fails
+	java.lang.IllegalArgumentException: Step Not Implemented: Just registered customer is listed
+([yardstick.core$eval3793$fn__3794 doInvoke "core.clj" 18]
+ [clojure.lang.RestFn invoke "RestFn.java" 410]
+ [clojure.lang.MultiFn invoke "MultiFn.java" 229])
+...
+
+
+
+All tests completed.
