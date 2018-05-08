@@ -6,6 +6,7 @@
             [endophile.hiccup :refer [to-hiccup]]
             [clojure.spec.alpha :as s]
             [markdown.core :as md]
+            [clojure.data.csv :as csv]
             [yardstick.spec-model :as spec-model])
   (:import (clojure.lang ExceptionInfo)
            (java.io ByteArrayInputStream)))
@@ -14,7 +15,7 @@
   ([line table]
     (let [[step & args] (parse-spec line)
           {:keys [head body]} table
-          headers (->> head :row :headers (map :value) (map keyword))
+          headers (->> head :row :headers (map :value))
           records (mapv #(into {} (mapv vector
                                         headers
                                         (map :value (:cells %))))
@@ -59,8 +60,18 @@
         content (if (empty? content) [] (mapv #(if (string? %) % (reduce-xml %)) content))]
     (into [tag] (concat attrs content))))
 
+(defn- fetch-table-file [table-tag]
+  (let [filename (apply str (drop 8 (drop-last table-tag)))
+        contents (csv/read-csv (slurp filename))
+        column-count (count (first contents))
+        header-boundary (repeat column-count "-")
+        rows (cons (first contents) (cons header-boundary (rest contents)))
+        md-table (str/join "\n" (map #(str "| " (str/join " | " %) " |") rows))]
+    (str "\n" md-table)))
+
 (defn parse-test-file [test-file-contents]
-  (let [escaped (reduce-kv str/replace test-file-contents {"\ntags: " "\n####" ">" "&gt;" "<" "&lt;"})
+  (let [escaped (reduce-kv str/replace test-file-contents {"\ntags: " "\n####"
+                                                           #" \<table\:.*\>" fetch-table-file})
         html (md/md-to-html-string escaped)
         reduced (reduce-kv str/replace html {"&mdash;" "&#8212;" "&ndash;" "&#8211;"})
         parsed (xml/parse (ByteArrayInputStream. (.getBytes (str "<body>" reduced "</body>"))))

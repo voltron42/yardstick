@@ -1,5 +1,6 @@
 (ns yardstick.example.runner
   (:require [yardstick.core :as y]
+            [clojure.test :refer :all]
             [clojure.pprint :as pp]
             [clojure.xml :as xml]
             [clojure.string :as str]
@@ -11,7 +12,7 @@
             [yardstick.tools :as t])
   (:import (clojure.lang ExceptionInfo)))
 
-(defn -main [& _]
+(deftest test-example-runner
   (try
     (let [results-atom (atom [])
           log-data (with-out-str
@@ -21,8 +22,7 @@
           results @results-atom
           filename "resources/examples/results.xml"]
       (t/print-results-as-xml results filename)
-      (spit "resources/examples/runner.log" log-data)
-      )
+      (spit "resources/examples/runner.log" log-data))
     (catch ExceptionInfo e
       (println (.getMessage e))
       (pp/pprint (.getData e)))

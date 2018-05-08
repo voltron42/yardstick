@@ -27,21 +27,23 @@
       (pp/pprint event))))
 
 (defprotocol Hooks
-  (before-suite [this])
-  (after-suite [this])
-  (before-spec [this])
-  (after-spec [this])
-  (before-scenario [this])
-  (after-scenario [this]))
+  (before-spec [this spec])
+  (after-spec [this spec])
+  (before-scenario [this spec scenario])
+  (after-scenario [this spec scenario])
+  (before-step [this spec scenario step])
+  (after-step [this spec scenario step])
+  )
 
 (def ^:private default-hooks
   (reify Hooks
-    (before-suite [_] nil)
-    (after-suite [_] nil)
-    (before-spec [_] nil)
-    (after-spec [_] nil)
-    (before-scenario [_] nil)
-    (after-scenario [_] nil)))
+    (before-spec [_ _] nil)
+    (after-spec [_ _] nil)
+    (before-scenario [_ _ _] nil)
+    (after-scenario [_ _ _] nil)
+    (before-step [_ _ _ _] nil)
+    (after-step [_ _ _ _] nil)
+    ))
 
 (defn- get-tests [file-list ^String test-file-or-folder]
   (let [file-obj (File. test-file-or-folder)]
@@ -77,64 +79,50 @@
                                      files)]
      (doseq [bad-file bad-files]
        (print-to printer bad-file))
-     (try
-       (print-to printer {:event :suite-start})
-       (before-suite hooks)
-       (doseq [{:keys [spec for-each scenarios]} (filter tag-resolve specs)]
-         (try
-           (print-to printer {:event :spec-start :spec spec})
-           (before-spec hooks)
-           (doseq [{:keys [scenario steps]} (filter tag-resolve scenarios)]
-             (try
-               (print-to printer {:event :scenario-start :spec spec :scenario scenario})
-               (before-scenario hooks)
-               (doseq [step for-each]
-                 (let [event {:event :step-before-each-scenario :spec spec :scenario scenario :step (get-step (first step) (rest step))}]
-                   (try
-                     (apply do-step step)
-                     (print-to printer event)
-                     (catch Throwable t
-                       (let [event (assoc event :error t)]
-                         (print-to printer event))))))
-               (doseq [step steps]
-                 (let [event {:event :step :spec spec :scenario scenario :step (get-step (first step) (rest step))}]
-                   (try
-                     (apply do-step step)
-                     (print-to printer event)
-                     (catch Throwable t
-                       (let [event (assoc event :error t)]
-                         (print-to printer event))))))
-               (catch Throwable t
-                 (let [event {:error t :event :before-scenario :spec spec :scenario scenario}]
-                   (print-to printer event)))
-               (finally
+     (print-to printer {:event :suite-start})
+     (doseq [{:keys [spec for-each scenarios]} (filter tag-resolve specs)]
+       (try
+         (print-to printer {:event :spec-start :spec spec})
+         (before-spec hooks spec)
+         (doseq [{:keys [scenario steps]} (filter tag-resolve scenarios)]
+           (try
+             (print-to printer {:event :scenario-start :spec spec :scenario scenario})
+             (before-scenario hooks spec scenario)
+             (doseq [step (concat for-each steps)]
+               (let [event {:event :step :spec spec :scenario scenario :step (get-step (first step) (rest step))}]
                  (try
-                   (after-scenario hooks)
+                   (before-step hooks spec scenario step)
+                   (try
+                     (apply do-step step)
+                     (print-to printer event)
+                     (catch Throwable t
+                         (print-to printer (assoc event :error t))))
                    (catch Throwable t
-                     (let [event {:error t :event :after-scenario :spec spec :scenario scenario}]
-                       (print-to printer event)))
+                     (print-to printer {:error t :event :before-step :spec spec :scenario scenario :step step}))
                    (finally
-                     (print-to printer {:event :scenario-end :spec spec :scenario scenario}))))))
-           (catch Throwable t
-             (let [event {:error t :event :before-spec :spec spec}]
-               (print-to printer event)))
-           (finally
-             (try
-               (after-spec hooks)
-               (catch Throwable t
-                 (let [event {:error t :event :after-spec :spec spec}]
-                   (print-to printer event)))
-               (finally
-                 (print-to printer {:event :spec-end :spec spec}))))))
-       (catch Throwable t
-         (let [event {:error t :event :before-suite}]
-           (print-to printer event)))
-       (finally
-         (try
-           (after-suite hooks)
-           (catch Throwable t
-             (let [event {:error t :event :after-suite}]
-               (print-to printer event)))
-           (finally
-             (print-to printer {:event :suite-end})))))
+                     (try
+                       (after-step hooks spec scenario step)
+                       (catch Throwable t
+                         (print-to printer {:error t :event :after-step :spec spec :scenario scenario :step step})))))))
+             (catch Throwable t
+               (print-to printer {:error t :event :before-scenario :spec spec :scenario scenario}))
+             (finally
+               (try
+                 (after-scenario hooks spec scenario)
+                 (catch Throwable t
+                   (let [event {:error t :event :after-scenario :spec spec :scenario scenario}]
+                     (print-to printer event)))
+                 (finally
+                   (print-to printer {:event :scenario-end :spec spec :scenario scenario}))))))
+         (catch Throwable t
+           (let [event {:error t :event :before-spec :spec spec}]
+             (print-to printer event)))
+         (finally
+           (try
+             (after-spec hooks spec)
+             (catch Throwable t
+               (let [event {:error t :event :after-spec :spec spec}]
+                 (print-to printer event)))
+             (finally
+               (print-to printer {:event :spec-end :spec spec}))))))
      nil)))

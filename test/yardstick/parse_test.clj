@@ -15,7 +15,10 @@
                    ["The customer %1s is listed" "ScroogeMcduck"]]}
           {:scenario "Verify a bunch of customers",
            :tags #{"admin" "customer" "search"},
-           :steps [["Search for customers <table:resources/user.csv>"]]}]})))
+           :steps [["Search for customers"
+                    [{"# users" "FredFlintstone"}
+                     {"# users" "JohnnyQuest"}
+                     {"# users" "ScroogeMcduck"}]]]}]})))
 
 (deftest test-parse-products
   (pp/pprint (parse-test-file (slurp "resources/examples/products.spec")))
@@ -26,23 +29,23 @@
           :scenarios
           [{:scenario "Create a new product",
             :tags #{"admin" "product" "create"},
-            :steps [["Create a product %1s"
-                     [{:Author      "John P. Baugh"
-                       :Description "ISBN: 978-1453636671"
-                       :Price       "25.00"
-                       :Title       "Go Programming"}
-                      {:Author      "Ivo Balbaert"
-                       :Description "ISBN: 978-1469769165"
-                       :Price       "20.00"
-                       :Title       "The Way to Go"}
-                      {:Author      "Brian Ketelsen"
-                       :Description "ISBN: 9781617291784"
-                       :Price       "30.00"
-                       :Title       "Go In Action"}
-                      {:Author      "Miek Gieben"
-                       :Description "ebook"
-                       :Price       "0.00"
-                       :Title       "Learning Go"}]]]}
+            :steps [["Create a product"
+                     [{"Author"      "John P. Baugh"
+                       "Description" "ISBN: 978-1453636671"
+                       "Price"       "25.00"
+                       "Title"       "Go Programming"}
+                      {"Author"      "Ivo Balbaert"
+                       "Description" "ISBN: 978-1469769165"
+                       "Price"       "20.00"
+                       "Title"       "The Way to Go"}
+                      {"Author"      "Brian Ketelsen"
+                       "Description" "ISBN: 9781617291784"
+                       "Price"       "30.00"
+                       "Title"       "Go In Action"}
+                      {"Author"      "Miek Gieben"
+                       "Description" "ebook"
+                       "Price"       "0.00"
+                       "Title"       "Learning Go"}]]]}
            {:scenario "Search for a product",
             :tags #{"admin" "product" "search"},
             :steps [["Find and Open product page for %1s" "Go Programming"]
@@ -50,8 +53,20 @@
            {:scenario "Search and edit and existing product",
             :tags #{"admin" "product" "edit"},
             :steps [["Open product edit page for stored productId"]
-                    ["Update product specifier to new value <table:resources/product_data.csv>"]
-                    ["Check product specifier has new value <table:resources/product_data.csv>"]]}
+                    ["Update product specifier to new value"
+                     [{"specifier" "title"
+                       "value"     "The Way to Go On"}
+                      {"specifier" "author"
+                       "value"     "Ivo Jay Balbaert"}
+                      {"specifier" "description"
+                       "value"     "hohoho"}]]
+                    ["Check product specifier has new value"
+                     [{"specifier" "title"
+                       "value"     "The Way to Go On"}
+                      {"specifier" "author"
+                       "value"     "Ivo Jay Balbaert"}
+                      {"specifier" "description"
+                       "value"     "hohoho"}]]]}
            {:scenario "Delete a product",
             :tags #{"delete" "admin" "product"},
             :steps [["Delete product %1s" "Learning Go"]]}]})))

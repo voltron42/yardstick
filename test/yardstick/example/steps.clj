@@ -29,3 +29,20 @@
 (defmethod y/do-step "Create a product" [_ table]
   (println "I have a table of stuff!")
   (pp/pprint table))
+
+(defmethod y/do-step "Search for customers" [_ table]
+  (println "I have a table of users!")
+  (pp/pprint table))
+
+(defmethod y/do-step "Search for customers" [_ table]
+  (println "I have a table of users!")
+  (pp/pprint table))
+
+(defmethod y/do-step "Update product specifier to new value" [_ table]
+  (println "I have a table of products!")
+  (pp/pprint table))
+
+(defmethod y/do-step "Check product specifier has new value" [_ table]
+  (println "I have a table of products!")
+  (pp/pprint table))
+

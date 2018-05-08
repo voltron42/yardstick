@@ -25,34 +25,32 @@ Beginning tests:
 
 ## Verify a bunch of customers
 > On the customer page - SUCCESS!
-> Search for customers <table:resources/user.csv> - fails
-	java.lang.IllegalArgumentException: Step Not Implemented: Search for customers <table:resources/user.csv>
-([yardstick.core$eval3793$fn__3794 doInvoke "core.clj" 18]
- [clojure.lang.RestFn invoke "RestFn.java" 410]
- [clojure.lang.MultiFn invoke "MultiFn.java" 229])
-...
-
+I have a table of users!
+[{"# users" "FredFlintstone"}
+ {"# users" "JohnnyQuest"}
+ {"# users" "ScroogeMcduck"}]
+> Search for customers - SUCCESS!
 
 
 # Products
 ## Create a new product
 I have a table of stuff!
-[{:Title "Go Programming",
-  :Description "ISBN: 978-1453636671",
-  :Author "John P. Baugh",
-  :Price "25.00"}
- {:Title "The Way to Go",
-  :Description "ISBN: 978-1469769165",
-  :Author "Ivo Balbaert",
-  :Price "20.00"}
- {:Title "Go In Action",
-  :Description "ISBN: 9781617291784",
-  :Author "Brian Ketelsen",
-  :Price "30.00"}
- {:Title "Learning Go",
-  :Description "ebook",
-  :Author "Miek Gieben",
-  :Price "0.00"}]
+[{"Title" "Go Programming",
+  "Description" "ISBN: 978-1453636671",
+  "Author" "John P. Baugh",
+  "Price" "25.00"}
+ {"Title" "The Way to Go",
+  "Description" "ISBN: 978-1469769165",
+  "Author" "Ivo Balbaert",
+  "Price" "20.00"}
+ {"Title" "Go In Action",
+  "Description" "ISBN: 9781617291784",
+  "Author" "Brian Ketelsen",
+  "Price" "30.00"}
+ {"Title" "Learning Go",
+  "Description" "ebook",
+  "Author" "Miek Gieben",
+  "Price" "0.00"}]
 > Create a product - SUCCESS!
 
 ## Search for a product
@@ -62,25 +60,21 @@ I have a table of stuff!
 ## Search and edit and existing product
 > Open product edit page for stored productId - fails
 	java.lang.IllegalArgumentException: Step Not Implemented: Open product edit page for stored productId
-([yardstick.core$eval3793$fn__3794 doInvoke "core.clj" 18]
+([yardstick.core$eval5098$fn__5099 doInvoke "core.clj" 18]
  [clojure.lang.RestFn invoke "RestFn.java" 410]
  [clojure.lang.MultiFn invoke "MultiFn.java" 229])
 ...
 
-> Update product specifier to new value <table:resources/product_data.csv> - fails
-	java.lang.IllegalArgumentException: Step Not Implemented: Update product specifier to new value <table:resources/product_data.csv>
-([yardstick.core$eval3793$fn__3794 doInvoke "core.clj" 18]
- [clojure.lang.RestFn invoke "RestFn.java" 410]
- [clojure.lang.MultiFn invoke "MultiFn.java" 229])
-...
-
-> Check product specifier has new value <table:resources/product_data.csv> - fails
-	java.lang.IllegalArgumentException: Step Not Implemented: Check product specifier has new value <table:resources/product_data.csv>
-([yardstick.core$eval3793$fn__3794 doInvoke "core.clj" 18]
- [clojure.lang.RestFn invoke "RestFn.java" 410]
- [clojure.lang.MultiFn invoke "MultiFn.java" 229])
-...
-
+I have a table of products!
+[{"specifier" "title", "value" "The Way to Go On"}
+ {"specifier" "author", "value" "Ivo Jay Balbaert"}
+ {"specifier" "description", "value" "hohoho"}]
+> Update product specifier to new value - SUCCESS!
+I have a table of products!
+[{"specifier" "title", "value" "The Way to Go On"}
+ {"specifier" "author", "value" "Ivo Jay Balbaert"}
+ {"specifier" "description", "value" "hohoho"}]
+> Check product specifier has new value - SUCCESS!
 
 ## Delete a product
 > Delete product "Learning Go" - SUCCESS!
@@ -90,7 +84,7 @@ I have a table of stuff!
 ## Register a customer
 > Sign up a new customer - fails
 	java.lang.IllegalArgumentException: Step Not Implemented: Sign up a new customer
-([yardstick.core$eval3793$fn__3794 doInvoke "core.clj" 18]
+([yardstick.core$eval5098$fn__5099 doInvoke "core.clj" 18]
  [clojure.lang.RestFn invoke "RestFn.java" 410]
  [clojure.lang.MultiFn invoke "MultiFn.java" 229])
 ...
@@ -98,7 +92,7 @@ I have a table of stuff!
 > On the customer page - SUCCESS!
 > Just registered customer is listed - fails
 	java.lang.IllegalArgumentException: Step Not Implemented: Just registered customer is listed
-([yardstick.core$eval3793$fn__3794 doInvoke "core.clj" 18]
+([yardstick.core$eval5098$fn__5099 doInvoke "core.clj" 18]
  [clojure.lang.RestFn invoke "RestFn.java" 410]
  [clojure.lang.MultiFn invoke "MultiFn.java" 229])
 ...

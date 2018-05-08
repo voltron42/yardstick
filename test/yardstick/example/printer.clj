@@ -44,6 +44,21 @@
       (println "")
       )))
 
+(defmethod ^:private print-event :step-start [{:keys [spec scenario step]}]
+  (println (str "# " step)))
+
+(defmethod ^:private print-event :before-step [{:keys [spec scenario step error]}]
+  ;TODO
+  )
+
+(defmethod ^:private print-event :after-step [{:keys [spec scenario step error]}]
+  ;TODO
+  )
+
+(defmethod ^:private print-event :step-end [{:keys [spec scenario step]}]
+  (println "")
+  )
+
 (defmethod ^:private print-event :scenario-start [{:keys [spec scenario]}]
   (println (str "## " scenario)))
 

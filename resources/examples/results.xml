@@ -3,11 +3,11 @@
     <bad-file file='C:\practice\code\yardstick\resources\examples\bad-example.spec'>
         <error type='class clojure.lang.ExceptionInfo' message='File does not conform to test structure:'>
             <stack-trace>
-                <stack-trace-element class-name='yardstick.parse$parse_test_file' file-name='parse.clj' line-number='71'
+                <stack-trace-element class-name='yardstick.parse$parse_test_file' file-name='parse.clj' line-number='82'
                                      method-name='invokeStatic'/>
-                <stack-trace-element class-name='yardstick.parse$parse_test_file' file-name='parse.clj' line-number='62'
+                <stack-trace-element class-name='yardstick.parse$parse_test_file' file-name='parse.clj' line-number='72'
                                      method-name='invoke'/>
-                <stack-trace-element class-name='yardstick.core$run$fn__3936' file-name='core.clj' line-number='72'
+                <stack-trace-element class-name='yardstick.core$run$fn__5241' file-name='core.clj' line-number='72'
                                      method-name='invoke'/>
                 <stack-trace-element class-name='clojure.lang.ArrayChunk' file-name='ArrayChunk.java' line-number='58'
                                      method-name='reduce'/>
@@ -35,17 +35,67 @@
                                      method-name='doInvoke'/>
                 <stack-trace-element class-name='clojure.lang.RestFn' file-name='RestFn.java' line-number='486'
                                      method-name='invoke'/>
-                <stack-trace-element class-name='yardstick.example.runner$_main$fn__4502' file-name='runner.clj'
-                                     line-number='18' method-name='invoke'/>
-                <stack-trace-element class-name='yardstick.example.runner$_main' file-name='runner.clj' line-number='17'
-                                     method-name='invokeStatic'/>
-                <stack-trace-element class-name='yardstick.example.runner$_main' file-name='runner.clj' line-number='14'
-                                     method-name='doInvoke'/>
-                <stack-trace-element class-name='clojure.lang.RestFn' file-name='RestFn.java' line-number='397'
+                <stack-trace-element class-name='yardstick.example.runner$fn__5759$fn__5760' file-name='runner.clj'
+                                     line-number='19' method-name='invoke'/>
+                <stack-trace-element class-name='yardstick.example.runner$fn__5759' file-name='runner.clj'
+                                     line-number='18' method-name='invokeStatic'/>
+                <stack-trace-element class-name='yardstick.example.runner$fn__5759' file-name='runner.clj'
+                                     line-number='15' method-name='invoke'/>
+                <stack-trace-element class-name='clojure.test$test_var$fn__9209' file-name='test.clj' line-number='716'
                                      method-name='invoke'/>
-                <stack-trace-element class-name='user$eval4577' file-name='form-init6748793272846153808.clj'
+                <stack-trace-element class-name='clojure.test$test_var' file-name='test.clj' line-number='716'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$test_var' file-name='test.clj' line-number='707'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='clojure.test$test_vars$fn__9235$fn__9240' file-name='test.clj'
+                                     line-number='734' method-name='invoke'/>
+                <stack-trace-element class-name='clojure.test$default_fixture' file-name='test.clj' line-number='686'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$default_fixture' file-name='test.clj' line-number='682'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='clojure.test$test_vars$fn__9235' file-name='test.clj' line-number='734'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='clojure.test$default_fixture' file-name='test.clj' line-number='686'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$default_fixture' file-name='test.clj' line-number='682'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='clojure.test$test_vars' file-name='test.clj' line-number='730'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$test_all_vars' file-name='test.clj' line-number='736'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$test_ns' file-name='test.clj' line-number='757'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$test_ns' file-name='test.clj' line-number='742'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='clojure.core$map$fn__5587' file-name='core.clj' line-number='2747'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='clojure.lang.LazySeq' file-name='LazySeq.java' line-number='40'
+                                     method-name='sval'/>
+                <stack-trace-element class-name='clojure.lang.LazySeq' file-name='LazySeq.java' line-number='49'
+                                     method-name='seq'/>
+                <stack-trace-element class-name='clojure.lang.Cons' file-name='Cons.java' line-number='39'
+                                     method-name='next'/>
+                <stack-trace-element class-name='clojure.lang.RT' file-name='RT.java' line-number='1785'
+                                     method-name='boundedLength'/>
+                <stack-trace-element class-name='clojure.lang.RestFn' file-name='RestFn.java' line-number='130'
+                                     method-name='applyTo'/>
+                <stack-trace-element class-name='clojure.core$apply' file-name='core.clj' line-number='659'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$run_tests' file-name='test.clj' line-number='767'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$run_tests' file-name='test.clj' line-number='767'
+                                     method-name='doInvoke'/>
+                <stack-trace-element class-name='clojure.lang.RestFn' file-name='RestFn.java' line-number='408'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='user$eval5767$fn__5806' file-name='form-init6524563332068273430.clj'
+                                     line-number='1' method-name='invoke'/>
+                <stack-trace-element class-name='clojure.core$with_redefs_fn' file-name='core.clj' line-number='7434'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.core$with_redefs_fn' file-name='core.clj' line-number='7418'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='user$eval5767' file-name='form-init6524563332068273430.clj'
                                      line-number='1' method-name='invokeStatic'/>
-                <stack-trace-element class-name='user$eval4577' file-name='form-init6748793272846153808.clj'
+                <stack-trace-element class-name='user$eval5767' file-name='form-init6524563332068273430.clj'
                                      line-number='1' method-name='invoke'/>
                 <stack-trace-element class-name='clojure.lang.Compiler' file-name='Compiler.java' line-number='7062'
                                      method-name='eval'/>
@@ -121,15 +171,15 @@
     <after-scenario spec='Customers' scenario='Search for a customer'>
         <error type='class java.lang.Exception' message='This is another example exception'>
             <stack-trace>
-                <stack-trace-element class-name='yardstick.example.hooks$reify__4087' file-name='hooks.clj'
+                <stack-trace-element class-name='yardstick.example.hooks$reify__5449' file-name='hooks.clj'
                                      line-number='7' method-name='after_scenario'/>
-                <stack-trace-element class-name='yardstick.core$run$fn__3942$fn__3948$fn__3954$fn__3971'
+                <stack-trace-element class-name='yardstick.core$run$fn__5247$fn__5253$fn__5259$fn__5276'
                                      file-name='core.clj' line-number='112' method-name='invoke'/>
-                <stack-trace-element class-name='yardstick.core$run$fn__3942$fn__3948$fn__3954' file-name='core.clj'
+                <stack-trace-element class-name='yardstick.core$run$fn__5247$fn__5253$fn__5259' file-name='core.clj'
                                      line-number='111' method-name='invoke'/>
-                <stack-trace-element class-name='yardstick.core$run$fn__3942$fn__3948' file-name='core.clj'
+                <stack-trace-element class-name='yardstick.core$run$fn__5247$fn__5253' file-name='core.clj'
                                      line-number='88' method-name='invoke'/>
-                <stack-trace-element class-name='yardstick.core$run$fn__3942' file-name='core.clj' line-number='84'
+                <stack-trace-element class-name='yardstick.core$run$fn__5247' file-name='core.clj' line-number='84'
                                      method-name='invoke'/>
                 <stack-trace-element class-name='yardstick.core$run' file-name='core.clj' line-number='80'
                                      method-name='invokeStatic'/>
@@ -137,17 +187,67 @@
                                      method-name='doInvoke'/>
                 <stack-trace-element class-name='clojure.lang.RestFn' file-name='RestFn.java' line-number='486'
                                      method-name='invoke'/>
-                <stack-trace-element class-name='yardstick.example.runner$_main$fn__4502' file-name='runner.clj'
-                                     line-number='18' method-name='invoke'/>
-                <stack-trace-element class-name='yardstick.example.runner$_main' file-name='runner.clj' line-number='17'
-                                     method-name='invokeStatic'/>
-                <stack-trace-element class-name='yardstick.example.runner$_main' file-name='runner.clj' line-number='14'
-                                     method-name='doInvoke'/>
-                <stack-trace-element class-name='clojure.lang.RestFn' file-name='RestFn.java' line-number='397'
+                <stack-trace-element class-name='yardstick.example.runner$fn__5759$fn__5760' file-name='runner.clj'
+                                     line-number='19' method-name='invoke'/>
+                <stack-trace-element class-name='yardstick.example.runner$fn__5759' file-name='runner.clj'
+                                     line-number='18' method-name='invokeStatic'/>
+                <stack-trace-element class-name='yardstick.example.runner$fn__5759' file-name='runner.clj'
+                                     line-number='15' method-name='invoke'/>
+                <stack-trace-element class-name='clojure.test$test_var$fn__9209' file-name='test.clj' line-number='716'
                                      method-name='invoke'/>
-                <stack-trace-element class-name='user$eval4577' file-name='form-init6748793272846153808.clj'
+                <stack-trace-element class-name='clojure.test$test_var' file-name='test.clj' line-number='716'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$test_var' file-name='test.clj' line-number='707'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='clojure.test$test_vars$fn__9235$fn__9240' file-name='test.clj'
+                                     line-number='734' method-name='invoke'/>
+                <stack-trace-element class-name='clojure.test$default_fixture' file-name='test.clj' line-number='686'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$default_fixture' file-name='test.clj' line-number='682'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='clojure.test$test_vars$fn__9235' file-name='test.clj' line-number='734'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='clojure.test$default_fixture' file-name='test.clj' line-number='686'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$default_fixture' file-name='test.clj' line-number='682'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='clojure.test$test_vars' file-name='test.clj' line-number='730'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$test_all_vars' file-name='test.clj' line-number='736'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$test_ns' file-name='test.clj' line-number='757'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$test_ns' file-name='test.clj' line-number='742'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='clojure.core$map$fn__5587' file-name='core.clj' line-number='2747'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='clojure.lang.LazySeq' file-name='LazySeq.java' line-number='40'
+                                     method-name='sval'/>
+                <stack-trace-element class-name='clojure.lang.LazySeq' file-name='LazySeq.java' line-number='49'
+                                     method-name='seq'/>
+                <stack-trace-element class-name='clojure.lang.Cons' file-name='Cons.java' line-number='39'
+                                     method-name='next'/>
+                <stack-trace-element class-name='clojure.lang.RT' file-name='RT.java' line-number='1785'
+                                     method-name='boundedLength'/>
+                <stack-trace-element class-name='clojure.lang.RestFn' file-name='RestFn.java' line-number='130'
+                                     method-name='applyTo'/>
+                <stack-trace-element class-name='clojure.core$apply' file-name='core.clj' line-number='659'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$run_tests' file-name='test.clj' line-number='767'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$run_tests' file-name='test.clj' line-number='767'
+                                     method-name='doInvoke'/>
+                <stack-trace-element class-name='clojure.lang.RestFn' file-name='RestFn.java' line-number='408'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='user$eval5767$fn__5806' file-name='form-init6524563332068273430.clj'
+                                     line-number='1' method-name='invoke'/>
+                <stack-trace-element class-name='clojure.core$with_redefs_fn' file-name='core.clj' line-number='7434'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.core$with_redefs_fn' file-name='core.clj' line-number='7418'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='user$eval5767' file-name='form-init6524563332068273430.clj'
                                      line-number='1' method-name='invokeStatic'/>
-                <stack-trace-element class-name='user$eval4577' file-name='form-init6748793272846153808.clj'
+                <stack-trace-element class-name='user$eval5767' file-name='form-init6524563332068273430.clj'
                                      line-number='1' method-name='invoke'/>
                 <stack-trace-element class-name='clojure.lang.Compiler' file-name='Compiler.java' line-number='7062'
                                      method-name='eval'/>
@@ -209,117 +309,20 @@
     </scenario-start>
     <step-before-each-scenario spec='Customers' scenario='Verify a bunch of customers' step='On the customer page'>
     </step-before-each-scenario>
-    <step spec='Customers' scenario='Verify a bunch of customers'
-          step='Search for customers <table:resources/user.csv>'>
-        <error type='class java.lang.IllegalArgumentException'
-               message='Step Not Implemented: Search for customers <table:resources/user.csv>'>
-            <stack-trace>
-                <stack-trace-element class-name='yardstick.core$eval3793$fn__3794' file-name='core.clj' line-number='18'
-                                     method-name='doInvoke'/>
-                <stack-trace-element class-name='clojure.lang.RestFn' file-name='RestFn.java' line-number='410'
-                                     method-name='invoke'/>
-                <stack-trace-element class-name='clojure.lang.MultiFn' file-name='MultiFn.java' line-number='229'
-                                     method-name='invoke'/>
-                <stack-trace-element class-name='clojure.lang.AFn' file-name='AFn.java' line-number='154'
-                                     method-name='applyToHelper'/>
-                <stack-trace-element class-name='clojure.lang.AFn' file-name='AFn.java' line-number='144'
-                                     method-name='applyTo'/>
-                <stack-trace-element class-name='clojure.core$apply' file-name='core.clj' line-number='657'
-                                     method-name='invokeStatic'/>
-                <stack-trace-element class-name='clojure.core$apply' file-name='core.clj' line-number='652'
-                                     method-name='invoke'/>
-                <stack-trace-element class-name='yardstick.core$run$fn__3942$fn__3948$fn__3954$fn__3967'
-                                     file-name='core.clj' line-number='102' method-name='invoke'/>
-                <stack-trace-element class-name='yardstick.core$run$fn__3942$fn__3948$fn__3954' file-name='core.clj'
-                                     line-number='101' method-name='invoke'/>
-                <stack-trace-element class-name='yardstick.core$run$fn__3942$fn__3948' file-name='core.clj'
-                                     line-number='88' method-name='invoke'/>
-                <stack-trace-element class-name='yardstick.core$run$fn__3942' file-name='core.clj' line-number='84'
-                                     method-name='invoke'/>
-                <stack-trace-element class-name='yardstick.core$run' file-name='core.clj' line-number='80'
-                                     method-name='invokeStatic'/>
-                <stack-trace-element class-name='yardstick.core$run' file-name='core.clj' line-number='61'
-                                     method-name='doInvoke'/>
-                <stack-trace-element class-name='clojure.lang.RestFn' file-name='RestFn.java' line-number='486'
-                                     method-name='invoke'/>
-                <stack-trace-element class-name='yardstick.example.runner$_main$fn__4502' file-name='runner.clj'
-                                     line-number='18' method-name='invoke'/>
-                <stack-trace-element class-name='yardstick.example.runner$_main' file-name='runner.clj' line-number='17'
-                                     method-name='invokeStatic'/>
-                <stack-trace-element class-name='yardstick.example.runner$_main' file-name='runner.clj' line-number='14'
-                                     method-name='doInvoke'/>
-                <stack-trace-element class-name='clojure.lang.RestFn' file-name='RestFn.java' line-number='397'
-                                     method-name='invoke'/>
-                <stack-trace-element class-name='user$eval4577' file-name='form-init6748793272846153808.clj'
-                                     line-number='1' method-name='invokeStatic'/>
-                <stack-trace-element class-name='user$eval4577' file-name='form-init6748793272846153808.clj'
-                                     line-number='1' method-name='invoke'/>
-                <stack-trace-element class-name='clojure.lang.Compiler' file-name='Compiler.java' line-number='7062'
-                                     method-name='eval'/>
-                <stack-trace-element class-name='clojure.lang.Compiler' file-name='Compiler.java' line-number='7025'
-                                     method-name='eval'/>
-                <stack-trace-element class-name='clojure.core$eval' file-name='core.clj' line-number='3206'
-                                     method-name='invokeStatic'/>
-                <stack-trace-element class-name='clojure.core$eval' file-name='core.clj' line-number='3202'
-                                     method-name='invoke'/>
-                <stack-trace-element class-name='clojure.main$repl$read_eval_print__8572$fn__8575' file-name='main.clj'
-                                     line-number='243' method-name='invoke'/>
-                <stack-trace-element class-name='clojure.main$repl$read_eval_print__8572' file-name='main.clj'
-                                     line-number='243' method-name='invoke'/>
-                <stack-trace-element class-name='clojure.main$repl$fn__8581' file-name='main.clj' line-number='261'
-                                     method-name='invoke'/>
-                <stack-trace-element class-name='clojure.main$repl' file-name='main.clj' line-number='261'
-                                     method-name='invokeStatic'/>
-                <stack-trace-element class-name='clojure.main$repl' file-name='main.clj' line-number='177'
-                                     method-name='doInvoke'/>
-                <stack-trace-element class-name='clojure.lang.RestFn' file-name='RestFn.java' line-number='1523'
-                                     method-name='invoke'/>
-                <stack-trace-element class-name='clojure.tools.nrepl.middleware.interruptible_eval$evaluate$fn__820'
-                                     file-name='interruptible_eval.clj' line-number='87' method-name='invoke'/>
-                <stack-trace-element class-name='clojure.lang.AFn' file-name='AFn.java' line-number='152'
-                                     method-name='applyToHelper'/>
-                <stack-trace-element class-name='clojure.lang.AFn' file-name='AFn.java' line-number='144'
-                                     method-name='applyTo'/>
-                <stack-trace-element class-name='clojure.core$apply' file-name='core.clj' line-number='657'
-                                     method-name='invokeStatic'/>
-                <stack-trace-element class-name='clojure.core$with_bindings_STAR_' file-name='core.clj'
-                                     line-number='1965' method-name='invokeStatic'/>
-                <stack-trace-element class-name='clojure.core$with_bindings_STAR_' file-name='core.clj'
-                                     line-number='1965' method-name='doInvoke'/>
-                <stack-trace-element class-name='clojure.lang.RestFn' file-name='RestFn.java' line-number='425'
-                                     method-name='invoke'/>
-                <stack-trace-element class-name='clojure.tools.nrepl.middleware.interruptible_eval$evaluate'
-                                     file-name='interruptible_eval.clj' line-number='85' method-name='invokeStatic'/>
-                <stack-trace-element class-name='clojure.tools.nrepl.middleware.interruptible_eval$evaluate'
-                                     file-name='interruptible_eval.clj' line-number='55' method-name='invoke'/>
-                <stack-trace-element
-                        class-name='clojure.tools.nrepl.middleware.interruptible_eval$interruptible_eval$fn__865$fn__868'
-                        file-name='interruptible_eval.clj' line-number='222' method-name='invoke'/>
-                <stack-trace-element class-name='clojure.tools.nrepl.middleware.interruptible_eval$run_next$fn__860'
-                                     file-name='interruptible_eval.clj' line-number='190' method-name='invoke'/>
-                <stack-trace-element class-name='clojure.lang.AFn' file-name='AFn.java' line-number='22'
-                                     method-name='run'/>
-                <stack-trace-element class-name='java.util.concurrent.ThreadPoolExecutor'
-                                     file-name='ThreadPoolExecutor.java' line-number='1149' method-name='runWorker'/>
-                <stack-trace-element class-name='java.util.concurrent.ThreadPoolExecutor$Worker'
-                                     file-name='ThreadPoolExecutor.java' line-number='624' method-name='run'/>
-                <stack-trace-element class-name='java.lang.Thread' file-name='Thread.java' line-number='748'
-                                     method-name='run'/>
-            </stack-trace>
-        </error>
+    <step spec='Customers' scenario='Verify a bunch of customers' step='Search for customers'>
     </step>
     <after-scenario spec='Customers' scenario='Verify a bunch of customers'>
         <error type='class java.lang.Exception' message='This is another example exception'>
             <stack-trace>
-                <stack-trace-element class-name='yardstick.example.hooks$reify__4087' file-name='hooks.clj'
+                <stack-trace-element class-name='yardstick.example.hooks$reify__5449' file-name='hooks.clj'
                                      line-number='7' method-name='after_scenario'/>
-                <stack-trace-element class-name='yardstick.core$run$fn__3942$fn__3948$fn__3954$fn__3971'
+                <stack-trace-element class-name='yardstick.core$run$fn__5247$fn__5253$fn__5259$fn__5276'
                                      file-name='core.clj' line-number='112' method-name='invoke'/>
-                <stack-trace-element class-name='yardstick.core$run$fn__3942$fn__3948$fn__3954' file-name='core.clj'
+                <stack-trace-element class-name='yardstick.core$run$fn__5247$fn__5253$fn__5259' file-name='core.clj'
                                      line-number='111' method-name='invoke'/>
-                <stack-trace-element class-name='yardstick.core$run$fn__3942$fn__3948' file-name='core.clj'
+                <stack-trace-element class-name='yardstick.core$run$fn__5247$fn__5253' file-name='core.clj'
                                      line-number='88' method-name='invoke'/>
-                <stack-trace-element class-name='yardstick.core$run$fn__3942' file-name='core.clj' line-number='84'
+                <stack-trace-element class-name='yardstick.core$run$fn__5247' file-name='core.clj' line-number='84'
                                      method-name='invoke'/>
                 <stack-trace-element class-name='yardstick.core$run' file-name='core.clj' line-number='80'
                                      method-name='invokeStatic'/>
@@ -327,17 +330,67 @@
                                      method-name='doInvoke'/>
                 <stack-trace-element class-name='clojure.lang.RestFn' file-name='RestFn.java' line-number='486'
                                      method-name='invoke'/>
-                <stack-trace-element class-name='yardstick.example.runner$_main$fn__4502' file-name='runner.clj'
-                                     line-number='18' method-name='invoke'/>
-                <stack-trace-element class-name='yardstick.example.runner$_main' file-name='runner.clj' line-number='17'
-                                     method-name='invokeStatic'/>
-                <stack-trace-element class-name='yardstick.example.runner$_main' file-name='runner.clj' line-number='14'
-                                     method-name='doInvoke'/>
-                <stack-trace-element class-name='clojure.lang.RestFn' file-name='RestFn.java' line-number='397'
+                <stack-trace-element class-name='yardstick.example.runner$fn__5759$fn__5760' file-name='runner.clj'
+                                     line-number='19' method-name='invoke'/>
+                <stack-trace-element class-name='yardstick.example.runner$fn__5759' file-name='runner.clj'
+                                     line-number='18' method-name='invokeStatic'/>
+                <stack-trace-element class-name='yardstick.example.runner$fn__5759' file-name='runner.clj'
+                                     line-number='15' method-name='invoke'/>
+                <stack-trace-element class-name='clojure.test$test_var$fn__9209' file-name='test.clj' line-number='716'
                                      method-name='invoke'/>
-                <stack-trace-element class-name='user$eval4577' file-name='form-init6748793272846153808.clj'
+                <stack-trace-element class-name='clojure.test$test_var' file-name='test.clj' line-number='716'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$test_var' file-name='test.clj' line-number='707'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='clojure.test$test_vars$fn__9235$fn__9240' file-name='test.clj'
+                                     line-number='734' method-name='invoke'/>
+                <stack-trace-element class-name='clojure.test$default_fixture' file-name='test.clj' line-number='686'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$default_fixture' file-name='test.clj' line-number='682'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='clojure.test$test_vars$fn__9235' file-name='test.clj' line-number='734'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='clojure.test$default_fixture' file-name='test.clj' line-number='686'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$default_fixture' file-name='test.clj' line-number='682'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='clojure.test$test_vars' file-name='test.clj' line-number='730'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$test_all_vars' file-name='test.clj' line-number='736'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$test_ns' file-name='test.clj' line-number='757'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$test_ns' file-name='test.clj' line-number='742'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='clojure.core$map$fn__5587' file-name='core.clj' line-number='2747'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='clojure.lang.LazySeq' file-name='LazySeq.java' line-number='40'
+                                     method-name='sval'/>
+                <stack-trace-element class-name='clojure.lang.LazySeq' file-name='LazySeq.java' line-number='49'
+                                     method-name='seq'/>
+                <stack-trace-element class-name='clojure.lang.Cons' file-name='Cons.java' line-number='39'
+                                     method-name='next'/>
+                <stack-trace-element class-name='clojure.lang.RT' file-name='RT.java' line-number='1785'
+                                     method-name='boundedLength'/>
+                <stack-trace-element class-name='clojure.lang.RestFn' file-name='RestFn.java' line-number='130'
+                                     method-name='applyTo'/>
+                <stack-trace-element class-name='clojure.core$apply' file-name='core.clj' line-number='659'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$run_tests' file-name='test.clj' line-number='767'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$run_tests' file-name='test.clj' line-number='767'
+                                     method-name='doInvoke'/>
+                <stack-trace-element class-name='clojure.lang.RestFn' file-name='RestFn.java' line-number='408'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='user$eval5767$fn__5806' file-name='form-init6524563332068273430.clj'
+                                     line-number='1' method-name='invoke'/>
+                <stack-trace-element class-name='clojure.core$with_redefs_fn' file-name='core.clj' line-number='7434'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.core$with_redefs_fn' file-name='core.clj' line-number='7418'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='user$eval5767' file-name='form-init6524563332068273430.clj'
                                      line-number='1' method-name='invokeStatic'/>
-                <stack-trace-element class-name='user$eval4577' file-name='form-init6748793272846153808.clj'
+                <stack-trace-element class-name='user$eval5767' file-name='form-init6524563332068273430.clj'
                                      line-number='1' method-name='invoke'/>
                 <stack-trace-element class-name='clojure.lang.Compiler' file-name='Compiler.java' line-number='7062'
                                      method-name='eval'/>
@@ -402,13 +455,13 @@
                                      method-name='fail'/>
                 <stack-trace-element class-name='org.junit.Assert' file-name='Assert.java' line-number='41'
                                      method-name='assertTrue'/>
-                <stack-trace-element class-name='yardstick.example.hooks$reify__4087' file-name='hooks.clj'
+                <stack-trace-element class-name='yardstick.example.hooks$reify__5449' file-name='hooks.clj'
                                      line-number='20' method-name='after_spec'/>
-                <stack-trace-element class-name='yardstick.core$run$fn__3942$fn__3948$fn__4003' file-name='core.clj'
+                <stack-trace-element class-name='yardstick.core$run$fn__5247$fn__5253$fn__5308' file-name='core.clj'
                                      line-number='123' method-name='invoke'/>
-                <stack-trace-element class-name='yardstick.core$run$fn__3942$fn__3948' file-name='core.clj'
+                <stack-trace-element class-name='yardstick.core$run$fn__5247$fn__5253' file-name='core.clj'
                                      line-number='122' method-name='invoke'/>
-                <stack-trace-element class-name='yardstick.core$run$fn__3942' file-name='core.clj' line-number='84'
+                <stack-trace-element class-name='yardstick.core$run$fn__5247' file-name='core.clj' line-number='84'
                                      method-name='invoke'/>
                 <stack-trace-element class-name='yardstick.core$run' file-name='core.clj' line-number='80'
                                      method-name='invokeStatic'/>
@@ -416,17 +469,67 @@
                                      method-name='doInvoke'/>
                 <stack-trace-element class-name='clojure.lang.RestFn' file-name='RestFn.java' line-number='486'
                                      method-name='invoke'/>
-                <stack-trace-element class-name='yardstick.example.runner$_main$fn__4502' file-name='runner.clj'
-                                     line-number='18' method-name='invoke'/>
-                <stack-trace-element class-name='yardstick.example.runner$_main' file-name='runner.clj' line-number='17'
-                                     method-name='invokeStatic'/>
-                <stack-trace-element class-name='yardstick.example.runner$_main' file-name='runner.clj' line-number='14'
-                                     method-name='doInvoke'/>
-                <stack-trace-element class-name='clojure.lang.RestFn' file-name='RestFn.java' line-number='397'
+                <stack-trace-element class-name='yardstick.example.runner$fn__5759$fn__5760' file-name='runner.clj'
+                                     line-number='19' method-name='invoke'/>
+                <stack-trace-element class-name='yardstick.example.runner$fn__5759' file-name='runner.clj'
+                                     line-number='18' method-name='invokeStatic'/>
+                <stack-trace-element class-name='yardstick.example.runner$fn__5759' file-name='runner.clj'
+                                     line-number='15' method-name='invoke'/>
+                <stack-trace-element class-name='clojure.test$test_var$fn__9209' file-name='test.clj' line-number='716'
                                      method-name='invoke'/>
-                <stack-trace-element class-name='user$eval4577' file-name='form-init6748793272846153808.clj'
+                <stack-trace-element class-name='clojure.test$test_var' file-name='test.clj' line-number='716'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$test_var' file-name='test.clj' line-number='707'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='clojure.test$test_vars$fn__9235$fn__9240' file-name='test.clj'
+                                     line-number='734' method-name='invoke'/>
+                <stack-trace-element class-name='clojure.test$default_fixture' file-name='test.clj' line-number='686'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$default_fixture' file-name='test.clj' line-number='682'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='clojure.test$test_vars$fn__9235' file-name='test.clj' line-number='734'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='clojure.test$default_fixture' file-name='test.clj' line-number='686'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$default_fixture' file-name='test.clj' line-number='682'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='clojure.test$test_vars' file-name='test.clj' line-number='730'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$test_all_vars' file-name='test.clj' line-number='736'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$test_ns' file-name='test.clj' line-number='757'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$test_ns' file-name='test.clj' line-number='742'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='clojure.core$map$fn__5587' file-name='core.clj' line-number='2747'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='clojure.lang.LazySeq' file-name='LazySeq.java' line-number='40'
+                                     method-name='sval'/>
+                <stack-trace-element class-name='clojure.lang.LazySeq' file-name='LazySeq.java' line-number='49'
+                                     method-name='seq'/>
+                <stack-trace-element class-name='clojure.lang.Cons' file-name='Cons.java' line-number='39'
+                                     method-name='next'/>
+                <stack-trace-element class-name='clojure.lang.RT' file-name='RT.java' line-number='1785'
+                                     method-name='boundedLength'/>
+                <stack-trace-element class-name='clojure.lang.RestFn' file-name='RestFn.java' line-number='130'
+                                     method-name='applyTo'/>
+                <stack-trace-element class-name='clojure.core$apply' file-name='core.clj' line-number='659'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$run_tests' file-name='test.clj' line-number='767'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$run_tests' file-name='test.clj' line-number='767'
+                                     method-name='doInvoke'/>
+                <stack-trace-element class-name='clojure.lang.RestFn' file-name='RestFn.java' line-number='408'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='user$eval5767$fn__5806' file-name='form-init6524563332068273430.clj'
+                                     line-number='1' method-name='invoke'/>
+                <stack-trace-element class-name='clojure.core$with_redefs_fn' file-name='core.clj' line-number='7434'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.core$with_redefs_fn' file-name='core.clj' line-number='7418'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='user$eval5767' file-name='form-init6524563332068273430.clj'
                                      line-number='1' method-name='invokeStatic'/>
-                <stack-trace-element class-name='user$eval4577' file-name='form-init6748793272846153808.clj'
+                <stack-trace-element class-name='user$eval5767' file-name='form-init6524563332068273430.clj'
                                      line-number='1' method-name='invoke'/>
                 <stack-trace-element class-name='clojure.lang.Compiler' file-name='Compiler.java' line-number='7062'
                                      method-name='eval'/>
@@ -493,15 +596,15 @@
     <after-scenario spec='Products' scenario='Create a new product'>
         <error type='class java.lang.Exception' message='This is another example exception'>
             <stack-trace>
-                <stack-trace-element class-name='yardstick.example.hooks$reify__4087' file-name='hooks.clj'
+                <stack-trace-element class-name='yardstick.example.hooks$reify__5449' file-name='hooks.clj'
                                      line-number='7' method-name='after_scenario'/>
-                <stack-trace-element class-name='yardstick.core$run$fn__3942$fn__3948$fn__3954$fn__3971'
+                <stack-trace-element class-name='yardstick.core$run$fn__5247$fn__5253$fn__5259$fn__5276'
                                      file-name='core.clj' line-number='112' method-name='invoke'/>
-                <stack-trace-element class-name='yardstick.core$run$fn__3942$fn__3948$fn__3954' file-name='core.clj'
+                <stack-trace-element class-name='yardstick.core$run$fn__5247$fn__5253$fn__5259' file-name='core.clj'
                                      line-number='111' method-name='invoke'/>
-                <stack-trace-element class-name='yardstick.core$run$fn__3942$fn__3948' file-name='core.clj'
+                <stack-trace-element class-name='yardstick.core$run$fn__5247$fn__5253' file-name='core.clj'
                                      line-number='88' method-name='invoke'/>
-                <stack-trace-element class-name='yardstick.core$run$fn__3942' file-name='core.clj' line-number='84'
+                <stack-trace-element class-name='yardstick.core$run$fn__5247' file-name='core.clj' line-number='84'
                                      method-name='invoke'/>
                 <stack-trace-element class-name='yardstick.core$run' file-name='core.clj' line-number='80'
                                      method-name='invokeStatic'/>
@@ -509,17 +612,67 @@
                                      method-name='doInvoke'/>
                 <stack-trace-element class-name='clojure.lang.RestFn' file-name='RestFn.java' line-number='486'
                                      method-name='invoke'/>
-                <stack-trace-element class-name='yardstick.example.runner$_main$fn__4502' file-name='runner.clj'
-                                     line-number='18' method-name='invoke'/>
-                <stack-trace-element class-name='yardstick.example.runner$_main' file-name='runner.clj' line-number='17'
-                                     method-name='invokeStatic'/>
-                <stack-trace-element class-name='yardstick.example.runner$_main' file-name='runner.clj' line-number='14'
-                                     method-name='doInvoke'/>
-                <stack-trace-element class-name='clojure.lang.RestFn' file-name='RestFn.java' line-number='397'
+                <stack-trace-element class-name='yardstick.example.runner$fn__5759$fn__5760' file-name='runner.clj'
+                                     line-number='19' method-name='invoke'/>
+                <stack-trace-element class-name='yardstick.example.runner$fn__5759' file-name='runner.clj'
+                                     line-number='18' method-name='invokeStatic'/>
+                <stack-trace-element class-name='yardstick.example.runner$fn__5759' file-name='runner.clj'
+                                     line-number='15' method-name='invoke'/>
+                <stack-trace-element class-name='clojure.test$test_var$fn__9209' file-name='test.clj' line-number='716'
                                      method-name='invoke'/>
-                <stack-trace-element class-name='user$eval4577' file-name='form-init6748793272846153808.clj'
+                <stack-trace-element class-name='clojure.test$test_var' file-name='test.clj' line-number='716'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$test_var' file-name='test.clj' line-number='707'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='clojure.test$test_vars$fn__9235$fn__9240' file-name='test.clj'
+                                     line-number='734' method-name='invoke'/>
+                <stack-trace-element class-name='clojure.test$default_fixture' file-name='test.clj' line-number='686'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$default_fixture' file-name='test.clj' line-number='682'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='clojure.test$test_vars$fn__9235' file-name='test.clj' line-number='734'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='clojure.test$default_fixture' file-name='test.clj' line-number='686'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$default_fixture' file-name='test.clj' line-number='682'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='clojure.test$test_vars' file-name='test.clj' line-number='730'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$test_all_vars' file-name='test.clj' line-number='736'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$test_ns' file-name='test.clj' line-number='757'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$test_ns' file-name='test.clj' line-number='742'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='clojure.core$map$fn__5587' file-name='core.clj' line-number='2747'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='clojure.lang.LazySeq' file-name='LazySeq.java' line-number='40'
+                                     method-name='sval'/>
+                <stack-trace-element class-name='clojure.lang.LazySeq' file-name='LazySeq.java' line-number='49'
+                                     method-name='seq'/>
+                <stack-trace-element class-name='clojure.lang.Cons' file-name='Cons.java' line-number='39'
+                                     method-name='next'/>
+                <stack-trace-element class-name='clojure.lang.RT' file-name='RT.java' line-number='1785'
+                                     method-name='boundedLength'/>
+                <stack-trace-element class-name='clojure.lang.RestFn' file-name='RestFn.java' line-number='130'
+                                     method-name='applyTo'/>
+                <stack-trace-element class-name='clojure.core$apply' file-name='core.clj' line-number='659'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$run_tests' file-name='test.clj' line-number='767'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$run_tests' file-name='test.clj' line-number='767'
+                                     method-name='doInvoke'/>
+                <stack-trace-element class-name='clojure.lang.RestFn' file-name='RestFn.java' line-number='408'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='user$eval5767$fn__5806' file-name='form-init6524563332068273430.clj'
+                                     line-number='1' method-name='invoke'/>
+                <stack-trace-element class-name='clojure.core$with_redefs_fn' file-name='core.clj' line-number='7434'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.core$with_redefs_fn' file-name='core.clj' line-number='7418'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='user$eval5767' file-name='form-init6524563332068273430.clj'
                                      line-number='1' method-name='invokeStatic'/>
-                <stack-trace-element class-name='user$eval4577' file-name='form-init6748793272846153808.clj'
+                <stack-trace-element class-name='user$eval5767' file-name='form-init6524563332068273430.clj'
                                      line-number='1' method-name='invoke'/>
                 <stack-trace-element class-name='clojure.lang.Compiler' file-name='Compiler.java' line-number='7062'
                                      method-name='eval'/>
@@ -588,15 +741,15 @@
     <after-scenario spec='Products' scenario='Search for a product'>
         <error type='class java.lang.Exception' message='This is another example exception'>
             <stack-trace>
-                <stack-trace-element class-name='yardstick.example.hooks$reify__4087' file-name='hooks.clj'
+                <stack-trace-element class-name='yardstick.example.hooks$reify__5449' file-name='hooks.clj'
                                      line-number='7' method-name='after_scenario'/>
-                <stack-trace-element class-name='yardstick.core$run$fn__3942$fn__3948$fn__3954$fn__3971'
+                <stack-trace-element class-name='yardstick.core$run$fn__5247$fn__5253$fn__5259$fn__5276'
                                      file-name='core.clj' line-number='112' method-name='invoke'/>
-                <stack-trace-element class-name='yardstick.core$run$fn__3942$fn__3948$fn__3954' file-name='core.clj'
+                <stack-trace-element class-name='yardstick.core$run$fn__5247$fn__5253$fn__5259' file-name='core.clj'
                                      line-number='111' method-name='invoke'/>
-                <stack-trace-element class-name='yardstick.core$run$fn__3942$fn__3948' file-name='core.clj'
+                <stack-trace-element class-name='yardstick.core$run$fn__5247$fn__5253' file-name='core.clj'
                                      line-number='88' method-name='invoke'/>
-                <stack-trace-element class-name='yardstick.core$run$fn__3942' file-name='core.clj' line-number='84'
+                <stack-trace-element class-name='yardstick.core$run$fn__5247' file-name='core.clj' line-number='84'
                                      method-name='invoke'/>
                 <stack-trace-element class-name='yardstick.core$run' file-name='core.clj' line-number='80'
                                      method-name='invokeStatic'/>
@@ -604,17 +757,67 @@
                                      method-name='doInvoke'/>
                 <stack-trace-element class-name='clojure.lang.RestFn' file-name='RestFn.java' line-number='486'
                                      method-name='invoke'/>
-                <stack-trace-element class-name='yardstick.example.runner$_main$fn__4502' file-name='runner.clj'
-                                     line-number='18' method-name='invoke'/>
-                <stack-trace-element class-name='yardstick.example.runner$_main' file-name='runner.clj' line-number='17'
-                                     method-name='invokeStatic'/>
-                <stack-trace-element class-name='yardstick.example.runner$_main' file-name='runner.clj' line-number='14'
-                                     method-name='doInvoke'/>
-                <stack-trace-element class-name='clojure.lang.RestFn' file-name='RestFn.java' line-number='397'
+                <stack-trace-element class-name='yardstick.example.runner$fn__5759$fn__5760' file-name='runner.clj'
+                                     line-number='19' method-name='invoke'/>
+                <stack-trace-element class-name='yardstick.example.runner$fn__5759' file-name='runner.clj'
+                                     line-number='18' method-name='invokeStatic'/>
+                <stack-trace-element class-name='yardstick.example.runner$fn__5759' file-name='runner.clj'
+                                     line-number='15' method-name='invoke'/>
+                <stack-trace-element class-name='clojure.test$test_var$fn__9209' file-name='test.clj' line-number='716'
                                      method-name='invoke'/>
-                <stack-trace-element class-name='user$eval4577' file-name='form-init6748793272846153808.clj'
+                <stack-trace-element class-name='clojure.test$test_var' file-name='test.clj' line-number='716'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$test_var' file-name='test.clj' line-number='707'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='clojure.test$test_vars$fn__9235$fn__9240' file-name='test.clj'
+                                     line-number='734' method-name='invoke'/>
+                <stack-trace-element class-name='clojure.test$default_fixture' file-name='test.clj' line-number='686'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$default_fixture' file-name='test.clj' line-number='682'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='clojure.test$test_vars$fn__9235' file-name='test.clj' line-number='734'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='clojure.test$default_fixture' file-name='test.clj' line-number='686'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$default_fixture' file-name='test.clj' line-number='682'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='clojure.test$test_vars' file-name='test.clj' line-number='730'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$test_all_vars' file-name='test.clj' line-number='736'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$test_ns' file-name='test.clj' line-number='757'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$test_ns' file-name='test.clj' line-number='742'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='clojure.core$map$fn__5587' file-name='core.clj' line-number='2747'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='clojure.lang.LazySeq' file-name='LazySeq.java' line-number='40'
+                                     method-name='sval'/>
+                <stack-trace-element class-name='clojure.lang.LazySeq' file-name='LazySeq.java' line-number='49'
+                                     method-name='seq'/>
+                <stack-trace-element class-name='clojure.lang.Cons' file-name='Cons.java' line-number='39'
+                                     method-name='next'/>
+                <stack-trace-element class-name='clojure.lang.RT' file-name='RT.java' line-number='1785'
+                                     method-name='boundedLength'/>
+                <stack-trace-element class-name='clojure.lang.RestFn' file-name='RestFn.java' line-number='130'
+                                     method-name='applyTo'/>
+                <stack-trace-element class-name='clojure.core$apply' file-name='core.clj' line-number='659'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$run_tests' file-name='test.clj' line-number='767'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$run_tests' file-name='test.clj' line-number='767'
+                                     method-name='doInvoke'/>
+                <stack-trace-element class-name='clojure.lang.RestFn' file-name='RestFn.java' line-number='408'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='user$eval5767$fn__5806' file-name='form-init6524563332068273430.clj'
+                                     line-number='1' method-name='invoke'/>
+                <stack-trace-element class-name='clojure.core$with_redefs_fn' file-name='core.clj' line-number='7434'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.core$with_redefs_fn' file-name='core.clj' line-number='7418'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='user$eval5767' file-name='form-init6524563332068273430.clj'
                                      line-number='1' method-name='invokeStatic'/>
-                <stack-trace-element class-name='user$eval4577' file-name='form-init6748793272846153808.clj'
+                <stack-trace-element class-name='user$eval5767' file-name='form-init6524563332068273430.clj'
                                      line-number='1' method-name='invoke'/>
                 <stack-trace-element class-name='clojure.lang.Compiler' file-name='Compiler.java' line-number='7062'
                                      method-name='eval'/>
@@ -679,7 +882,7 @@
         <error type='class java.lang.IllegalArgumentException'
                message='Step Not Implemented: Open product edit page for stored productId'>
             <stack-trace>
-                <stack-trace-element class-name='yardstick.core$eval3793$fn__3794' file-name='core.clj' line-number='18'
+                <stack-trace-element class-name='yardstick.core$eval5098$fn__5099' file-name='core.clj' line-number='18'
                                      method-name='doInvoke'/>
                 <stack-trace-element class-name='clojure.lang.RestFn' file-name='RestFn.java' line-number='410'
                                      method-name='invoke'/>
@@ -693,13 +896,13 @@
                                      method-name='invokeStatic'/>
                 <stack-trace-element class-name='clojure.core$apply' file-name='core.clj' line-number='652'
                                      method-name='invoke'/>
-                <stack-trace-element class-name='yardstick.core$run$fn__3942$fn__3948$fn__3954$fn__3967'
+                <stack-trace-element class-name='yardstick.core$run$fn__5247$fn__5253$fn__5259$fn__5272'
                                      file-name='core.clj' line-number='102' method-name='invoke'/>
-                <stack-trace-element class-name='yardstick.core$run$fn__3942$fn__3948$fn__3954' file-name='core.clj'
+                <stack-trace-element class-name='yardstick.core$run$fn__5247$fn__5253$fn__5259' file-name='core.clj'
                                      line-number='101' method-name='invoke'/>
-                <stack-trace-element class-name='yardstick.core$run$fn__3942$fn__3948' file-name='core.clj'
+                <stack-trace-element class-name='yardstick.core$run$fn__5247$fn__5253' file-name='core.clj'
                                      line-number='88' method-name='invoke'/>
-                <stack-trace-element class-name='yardstick.core$run$fn__3942' file-name='core.clj' line-number='84'
+                <stack-trace-element class-name='yardstick.core$run$fn__5247' file-name='core.clj' line-number='84'
                                      method-name='invoke'/>
                 <stack-trace-element class-name='yardstick.core$run' file-name='core.clj' line-number='80'
                                      method-name='invokeStatic'/>
@@ -707,17 +910,67 @@
                                      method-name='doInvoke'/>
                 <stack-trace-element class-name='clojure.lang.RestFn' file-name='RestFn.java' line-number='486'
                                      method-name='invoke'/>
-                <stack-trace-element class-name='yardstick.example.runner$_main$fn__4502' file-name='runner.clj'
-                                     line-number='18' method-name='invoke'/>
-                <stack-trace-element class-name='yardstick.example.runner$_main' file-name='runner.clj' line-number='17'
-                                     method-name='invokeStatic'/>
-                <stack-trace-element class-name='yardstick.example.runner$_main' file-name='runner.clj' line-number='14'
-                                     method-name='doInvoke'/>
-                <stack-trace-element class-name='clojure.lang.RestFn' file-name='RestFn.java' line-number='397'
+                <stack-trace-element class-name='yardstick.example.runner$fn__5759$fn__5760' file-name='runner.clj'
+                                     line-number='19' method-name='invoke'/>
+                <stack-trace-element class-name='yardstick.example.runner$fn__5759' file-name='runner.clj'
+                                     line-number='18' method-name='invokeStatic'/>
+                <stack-trace-element class-name='yardstick.example.runner$fn__5759' file-name='runner.clj'
+                                     line-number='15' method-name='invoke'/>
+                <stack-trace-element class-name='clojure.test$test_var$fn__9209' file-name='test.clj' line-number='716'
                                      method-name='invoke'/>
-                <stack-trace-element class-name='user$eval4577' file-name='form-init6748793272846153808.clj'
+                <stack-trace-element class-name='clojure.test$test_var' file-name='test.clj' line-number='716'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$test_var' file-name='test.clj' line-number='707'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='clojure.test$test_vars$fn__9235$fn__9240' file-name='test.clj'
+                                     line-number='734' method-name='invoke'/>
+                <stack-trace-element class-name='clojure.test$default_fixture' file-name='test.clj' line-number='686'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$default_fixture' file-name='test.clj' line-number='682'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='clojure.test$test_vars$fn__9235' file-name='test.clj' line-number='734'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='clojure.test$default_fixture' file-name='test.clj' line-number='686'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$default_fixture' file-name='test.clj' line-number='682'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='clojure.test$test_vars' file-name='test.clj' line-number='730'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$test_all_vars' file-name='test.clj' line-number='736'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$test_ns' file-name='test.clj' line-number='757'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$test_ns' file-name='test.clj' line-number='742'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='clojure.core$map$fn__5587' file-name='core.clj' line-number='2747'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='clojure.lang.LazySeq' file-name='LazySeq.java' line-number='40'
+                                     method-name='sval'/>
+                <stack-trace-element class-name='clojure.lang.LazySeq' file-name='LazySeq.java' line-number='49'
+                                     method-name='seq'/>
+                <stack-trace-element class-name='clojure.lang.Cons' file-name='Cons.java' line-number='39'
+                                     method-name='next'/>
+                <stack-trace-element class-name='clojure.lang.RT' file-name='RT.java' line-number='1785'
+                                     method-name='boundedLength'/>
+                <stack-trace-element class-name='clojure.lang.RestFn' file-name='RestFn.java' line-number='130'
+                                     method-name='applyTo'/>
+                <stack-trace-element class-name='clojure.core$apply' file-name='core.clj' line-number='659'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$run_tests' file-name='test.clj' line-number='767'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$run_tests' file-name='test.clj' line-number='767'
+                                     method-name='doInvoke'/>
+                <stack-trace-element class-name='clojure.lang.RestFn' file-name='RestFn.java' line-number='408'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='user$eval5767$fn__5806' file-name='form-init6524563332068273430.clj'
+                                     line-number='1' method-name='invoke'/>
+                <stack-trace-element class-name='clojure.core$with_redefs_fn' file-name='core.clj' line-number='7434'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.core$with_redefs_fn' file-name='core.clj' line-number='7418'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='user$eval5767' file-name='form-init6524563332068273430.clj'
                                      line-number='1' method-name='invokeStatic'/>
-                <stack-trace-element class-name='user$eval4577' file-name='form-init6748793272846153808.clj'
+                <stack-trace-element class-name='user$eval5767' file-name='form-init6524563332068273430.clj'
                                      line-number='1' method-name='invoke'/>
                 <stack-trace-element class-name='clojure.lang.Compiler' file-name='Compiler.java' line-number='7062'
                                      method-name='eval'/>
@@ -773,216 +1026,22 @@
             </stack-trace>
         </error>
     </step>
-    <step spec='Products' scenario='Search and edit and existing product'
-          step='Update product specifier to new value <table:resources/product_data.csv>'>
-        <error type='class java.lang.IllegalArgumentException'
-               message='Step Not Implemented: Update product specifier to new value <table:resources/product_data.csv>'>
-            <stack-trace>
-                <stack-trace-element class-name='yardstick.core$eval3793$fn__3794' file-name='core.clj' line-number='18'
-                                     method-name='doInvoke'/>
-                <stack-trace-element class-name='clojure.lang.RestFn' file-name='RestFn.java' line-number='410'
-                                     method-name='invoke'/>
-                <stack-trace-element class-name='clojure.lang.MultiFn' file-name='MultiFn.java' line-number='229'
-                                     method-name='invoke'/>
-                <stack-trace-element class-name='clojure.lang.AFn' file-name='AFn.java' line-number='154'
-                                     method-name='applyToHelper'/>
-                <stack-trace-element class-name='clojure.lang.AFn' file-name='AFn.java' line-number='144'
-                                     method-name='applyTo'/>
-                <stack-trace-element class-name='clojure.core$apply' file-name='core.clj' line-number='657'
-                                     method-name='invokeStatic'/>
-                <stack-trace-element class-name='clojure.core$apply' file-name='core.clj' line-number='652'
-                                     method-name='invoke'/>
-                <stack-trace-element class-name='yardstick.core$run$fn__3942$fn__3948$fn__3954$fn__3967'
-                                     file-name='core.clj' line-number='102' method-name='invoke'/>
-                <stack-trace-element class-name='yardstick.core$run$fn__3942$fn__3948$fn__3954' file-name='core.clj'
-                                     line-number='101' method-name='invoke'/>
-                <stack-trace-element class-name='yardstick.core$run$fn__3942$fn__3948' file-name='core.clj'
-                                     line-number='88' method-name='invoke'/>
-                <stack-trace-element class-name='yardstick.core$run$fn__3942' file-name='core.clj' line-number='84'
-                                     method-name='invoke'/>
-                <stack-trace-element class-name='yardstick.core$run' file-name='core.clj' line-number='80'
-                                     method-name='invokeStatic'/>
-                <stack-trace-element class-name='yardstick.core$run' file-name='core.clj' line-number='61'
-                                     method-name='doInvoke'/>
-                <stack-trace-element class-name='clojure.lang.RestFn' file-name='RestFn.java' line-number='486'
-                                     method-name='invoke'/>
-                <stack-trace-element class-name='yardstick.example.runner$_main$fn__4502' file-name='runner.clj'
-                                     line-number='18' method-name='invoke'/>
-                <stack-trace-element class-name='yardstick.example.runner$_main' file-name='runner.clj' line-number='17'
-                                     method-name='invokeStatic'/>
-                <stack-trace-element class-name='yardstick.example.runner$_main' file-name='runner.clj' line-number='14'
-                                     method-name='doInvoke'/>
-                <stack-trace-element class-name='clojure.lang.RestFn' file-name='RestFn.java' line-number='397'
-                                     method-name='invoke'/>
-                <stack-trace-element class-name='user$eval4577' file-name='form-init6748793272846153808.clj'
-                                     line-number='1' method-name='invokeStatic'/>
-                <stack-trace-element class-name='user$eval4577' file-name='form-init6748793272846153808.clj'
-                                     line-number='1' method-name='invoke'/>
-                <stack-trace-element class-name='clojure.lang.Compiler' file-name='Compiler.java' line-number='7062'
-                                     method-name='eval'/>
-                <stack-trace-element class-name='clojure.lang.Compiler' file-name='Compiler.java' line-number='7025'
-                                     method-name='eval'/>
-                <stack-trace-element class-name='clojure.core$eval' file-name='core.clj' line-number='3206'
-                                     method-name='invokeStatic'/>
-                <stack-trace-element class-name='clojure.core$eval' file-name='core.clj' line-number='3202'
-                                     method-name='invoke'/>
-                <stack-trace-element class-name='clojure.main$repl$read_eval_print__8572$fn__8575' file-name='main.clj'
-                                     line-number='243' method-name='invoke'/>
-                <stack-trace-element class-name='clojure.main$repl$read_eval_print__8572' file-name='main.clj'
-                                     line-number='243' method-name='invoke'/>
-                <stack-trace-element class-name='clojure.main$repl$fn__8581' file-name='main.clj' line-number='261'
-                                     method-name='invoke'/>
-                <stack-trace-element class-name='clojure.main$repl' file-name='main.clj' line-number='261'
-                                     method-name='invokeStatic'/>
-                <stack-trace-element class-name='clojure.main$repl' file-name='main.clj' line-number='177'
-                                     method-name='doInvoke'/>
-                <stack-trace-element class-name='clojure.lang.RestFn' file-name='RestFn.java' line-number='1523'
-                                     method-name='invoke'/>
-                <stack-trace-element class-name='clojure.tools.nrepl.middleware.interruptible_eval$evaluate$fn__820'
-                                     file-name='interruptible_eval.clj' line-number='87' method-name='invoke'/>
-                <stack-trace-element class-name='clojure.lang.AFn' file-name='AFn.java' line-number='152'
-                                     method-name='applyToHelper'/>
-                <stack-trace-element class-name='clojure.lang.AFn' file-name='AFn.java' line-number='144'
-                                     method-name='applyTo'/>
-                <stack-trace-element class-name='clojure.core$apply' file-name='core.clj' line-number='657'
-                                     method-name='invokeStatic'/>
-                <stack-trace-element class-name='clojure.core$with_bindings_STAR_' file-name='core.clj'
-                                     line-number='1965' method-name='invokeStatic'/>
-                <stack-trace-element class-name='clojure.core$with_bindings_STAR_' file-name='core.clj'
-                                     line-number='1965' method-name='doInvoke'/>
-                <stack-trace-element class-name='clojure.lang.RestFn' file-name='RestFn.java' line-number='425'
-                                     method-name='invoke'/>
-                <stack-trace-element class-name='clojure.tools.nrepl.middleware.interruptible_eval$evaluate'
-                                     file-name='interruptible_eval.clj' line-number='85' method-name='invokeStatic'/>
-                <stack-trace-element class-name='clojure.tools.nrepl.middleware.interruptible_eval$evaluate'
-                                     file-name='interruptible_eval.clj' line-number='55' method-name='invoke'/>
-                <stack-trace-element
-                        class-name='clojure.tools.nrepl.middleware.interruptible_eval$interruptible_eval$fn__865$fn__868'
-                        file-name='interruptible_eval.clj' line-number='222' method-name='invoke'/>
-                <stack-trace-element class-name='clojure.tools.nrepl.middleware.interruptible_eval$run_next$fn__860'
-                                     file-name='interruptible_eval.clj' line-number='190' method-name='invoke'/>
-                <stack-trace-element class-name='clojure.lang.AFn' file-name='AFn.java' line-number='22'
-                                     method-name='run'/>
-                <stack-trace-element class-name='java.util.concurrent.ThreadPoolExecutor'
-                                     file-name='ThreadPoolExecutor.java' line-number='1149' method-name='runWorker'/>
-                <stack-trace-element class-name='java.util.concurrent.ThreadPoolExecutor$Worker'
-                                     file-name='ThreadPoolExecutor.java' line-number='624' method-name='run'/>
-                <stack-trace-element class-name='java.lang.Thread' file-name='Thread.java' line-number='748'
-                                     method-name='run'/>
-            </stack-trace>
-        </error>
+    <step spec='Products' scenario='Search and edit and existing product' step='Update product specifier to new value'>
     </step>
-    <step spec='Products' scenario='Search and edit and existing product'
-          step='Check product specifier has new value <table:resources/product_data.csv>'>
-        <error type='class java.lang.IllegalArgumentException'
-               message='Step Not Implemented: Check product specifier has new value <table:resources/product_data.csv>'>
-            <stack-trace>
-                <stack-trace-element class-name='yardstick.core$eval3793$fn__3794' file-name='core.clj' line-number='18'
-                                     method-name='doInvoke'/>
-                <stack-trace-element class-name='clojure.lang.RestFn' file-name='RestFn.java' line-number='410'
-                                     method-name='invoke'/>
-                <stack-trace-element class-name='clojure.lang.MultiFn' file-name='MultiFn.java' line-number='229'
-                                     method-name='invoke'/>
-                <stack-trace-element class-name='clojure.lang.AFn' file-name='AFn.java' line-number='154'
-                                     method-name='applyToHelper'/>
-                <stack-trace-element class-name='clojure.lang.AFn' file-name='AFn.java' line-number='144'
-                                     method-name='applyTo'/>
-                <stack-trace-element class-name='clojure.core$apply' file-name='core.clj' line-number='657'
-                                     method-name='invokeStatic'/>
-                <stack-trace-element class-name='clojure.core$apply' file-name='core.clj' line-number='652'
-                                     method-name='invoke'/>
-                <stack-trace-element class-name='yardstick.core$run$fn__3942$fn__3948$fn__3954$fn__3967'
-                                     file-name='core.clj' line-number='102' method-name='invoke'/>
-                <stack-trace-element class-name='yardstick.core$run$fn__3942$fn__3948$fn__3954' file-name='core.clj'
-                                     line-number='101' method-name='invoke'/>
-                <stack-trace-element class-name='yardstick.core$run$fn__3942$fn__3948' file-name='core.clj'
-                                     line-number='88' method-name='invoke'/>
-                <stack-trace-element class-name='yardstick.core$run$fn__3942' file-name='core.clj' line-number='84'
-                                     method-name='invoke'/>
-                <stack-trace-element class-name='yardstick.core$run' file-name='core.clj' line-number='80'
-                                     method-name='invokeStatic'/>
-                <stack-trace-element class-name='yardstick.core$run' file-name='core.clj' line-number='61'
-                                     method-name='doInvoke'/>
-                <stack-trace-element class-name='clojure.lang.RestFn' file-name='RestFn.java' line-number='486'
-                                     method-name='invoke'/>
-                <stack-trace-element class-name='yardstick.example.runner$_main$fn__4502' file-name='runner.clj'
-                                     line-number='18' method-name='invoke'/>
-                <stack-trace-element class-name='yardstick.example.runner$_main' file-name='runner.clj' line-number='17'
-                                     method-name='invokeStatic'/>
-                <stack-trace-element class-name='yardstick.example.runner$_main' file-name='runner.clj' line-number='14'
-                                     method-name='doInvoke'/>
-                <stack-trace-element class-name='clojure.lang.RestFn' file-name='RestFn.java' line-number='397'
-                                     method-name='invoke'/>
-                <stack-trace-element class-name='user$eval4577' file-name='form-init6748793272846153808.clj'
-                                     line-number='1' method-name='invokeStatic'/>
-                <stack-trace-element class-name='user$eval4577' file-name='form-init6748793272846153808.clj'
-                                     line-number='1' method-name='invoke'/>
-                <stack-trace-element class-name='clojure.lang.Compiler' file-name='Compiler.java' line-number='7062'
-                                     method-name='eval'/>
-                <stack-trace-element class-name='clojure.lang.Compiler' file-name='Compiler.java' line-number='7025'
-                                     method-name='eval'/>
-                <stack-trace-element class-name='clojure.core$eval' file-name='core.clj' line-number='3206'
-                                     method-name='invokeStatic'/>
-                <stack-trace-element class-name='clojure.core$eval' file-name='core.clj' line-number='3202'
-                                     method-name='invoke'/>
-                <stack-trace-element class-name='clojure.main$repl$read_eval_print__8572$fn__8575' file-name='main.clj'
-                                     line-number='243' method-name='invoke'/>
-                <stack-trace-element class-name='clojure.main$repl$read_eval_print__8572' file-name='main.clj'
-                                     line-number='243' method-name='invoke'/>
-                <stack-trace-element class-name='clojure.main$repl$fn__8581' file-name='main.clj' line-number='261'
-                                     method-name='invoke'/>
-                <stack-trace-element class-name='clojure.main$repl' file-name='main.clj' line-number='261'
-                                     method-name='invokeStatic'/>
-                <stack-trace-element class-name='clojure.main$repl' file-name='main.clj' line-number='177'
-                                     method-name='doInvoke'/>
-                <stack-trace-element class-name='clojure.lang.RestFn' file-name='RestFn.java' line-number='1523'
-                                     method-name='invoke'/>
-                <stack-trace-element class-name='clojure.tools.nrepl.middleware.interruptible_eval$evaluate$fn__820'
-                                     file-name='interruptible_eval.clj' line-number='87' method-name='invoke'/>
-                <stack-trace-element class-name='clojure.lang.AFn' file-name='AFn.java' line-number='152'
-                                     method-name='applyToHelper'/>
-                <stack-trace-element class-name='clojure.lang.AFn' file-name='AFn.java' line-number='144'
-                                     method-name='applyTo'/>
-                <stack-trace-element class-name='clojure.core$apply' file-name='core.clj' line-number='657'
-                                     method-name='invokeStatic'/>
-                <stack-trace-element class-name='clojure.core$with_bindings_STAR_' file-name='core.clj'
-                                     line-number='1965' method-name='invokeStatic'/>
-                <stack-trace-element class-name='clojure.core$with_bindings_STAR_' file-name='core.clj'
-                                     line-number='1965' method-name='doInvoke'/>
-                <stack-trace-element class-name='clojure.lang.RestFn' file-name='RestFn.java' line-number='425'
-                                     method-name='invoke'/>
-                <stack-trace-element class-name='clojure.tools.nrepl.middleware.interruptible_eval$evaluate'
-                                     file-name='interruptible_eval.clj' line-number='85' method-name='invokeStatic'/>
-                <stack-trace-element class-name='clojure.tools.nrepl.middleware.interruptible_eval$evaluate'
-                                     file-name='interruptible_eval.clj' line-number='55' method-name='invoke'/>
-                <stack-trace-element
-                        class-name='clojure.tools.nrepl.middleware.interruptible_eval$interruptible_eval$fn__865$fn__868'
-                        file-name='interruptible_eval.clj' line-number='222' method-name='invoke'/>
-                <stack-trace-element class-name='clojure.tools.nrepl.middleware.interruptible_eval$run_next$fn__860'
-                                     file-name='interruptible_eval.clj' line-number='190' method-name='invoke'/>
-                <stack-trace-element class-name='clojure.lang.AFn' file-name='AFn.java' line-number='22'
-                                     method-name='run'/>
-                <stack-trace-element class-name='java.util.concurrent.ThreadPoolExecutor'
-                                     file-name='ThreadPoolExecutor.java' line-number='1149' method-name='runWorker'/>
-                <stack-trace-element class-name='java.util.concurrent.ThreadPoolExecutor$Worker'
-                                     file-name='ThreadPoolExecutor.java' line-number='624' method-name='run'/>
-                <stack-trace-element class-name='java.lang.Thread' file-name='Thread.java' line-number='748'
-                                     method-name='run'/>
-            </stack-trace>
-        </error>
+    <step spec='Products' scenario='Search and edit and existing product' step='Check product specifier has new value'>
     </step>
     <after-scenario spec='Products' scenario='Search and edit and existing product'>
         <error type='class java.lang.Exception' message='This is another example exception'>
             <stack-trace>
-                <stack-trace-element class-name='yardstick.example.hooks$reify__4087' file-name='hooks.clj'
+                <stack-trace-element class-name='yardstick.example.hooks$reify__5449' file-name='hooks.clj'
                                      line-number='7' method-name='after_scenario'/>
-                <stack-trace-element class-name='yardstick.core$run$fn__3942$fn__3948$fn__3954$fn__3971'
+                <stack-trace-element class-name='yardstick.core$run$fn__5247$fn__5253$fn__5259$fn__5276'
                                      file-name='core.clj' line-number='112' method-name='invoke'/>
-                <stack-trace-element class-name='yardstick.core$run$fn__3942$fn__3948$fn__3954' file-name='core.clj'
+                <stack-trace-element class-name='yardstick.core$run$fn__5247$fn__5253$fn__5259' file-name='core.clj'
                                      line-number='111' method-name='invoke'/>
-                <stack-trace-element class-name='yardstick.core$run$fn__3942$fn__3948' file-name='core.clj'
+                <stack-trace-element class-name='yardstick.core$run$fn__5247$fn__5253' file-name='core.clj'
                                      line-number='88' method-name='invoke'/>
-                <stack-trace-element class-name='yardstick.core$run$fn__3942' file-name='core.clj' line-number='84'
+                <stack-trace-element class-name='yardstick.core$run$fn__5247' file-name='core.clj' line-number='84'
                                      method-name='invoke'/>
                 <stack-trace-element class-name='yardstick.core$run' file-name='core.clj' line-number='80'
                                      method-name='invokeStatic'/>
@@ -990,17 +1049,67 @@
                                      method-name='doInvoke'/>
                 <stack-trace-element class-name='clojure.lang.RestFn' file-name='RestFn.java' line-number='486'
                                      method-name='invoke'/>
-                <stack-trace-element class-name='yardstick.example.runner$_main$fn__4502' file-name='runner.clj'
-                                     line-number='18' method-name='invoke'/>
-                <stack-trace-element class-name='yardstick.example.runner$_main' file-name='runner.clj' line-number='17'
-                                     method-name='invokeStatic'/>
-                <stack-trace-element class-name='yardstick.example.runner$_main' file-name='runner.clj' line-number='14'
-                                     method-name='doInvoke'/>
-                <stack-trace-element class-name='clojure.lang.RestFn' file-name='RestFn.java' line-number='397'
+                <stack-trace-element class-name='yardstick.example.runner$fn__5759$fn__5760' file-name='runner.clj'
+                                     line-number='19' method-name='invoke'/>
+                <stack-trace-element class-name='yardstick.example.runner$fn__5759' file-name='runner.clj'
+                                     line-number='18' method-name='invokeStatic'/>
+                <stack-trace-element class-name='yardstick.example.runner$fn__5759' file-name='runner.clj'
+                                     line-number='15' method-name='invoke'/>
+                <stack-trace-element class-name='clojure.test$test_var$fn__9209' file-name='test.clj' line-number='716'
                                      method-name='invoke'/>
-                <stack-trace-element class-name='user$eval4577' file-name='form-init6748793272846153808.clj'
+                <stack-trace-element class-name='clojure.test$test_var' file-name='test.clj' line-number='716'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$test_var' file-name='test.clj' line-number='707'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='clojure.test$test_vars$fn__9235$fn__9240' file-name='test.clj'
+                                     line-number='734' method-name='invoke'/>
+                <stack-trace-element class-name='clojure.test$default_fixture' file-name='test.clj' line-number='686'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$default_fixture' file-name='test.clj' line-number='682'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='clojure.test$test_vars$fn__9235' file-name='test.clj' line-number='734'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='clojure.test$default_fixture' file-name='test.clj' line-number='686'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$default_fixture' file-name='test.clj' line-number='682'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='clojure.test$test_vars' file-name='test.clj' line-number='730'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$test_all_vars' file-name='test.clj' line-number='736'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$test_ns' file-name='test.clj' line-number='757'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$test_ns' file-name='test.clj' line-number='742'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='clojure.core$map$fn__5587' file-name='core.clj' line-number='2747'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='clojure.lang.LazySeq' file-name='LazySeq.java' line-number='40'
+                                     method-name='sval'/>
+                <stack-trace-element class-name='clojure.lang.LazySeq' file-name='LazySeq.java' line-number='49'
+                                     method-name='seq'/>
+                <stack-trace-element class-name='clojure.lang.Cons' file-name='Cons.java' line-number='39'
+                                     method-name='next'/>
+                <stack-trace-element class-name='clojure.lang.RT' file-name='RT.java' line-number='1785'
+                                     method-name='boundedLength'/>
+                <stack-trace-element class-name='clojure.lang.RestFn' file-name='RestFn.java' line-number='130'
+                                     method-name='applyTo'/>
+                <stack-trace-element class-name='clojure.core$apply' file-name='core.clj' line-number='659'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$run_tests' file-name='test.clj' line-number='767'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$run_tests' file-name='test.clj' line-number='767'
+                                     method-name='doInvoke'/>
+                <stack-trace-element class-name='clojure.lang.RestFn' file-name='RestFn.java' line-number='408'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='user$eval5767$fn__5806' file-name='form-init6524563332068273430.clj'
+                                     line-number='1' method-name='invoke'/>
+                <stack-trace-element class-name='clojure.core$with_redefs_fn' file-name='core.clj' line-number='7434'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.core$with_redefs_fn' file-name='core.clj' line-number='7418'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='user$eval5767' file-name='form-init6524563332068273430.clj'
                                      line-number='1' method-name='invokeStatic'/>
-                <stack-trace-element class-name='user$eval4577' file-name='form-init6748793272846153808.clj'
+                <stack-trace-element class-name='user$eval5767' file-name='form-init6524563332068273430.clj'
                                      line-number='1' method-name='invoke'/>
                 <stack-trace-element class-name='clojure.lang.Compiler' file-name='Compiler.java' line-number='7062'
                                      method-name='eval'/>
@@ -1065,15 +1174,15 @@
     <after-scenario spec='Products' scenario='Delete a product'>
         <error type='class java.lang.Exception' message='This is another example exception'>
             <stack-trace>
-                <stack-trace-element class-name='yardstick.example.hooks$reify__4087' file-name='hooks.clj'
+                <stack-trace-element class-name='yardstick.example.hooks$reify__5449' file-name='hooks.clj'
                                      line-number='7' method-name='after_scenario'/>
-                <stack-trace-element class-name='yardstick.core$run$fn__3942$fn__3948$fn__3954$fn__3971'
+                <stack-trace-element class-name='yardstick.core$run$fn__5247$fn__5253$fn__5259$fn__5276'
                                      file-name='core.clj' line-number='112' method-name='invoke'/>
-                <stack-trace-element class-name='yardstick.core$run$fn__3942$fn__3948$fn__3954' file-name='core.clj'
+                <stack-trace-element class-name='yardstick.core$run$fn__5247$fn__5253$fn__5259' file-name='core.clj'
                                      line-number='111' method-name='invoke'/>
-                <stack-trace-element class-name='yardstick.core$run$fn__3942$fn__3948' file-name='core.clj'
+                <stack-trace-element class-name='yardstick.core$run$fn__5247$fn__5253' file-name='core.clj'
                                      line-number='88' method-name='invoke'/>
-                <stack-trace-element class-name='yardstick.core$run$fn__3942' file-name='core.clj' line-number='84'
+                <stack-trace-element class-name='yardstick.core$run$fn__5247' file-name='core.clj' line-number='84'
                                      method-name='invoke'/>
                 <stack-trace-element class-name='yardstick.core$run' file-name='core.clj' line-number='80'
                                      method-name='invokeStatic'/>
@@ -1081,17 +1190,67 @@
                                      method-name='doInvoke'/>
                 <stack-trace-element class-name='clojure.lang.RestFn' file-name='RestFn.java' line-number='486'
                                      method-name='invoke'/>
-                <stack-trace-element class-name='yardstick.example.runner$_main$fn__4502' file-name='runner.clj'
-                                     line-number='18' method-name='invoke'/>
-                <stack-trace-element class-name='yardstick.example.runner$_main' file-name='runner.clj' line-number='17'
-                                     method-name='invokeStatic'/>
-                <stack-trace-element class-name='yardstick.example.runner$_main' file-name='runner.clj' line-number='14'
-                                     method-name='doInvoke'/>
-                <stack-trace-element class-name='clojure.lang.RestFn' file-name='RestFn.java' line-number='397'
+                <stack-trace-element class-name='yardstick.example.runner$fn__5759$fn__5760' file-name='runner.clj'
+                                     line-number='19' method-name='invoke'/>
+                <stack-trace-element class-name='yardstick.example.runner$fn__5759' file-name='runner.clj'
+                                     line-number='18' method-name='invokeStatic'/>
+                <stack-trace-element class-name='yardstick.example.runner$fn__5759' file-name='runner.clj'
+                                     line-number='15' method-name='invoke'/>
+                <stack-trace-element class-name='clojure.test$test_var$fn__9209' file-name='test.clj' line-number='716'
                                      method-name='invoke'/>
-                <stack-trace-element class-name='user$eval4577' file-name='form-init6748793272846153808.clj'
+                <stack-trace-element class-name='clojure.test$test_var' file-name='test.clj' line-number='716'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$test_var' file-name='test.clj' line-number='707'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='clojure.test$test_vars$fn__9235$fn__9240' file-name='test.clj'
+                                     line-number='734' method-name='invoke'/>
+                <stack-trace-element class-name='clojure.test$default_fixture' file-name='test.clj' line-number='686'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$default_fixture' file-name='test.clj' line-number='682'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='clojure.test$test_vars$fn__9235' file-name='test.clj' line-number='734'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='clojure.test$default_fixture' file-name='test.clj' line-number='686'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$default_fixture' file-name='test.clj' line-number='682'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='clojure.test$test_vars' file-name='test.clj' line-number='730'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$test_all_vars' file-name='test.clj' line-number='736'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$test_ns' file-name='test.clj' line-number='757'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$test_ns' file-name='test.clj' line-number='742'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='clojure.core$map$fn__5587' file-name='core.clj' line-number='2747'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='clojure.lang.LazySeq' file-name='LazySeq.java' line-number='40'
+                                     method-name='sval'/>
+                <stack-trace-element class-name='clojure.lang.LazySeq' file-name='LazySeq.java' line-number='49'
+                                     method-name='seq'/>
+                <stack-trace-element class-name='clojure.lang.Cons' file-name='Cons.java' line-number='39'
+                                     method-name='next'/>
+                <stack-trace-element class-name='clojure.lang.RT' file-name='RT.java' line-number='1785'
+                                     method-name='boundedLength'/>
+                <stack-trace-element class-name='clojure.lang.RestFn' file-name='RestFn.java' line-number='130'
+                                     method-name='applyTo'/>
+                <stack-trace-element class-name='clojure.core$apply' file-name='core.clj' line-number='659'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$run_tests' file-name='test.clj' line-number='767'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$run_tests' file-name='test.clj' line-number='767'
+                                     method-name='doInvoke'/>
+                <stack-trace-element class-name='clojure.lang.RestFn' file-name='RestFn.java' line-number='408'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='user$eval5767$fn__5806' file-name='form-init6524563332068273430.clj'
+                                     line-number='1' method-name='invoke'/>
+                <stack-trace-element class-name='clojure.core$with_redefs_fn' file-name='core.clj' line-number='7434'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.core$with_redefs_fn' file-name='core.clj' line-number='7418'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='user$eval5767' file-name='form-init6524563332068273430.clj'
                                      line-number='1' method-name='invokeStatic'/>
-                <stack-trace-element class-name='user$eval4577' file-name='form-init6748793272846153808.clj'
+                <stack-trace-element class-name='user$eval5767' file-name='form-init6524563332068273430.clj'
                                      line-number='1' method-name='invoke'/>
                 <stack-trace-element class-name='clojure.lang.Compiler' file-name='Compiler.java' line-number='7062'
                                      method-name='eval'/>
@@ -1156,13 +1315,13 @@
                                      method-name='fail'/>
                 <stack-trace-element class-name='org.junit.Assert' file-name='Assert.java' line-number='41'
                                      method-name='assertTrue'/>
-                <stack-trace-element class-name='yardstick.example.hooks$reify__4087' file-name='hooks.clj'
+                <stack-trace-element class-name='yardstick.example.hooks$reify__5449' file-name='hooks.clj'
                                      line-number='20' method-name='after_spec'/>
-                <stack-trace-element class-name='yardstick.core$run$fn__3942$fn__3948$fn__4003' file-name='core.clj'
+                <stack-trace-element class-name='yardstick.core$run$fn__5247$fn__5253$fn__5308' file-name='core.clj'
                                      line-number='123' method-name='invoke'/>
-                <stack-trace-element class-name='yardstick.core$run$fn__3942$fn__3948' file-name='core.clj'
+                <stack-trace-element class-name='yardstick.core$run$fn__5247$fn__5253' file-name='core.clj'
                                      line-number='122' method-name='invoke'/>
-                <stack-trace-element class-name='yardstick.core$run$fn__3942' file-name='core.clj' line-number='84'
+                <stack-trace-element class-name='yardstick.core$run$fn__5247' file-name='core.clj' line-number='84'
                                      method-name='invoke'/>
                 <stack-trace-element class-name='yardstick.core$run' file-name='core.clj' line-number='80'
                                      method-name='invokeStatic'/>
@@ -1170,17 +1329,67 @@
                                      method-name='doInvoke'/>
                 <stack-trace-element class-name='clojure.lang.RestFn' file-name='RestFn.java' line-number='486'
                                      method-name='invoke'/>
-                <stack-trace-element class-name='yardstick.example.runner$_main$fn__4502' file-name='runner.clj'
-                                     line-number='18' method-name='invoke'/>
-                <stack-trace-element class-name='yardstick.example.runner$_main' file-name='runner.clj' line-number='17'
-                                     method-name='invokeStatic'/>
-                <stack-trace-element class-name='yardstick.example.runner$_main' file-name='runner.clj' line-number='14'
-                                     method-name='doInvoke'/>
-                <stack-trace-element class-name='clojure.lang.RestFn' file-name='RestFn.java' line-number='397'
+                <stack-trace-element class-name='yardstick.example.runner$fn__5759$fn__5760' file-name='runner.clj'
+                                     line-number='19' method-name='invoke'/>
+                <stack-trace-element class-name='yardstick.example.runner$fn__5759' file-name='runner.clj'
+                                     line-number='18' method-name='invokeStatic'/>
+                <stack-trace-element class-name='yardstick.example.runner$fn__5759' file-name='runner.clj'
+                                     line-number='15' method-name='invoke'/>
+                <stack-trace-element class-name='clojure.test$test_var$fn__9209' file-name='test.clj' line-number='716'
                                      method-name='invoke'/>
-                <stack-trace-element class-name='user$eval4577' file-name='form-init6748793272846153808.clj'
+                <stack-trace-element class-name='clojure.test$test_var' file-name='test.clj' line-number='716'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$test_var' file-name='test.clj' line-number='707'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='clojure.test$test_vars$fn__9235$fn__9240' file-name='test.clj'
+                                     line-number='734' method-name='invoke'/>
+                <stack-trace-element class-name='clojure.test$default_fixture' file-name='test.clj' line-number='686'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$default_fixture' file-name='test.clj' line-number='682'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='clojure.test$test_vars$fn__9235' file-name='test.clj' line-number='734'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='clojure.test$default_fixture' file-name='test.clj' line-number='686'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$default_fixture' file-name='test.clj' line-number='682'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='clojure.test$test_vars' file-name='test.clj' line-number='730'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$test_all_vars' file-name='test.clj' line-number='736'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$test_ns' file-name='test.clj' line-number='757'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$test_ns' file-name='test.clj' line-number='742'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='clojure.core$map$fn__5587' file-name='core.clj' line-number='2747'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='clojure.lang.LazySeq' file-name='LazySeq.java' line-number='40'
+                                     method-name='sval'/>
+                <stack-trace-element class-name='clojure.lang.LazySeq' file-name='LazySeq.java' line-number='49'
+                                     method-name='seq'/>
+                <stack-trace-element class-name='clojure.lang.Cons' file-name='Cons.java' line-number='39'
+                                     method-name='next'/>
+                <stack-trace-element class-name='clojure.lang.RT' file-name='RT.java' line-number='1785'
+                                     method-name='boundedLength'/>
+                <stack-trace-element class-name='clojure.lang.RestFn' file-name='RestFn.java' line-number='130'
+                                     method-name='applyTo'/>
+                <stack-trace-element class-name='clojure.core$apply' file-name='core.clj' line-number='659'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$run_tests' file-name='test.clj' line-number='767'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$run_tests' file-name='test.clj' line-number='767'
+                                     method-name='doInvoke'/>
+                <stack-trace-element class-name='clojure.lang.RestFn' file-name='RestFn.java' line-number='408'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='user$eval5767$fn__5806' file-name='form-init6524563332068273430.clj'
+                                     line-number='1' method-name='invoke'/>
+                <stack-trace-element class-name='clojure.core$with_redefs_fn' file-name='core.clj' line-number='7434'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.core$with_redefs_fn' file-name='core.clj' line-number='7418'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='user$eval5767' file-name='form-init6524563332068273430.clj'
                                      line-number='1' method-name='invokeStatic'/>
-                <stack-trace-element class-name='user$eval4577' file-name='form-init6748793272846153808.clj'
+                <stack-trace-element class-name='user$eval5767' file-name='form-init6524563332068273430.clj'
                                      line-number='1' method-name='invoke'/>
                 <stack-trace-element class-name='clojure.lang.Compiler' file-name='Compiler.java' line-number='7062'
                                      method-name='eval'/>
@@ -1245,7 +1454,7 @@
     <step spec='Signup' scenario='Register a customer' step='Sign up a new customer'>
         <error type='class java.lang.IllegalArgumentException' message='Step Not Implemented: Sign up a new customer'>
             <stack-trace>
-                <stack-trace-element class-name='yardstick.core$eval3793$fn__3794' file-name='core.clj' line-number='18'
+                <stack-trace-element class-name='yardstick.core$eval5098$fn__5099' file-name='core.clj' line-number='18'
                                      method-name='doInvoke'/>
                 <stack-trace-element class-name='clojure.lang.RestFn' file-name='RestFn.java' line-number='410'
                                      method-name='invoke'/>
@@ -1259,13 +1468,13 @@
                                      method-name='invokeStatic'/>
                 <stack-trace-element class-name='clojure.core$apply' file-name='core.clj' line-number='652'
                                      method-name='invoke'/>
-                <stack-trace-element class-name='yardstick.core$run$fn__3942$fn__3948$fn__3954$fn__3967'
+                <stack-trace-element class-name='yardstick.core$run$fn__5247$fn__5253$fn__5259$fn__5272'
                                      file-name='core.clj' line-number='102' method-name='invoke'/>
-                <stack-trace-element class-name='yardstick.core$run$fn__3942$fn__3948$fn__3954' file-name='core.clj'
+                <stack-trace-element class-name='yardstick.core$run$fn__5247$fn__5253$fn__5259' file-name='core.clj'
                                      line-number='101' method-name='invoke'/>
-                <stack-trace-element class-name='yardstick.core$run$fn__3942$fn__3948' file-name='core.clj'
+                <stack-trace-element class-name='yardstick.core$run$fn__5247$fn__5253' file-name='core.clj'
                                      line-number='88' method-name='invoke'/>
-                <stack-trace-element class-name='yardstick.core$run$fn__3942' file-name='core.clj' line-number='84'
+                <stack-trace-element class-name='yardstick.core$run$fn__5247' file-name='core.clj' line-number='84'
                                      method-name='invoke'/>
                 <stack-trace-element class-name='yardstick.core$run' file-name='core.clj' line-number='80'
                                      method-name='invokeStatic'/>
@@ -1273,17 +1482,67 @@
                                      method-name='doInvoke'/>
                 <stack-trace-element class-name='clojure.lang.RestFn' file-name='RestFn.java' line-number='486'
                                      method-name='invoke'/>
-                <stack-trace-element class-name='yardstick.example.runner$_main$fn__4502' file-name='runner.clj'
-                                     line-number='18' method-name='invoke'/>
-                <stack-trace-element class-name='yardstick.example.runner$_main' file-name='runner.clj' line-number='17'
-                                     method-name='invokeStatic'/>
-                <stack-trace-element class-name='yardstick.example.runner$_main' file-name='runner.clj' line-number='14'
-                                     method-name='doInvoke'/>
-                <stack-trace-element class-name='clojure.lang.RestFn' file-name='RestFn.java' line-number='397'
+                <stack-trace-element class-name='yardstick.example.runner$fn__5759$fn__5760' file-name='runner.clj'
+                                     line-number='19' method-name='invoke'/>
+                <stack-trace-element class-name='yardstick.example.runner$fn__5759' file-name='runner.clj'
+                                     line-number='18' method-name='invokeStatic'/>
+                <stack-trace-element class-name='yardstick.example.runner$fn__5759' file-name='runner.clj'
+                                     line-number='15' method-name='invoke'/>
+                <stack-trace-element class-name='clojure.test$test_var$fn__9209' file-name='test.clj' line-number='716'
                                      method-name='invoke'/>
-                <stack-trace-element class-name='user$eval4577' file-name='form-init6748793272846153808.clj'
+                <stack-trace-element class-name='clojure.test$test_var' file-name='test.clj' line-number='716'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$test_var' file-name='test.clj' line-number='707'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='clojure.test$test_vars$fn__9235$fn__9240' file-name='test.clj'
+                                     line-number='734' method-name='invoke'/>
+                <stack-trace-element class-name='clojure.test$default_fixture' file-name='test.clj' line-number='686'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$default_fixture' file-name='test.clj' line-number='682'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='clojure.test$test_vars$fn__9235' file-name='test.clj' line-number='734'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='clojure.test$default_fixture' file-name='test.clj' line-number='686'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$default_fixture' file-name='test.clj' line-number='682'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='clojure.test$test_vars' file-name='test.clj' line-number='730'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$test_all_vars' file-name='test.clj' line-number='736'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$test_ns' file-name='test.clj' line-number='757'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$test_ns' file-name='test.clj' line-number='742'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='clojure.core$map$fn__5587' file-name='core.clj' line-number='2747'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='clojure.lang.LazySeq' file-name='LazySeq.java' line-number='40'
+                                     method-name='sval'/>
+                <stack-trace-element class-name='clojure.lang.LazySeq' file-name='LazySeq.java' line-number='49'
+                                     method-name='seq'/>
+                <stack-trace-element class-name='clojure.lang.Cons' file-name='Cons.java' line-number='39'
+                                     method-name='next'/>
+                <stack-trace-element class-name='clojure.lang.RT' file-name='RT.java' line-number='1785'
+                                     method-name='boundedLength'/>
+                <stack-trace-element class-name='clojure.lang.RestFn' file-name='RestFn.java' line-number='130'
+                                     method-name='applyTo'/>
+                <stack-trace-element class-name='clojure.core$apply' file-name='core.clj' line-number='659'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$run_tests' file-name='test.clj' line-number='767'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$run_tests' file-name='test.clj' line-number='767'
+                                     method-name='doInvoke'/>
+                <stack-trace-element class-name='clojure.lang.RestFn' file-name='RestFn.java' line-number='408'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='user$eval5767$fn__5806' file-name='form-init6524563332068273430.clj'
+                                     line-number='1' method-name='invoke'/>
+                <stack-trace-element class-name='clojure.core$with_redefs_fn' file-name='core.clj' line-number='7434'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.core$with_redefs_fn' file-name='core.clj' line-number='7418'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='user$eval5767' file-name='form-init6524563332068273430.clj'
                                      line-number='1' method-name='invokeStatic'/>
-                <stack-trace-element class-name='user$eval4577' file-name='form-init6748793272846153808.clj'
+                <stack-trace-element class-name='user$eval5767' file-name='form-init6524563332068273430.clj'
                                      line-number='1' method-name='invoke'/>
                 <stack-trace-element class-name='clojure.lang.Compiler' file-name='Compiler.java' line-number='7062'
                                      method-name='eval'/>
@@ -1345,7 +1604,7 @@
         <error type='class java.lang.IllegalArgumentException'
                message='Step Not Implemented: Just registered customer is listed'>
             <stack-trace>
-                <stack-trace-element class-name='yardstick.core$eval3793$fn__3794' file-name='core.clj' line-number='18'
+                <stack-trace-element class-name='yardstick.core$eval5098$fn__5099' file-name='core.clj' line-number='18'
                                      method-name='doInvoke'/>
                 <stack-trace-element class-name='clojure.lang.RestFn' file-name='RestFn.java' line-number='410'
                                      method-name='invoke'/>
@@ -1359,13 +1618,13 @@
                                      method-name='invokeStatic'/>
                 <stack-trace-element class-name='clojure.core$apply' file-name='core.clj' line-number='652'
                                      method-name='invoke'/>
-                <stack-trace-element class-name='yardstick.core$run$fn__3942$fn__3948$fn__3954$fn__3967'
+                <stack-trace-element class-name='yardstick.core$run$fn__5247$fn__5253$fn__5259$fn__5272'
                                      file-name='core.clj' line-number='102' method-name='invoke'/>
-                <stack-trace-element class-name='yardstick.core$run$fn__3942$fn__3948$fn__3954' file-name='core.clj'
+                <stack-trace-element class-name='yardstick.core$run$fn__5247$fn__5253$fn__5259' file-name='core.clj'
                                      line-number='101' method-name='invoke'/>
-                <stack-trace-element class-name='yardstick.core$run$fn__3942$fn__3948' file-name='core.clj'
+                <stack-trace-element class-name='yardstick.core$run$fn__5247$fn__5253' file-name='core.clj'
                                      line-number='88' method-name='invoke'/>
-                <stack-trace-element class-name='yardstick.core$run$fn__3942' file-name='core.clj' line-number='84'
+                <stack-trace-element class-name='yardstick.core$run$fn__5247' file-name='core.clj' line-number='84'
                                      method-name='invoke'/>
                 <stack-trace-element class-name='yardstick.core$run' file-name='core.clj' line-number='80'
                                      method-name='invokeStatic'/>
@@ -1373,17 +1632,67 @@
                                      method-name='doInvoke'/>
                 <stack-trace-element class-name='clojure.lang.RestFn' file-name='RestFn.java' line-number='486'
                                      method-name='invoke'/>
-                <stack-trace-element class-name='yardstick.example.runner$_main$fn__4502' file-name='runner.clj'
-                                     line-number='18' method-name='invoke'/>
-                <stack-trace-element class-name='yardstick.example.runner$_main' file-name='runner.clj' line-number='17'
-                                     method-name='invokeStatic'/>
-                <stack-trace-element class-name='yardstick.example.runner$_main' file-name='runner.clj' line-number='14'
-                                     method-name='doInvoke'/>
-                <stack-trace-element class-name='clojure.lang.RestFn' file-name='RestFn.java' line-number='397'
+                <stack-trace-element class-name='yardstick.example.runner$fn__5759$fn__5760' file-name='runner.clj'
+                                     line-number='19' method-name='invoke'/>
+                <stack-trace-element class-name='yardstick.example.runner$fn__5759' file-name='runner.clj'
+                                     line-number='18' method-name='invokeStatic'/>
+                <stack-trace-element class-name='yardstick.example.runner$fn__5759' file-name='runner.clj'
+                                     line-number='15' method-name='invoke'/>
+                <stack-trace-element class-name='clojure.test$test_var$fn__9209' file-name='test.clj' line-number='716'
                                      method-name='invoke'/>
-                <stack-trace-element class-name='user$eval4577' file-name='form-init6748793272846153808.clj'
+                <stack-trace-element class-name='clojure.test$test_var' file-name='test.clj' line-number='716'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$test_var' file-name='test.clj' line-number='707'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='clojure.test$test_vars$fn__9235$fn__9240' file-name='test.clj'
+                                     line-number='734' method-name='invoke'/>
+                <stack-trace-element class-name='clojure.test$default_fixture' file-name='test.clj' line-number='686'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$default_fixture' file-name='test.clj' line-number='682'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='clojure.test$test_vars$fn__9235' file-name='test.clj' line-number='734'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='clojure.test$default_fixture' file-name='test.clj' line-number='686'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$default_fixture' file-name='test.clj' line-number='682'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='clojure.test$test_vars' file-name='test.clj' line-number='730'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$test_all_vars' file-name='test.clj' line-number='736'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$test_ns' file-name='test.clj' line-number='757'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$test_ns' file-name='test.clj' line-number='742'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='clojure.core$map$fn__5587' file-name='core.clj' line-number='2747'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='clojure.lang.LazySeq' file-name='LazySeq.java' line-number='40'
+                                     method-name='sval'/>
+                <stack-trace-element class-name='clojure.lang.LazySeq' file-name='LazySeq.java' line-number='49'
+                                     method-name='seq'/>
+                <stack-trace-element class-name='clojure.lang.Cons' file-name='Cons.java' line-number='39'
+                                     method-name='next'/>
+                <stack-trace-element class-name='clojure.lang.RT' file-name='RT.java' line-number='1785'
+                                     method-name='boundedLength'/>
+                <stack-trace-element class-name='clojure.lang.RestFn' file-name='RestFn.java' line-number='130'
+                                     method-name='applyTo'/>
+                <stack-trace-element class-name='clojure.core$apply' file-name='core.clj' line-number='659'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$run_tests' file-name='test.clj' line-number='767'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$run_tests' file-name='test.clj' line-number='767'
+                                     method-name='doInvoke'/>
+                <stack-trace-element class-name='clojure.lang.RestFn' file-name='RestFn.java' line-number='408'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='user$eval5767$fn__5806' file-name='form-init6524563332068273430.clj'
+                                     line-number='1' method-name='invoke'/>
+                <stack-trace-element class-name='clojure.core$with_redefs_fn' file-name='core.clj' line-number='7434'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.core$with_redefs_fn' file-name='core.clj' line-number='7418'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='user$eval5767' file-name='form-init6524563332068273430.clj'
                                      line-number='1' method-name='invokeStatic'/>
-                <stack-trace-element class-name='user$eval4577' file-name='form-init6748793272846153808.clj'
+                <stack-trace-element class-name='user$eval5767' file-name='form-init6524563332068273430.clj'
                                      line-number='1' method-name='invoke'/>
                 <stack-trace-element class-name='clojure.lang.Compiler' file-name='Compiler.java' line-number='7062'
                                      method-name='eval'/>
@@ -1442,15 +1751,15 @@
     <after-scenario spec='Signup' scenario='Register a customer'>
         <error type='class java.lang.Exception' message='This is another example exception'>
             <stack-trace>
-                <stack-trace-element class-name='yardstick.example.hooks$reify__4087' file-name='hooks.clj'
+                <stack-trace-element class-name='yardstick.example.hooks$reify__5449' file-name='hooks.clj'
                                      line-number='7' method-name='after_scenario'/>
-                <stack-trace-element class-name='yardstick.core$run$fn__3942$fn__3948$fn__3954$fn__3971'
+                <stack-trace-element class-name='yardstick.core$run$fn__5247$fn__5253$fn__5259$fn__5276'
                                      file-name='core.clj' line-number='112' method-name='invoke'/>
-                <stack-trace-element class-name='yardstick.core$run$fn__3942$fn__3948$fn__3954' file-name='core.clj'
+                <stack-trace-element class-name='yardstick.core$run$fn__5247$fn__5253$fn__5259' file-name='core.clj'
                                      line-number='111' method-name='invoke'/>
-                <stack-trace-element class-name='yardstick.core$run$fn__3942$fn__3948' file-name='core.clj'
+                <stack-trace-element class-name='yardstick.core$run$fn__5247$fn__5253' file-name='core.clj'
                                      line-number='88' method-name='invoke'/>
-                <stack-trace-element class-name='yardstick.core$run$fn__3942' file-name='core.clj' line-number='84'
+                <stack-trace-element class-name='yardstick.core$run$fn__5247' file-name='core.clj' line-number='84'
                                      method-name='invoke'/>
                 <stack-trace-element class-name='yardstick.core$run' file-name='core.clj' line-number='80'
                                      method-name='invokeStatic'/>
@@ -1458,17 +1767,67 @@
                                      method-name='doInvoke'/>
                 <stack-trace-element class-name='clojure.lang.RestFn' file-name='RestFn.java' line-number='486'
                                      method-name='invoke'/>
-                <stack-trace-element class-name='yardstick.example.runner$_main$fn__4502' file-name='runner.clj'
-                                     line-number='18' method-name='invoke'/>
-                <stack-trace-element class-name='yardstick.example.runner$_main' file-name='runner.clj' line-number='17'
-                                     method-name='invokeStatic'/>
-                <stack-trace-element class-name='yardstick.example.runner$_main' file-name='runner.clj' line-number='14'
-                                     method-name='doInvoke'/>
-                <stack-trace-element class-name='clojure.lang.RestFn' file-name='RestFn.java' line-number='397'
+                <stack-trace-element class-name='yardstick.example.runner$fn__5759$fn__5760' file-name='runner.clj'
+                                     line-number='19' method-name='invoke'/>
+                <stack-trace-element class-name='yardstick.example.runner$fn__5759' file-name='runner.clj'
+                                     line-number='18' method-name='invokeStatic'/>
+                <stack-trace-element class-name='yardstick.example.runner$fn__5759' file-name='runner.clj'
+                                     line-number='15' method-name='invoke'/>
+                <stack-trace-element class-name='clojure.test$test_var$fn__9209' file-name='test.clj' line-number='716'
                                      method-name='invoke'/>
-                <stack-trace-element class-name='user$eval4577' file-name='form-init6748793272846153808.clj'
+                <stack-trace-element class-name='clojure.test$test_var' file-name='test.clj' line-number='716'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$test_var' file-name='test.clj' line-number='707'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='clojure.test$test_vars$fn__9235$fn__9240' file-name='test.clj'
+                                     line-number='734' method-name='invoke'/>
+                <stack-trace-element class-name='clojure.test$default_fixture' file-name='test.clj' line-number='686'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$default_fixture' file-name='test.clj' line-number='682'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='clojure.test$test_vars$fn__9235' file-name='test.clj' line-number='734'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='clojure.test$default_fixture' file-name='test.clj' line-number='686'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$default_fixture' file-name='test.clj' line-number='682'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='clojure.test$test_vars' file-name='test.clj' line-number='730'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$test_all_vars' file-name='test.clj' line-number='736'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$test_ns' file-name='test.clj' line-number='757'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$test_ns' file-name='test.clj' line-number='742'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='clojure.core$map$fn__5587' file-name='core.clj' line-number='2747'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='clojure.lang.LazySeq' file-name='LazySeq.java' line-number='40'
+                                     method-name='sval'/>
+                <stack-trace-element class-name='clojure.lang.LazySeq' file-name='LazySeq.java' line-number='49'
+                                     method-name='seq'/>
+                <stack-trace-element class-name='clojure.lang.Cons' file-name='Cons.java' line-number='39'
+                                     method-name='next'/>
+                <stack-trace-element class-name='clojure.lang.RT' file-name='RT.java' line-number='1785'
+                                     method-name='boundedLength'/>
+                <stack-trace-element class-name='clojure.lang.RestFn' file-name='RestFn.java' line-number='130'
+                                     method-name='applyTo'/>
+                <stack-trace-element class-name='clojure.core$apply' file-name='core.clj' line-number='659'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$run_tests' file-name='test.clj' line-number='767'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$run_tests' file-name='test.clj' line-number='767'
+                                     method-name='doInvoke'/>
+                <stack-trace-element class-name='clojure.lang.RestFn' file-name='RestFn.java' line-number='408'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='user$eval5767$fn__5806' file-name='form-init6524563332068273430.clj'
+                                     line-number='1' method-name='invoke'/>
+                <stack-trace-element class-name='clojure.core$with_redefs_fn' file-name='core.clj' line-number='7434'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.core$with_redefs_fn' file-name='core.clj' line-number='7418'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='user$eval5767' file-name='form-init6524563332068273430.clj'
                                      line-number='1' method-name='invokeStatic'/>
-                <stack-trace-element class-name='user$eval4577' file-name='form-init6748793272846153808.clj'
+                <stack-trace-element class-name='user$eval5767' file-name='form-init6524563332068273430.clj'
                                      line-number='1' method-name='invoke'/>
                 <stack-trace-element class-name='clojure.lang.Compiler' file-name='Compiler.java' line-number='7062'
                                      method-name='eval'/>
@@ -1533,13 +1892,13 @@
                                      method-name='fail'/>
                 <stack-trace-element class-name='org.junit.Assert' file-name='Assert.java' line-number='41'
                                      method-name='assertTrue'/>
-                <stack-trace-element class-name='yardstick.example.hooks$reify__4087' file-name='hooks.clj'
+                <stack-trace-element class-name='yardstick.example.hooks$reify__5449' file-name='hooks.clj'
                                      line-number='20' method-name='after_spec'/>
-                <stack-trace-element class-name='yardstick.core$run$fn__3942$fn__3948$fn__4003' file-name='core.clj'
+                <stack-trace-element class-name='yardstick.core$run$fn__5247$fn__5253$fn__5308' file-name='core.clj'
                                      line-number='123' method-name='invoke'/>
-                <stack-trace-element class-name='yardstick.core$run$fn__3942$fn__3948' file-name='core.clj'
+                <stack-trace-element class-name='yardstick.core$run$fn__5247$fn__5253' file-name='core.clj'
                                      line-number='122' method-name='invoke'/>
-                <stack-trace-element class-name='yardstick.core$run$fn__3942' file-name='core.clj' line-number='84'
+                <stack-trace-element class-name='yardstick.core$run$fn__5247' file-name='core.clj' line-number='84'
                                      method-name='invoke'/>
                 <stack-trace-element class-name='yardstick.core$run' file-name='core.clj' line-number='80'
                                      method-name='invokeStatic'/>
@@ -1547,17 +1906,67 @@
                                      method-name='doInvoke'/>
                 <stack-trace-element class-name='clojure.lang.RestFn' file-name='RestFn.java' line-number='486'
                                      method-name='invoke'/>
-                <stack-trace-element class-name='yardstick.example.runner$_main$fn__4502' file-name='runner.clj'
-                                     line-number='18' method-name='invoke'/>
-                <stack-trace-element class-name='yardstick.example.runner$_main' file-name='runner.clj' line-number='17'
-                                     method-name='invokeStatic'/>
-                <stack-trace-element class-name='yardstick.example.runner$_main' file-name='runner.clj' line-number='14'
-                                     method-name='doInvoke'/>
-                <stack-trace-element class-name='clojure.lang.RestFn' file-name='RestFn.java' line-number='397'
+                <stack-trace-element class-name='yardstick.example.runner$fn__5759$fn__5760' file-name='runner.clj'
+                                     line-number='19' method-name='invoke'/>
+                <stack-trace-element class-name='yardstick.example.runner$fn__5759' file-name='runner.clj'
+                                     line-number='18' method-name='invokeStatic'/>
+                <stack-trace-element class-name='yardstick.example.runner$fn__5759' file-name='runner.clj'
+                                     line-number='15' method-name='invoke'/>
+                <stack-trace-element class-name='clojure.test$test_var$fn__9209' file-name='test.clj' line-number='716'
                                      method-name='invoke'/>
-                <stack-trace-element class-name='user$eval4577' file-name='form-init6748793272846153808.clj'
+                <stack-trace-element class-name='clojure.test$test_var' file-name='test.clj' line-number='716'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$test_var' file-name='test.clj' line-number='707'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='clojure.test$test_vars$fn__9235$fn__9240' file-name='test.clj'
+                                     line-number='734' method-name='invoke'/>
+                <stack-trace-element class-name='clojure.test$default_fixture' file-name='test.clj' line-number='686'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$default_fixture' file-name='test.clj' line-number='682'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='clojure.test$test_vars$fn__9235' file-name='test.clj' line-number='734'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='clojure.test$default_fixture' file-name='test.clj' line-number='686'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$default_fixture' file-name='test.clj' line-number='682'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='clojure.test$test_vars' file-name='test.clj' line-number='730'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$test_all_vars' file-name='test.clj' line-number='736'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$test_ns' file-name='test.clj' line-number='757'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$test_ns' file-name='test.clj' line-number='742'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='clojure.core$map$fn__5587' file-name='core.clj' line-number='2747'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='clojure.lang.LazySeq' file-name='LazySeq.java' line-number='40'
+                                     method-name='sval'/>
+                <stack-trace-element class-name='clojure.lang.LazySeq' file-name='LazySeq.java' line-number='49'
+                                     method-name='seq'/>
+                <stack-trace-element class-name='clojure.lang.Cons' file-name='Cons.java' line-number='39'
+                                     method-name='next'/>
+                <stack-trace-element class-name='clojure.lang.RT' file-name='RT.java' line-number='1785'
+                                     method-name='boundedLength'/>
+                <stack-trace-element class-name='clojure.lang.RestFn' file-name='RestFn.java' line-number='130'
+                                     method-name='applyTo'/>
+                <stack-trace-element class-name='clojure.core$apply' file-name='core.clj' line-number='659'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$run_tests' file-name='test.clj' line-number='767'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$run_tests' file-name='test.clj' line-number='767'
+                                     method-name='doInvoke'/>
+                <stack-trace-element class-name='clojure.lang.RestFn' file-name='RestFn.java' line-number='408'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='user$eval5767$fn__5806' file-name='form-init6524563332068273430.clj'
+                                     line-number='1' method-name='invoke'/>
+                <stack-trace-element class-name='clojure.core$with_redefs_fn' file-name='core.clj' line-number='7434'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.core$with_redefs_fn' file-name='core.clj' line-number='7418'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='user$eval5767' file-name='form-init6524563332068273430.clj'
                                      line-number='1' method-name='invokeStatic'/>
-                <stack-trace-element class-name='user$eval4577' file-name='form-init6748793272846153808.clj'
+                <stack-trace-element class-name='user$eval5767' file-name='form-init6524563332068273430.clj'
                                      line-number='1' method-name='invoke'/>
                 <stack-trace-element class-name='clojure.lang.Compiler' file-name='Compiler.java' line-number='7062'
                                      method-name='eval'/>
@@ -1618,11 +2027,11 @@
     <after-suite>
         <error type='class java.lang.Exception' message='This is an example exception'>
             <stack-trace>
-                <stack-trace-element class-name='yardstick.example.hooks$reify__4087' file-name='hooks.clj'
+                <stack-trace-element class-name='yardstick.example.hooks$reify__5449' file-name='hooks.clj'
                                      line-number='7' method-name='after_suite'/>
-                <stack-trace-element class-name='yardstick.core$run$fn__3942$fn__4069' file-name='core.clj'
+                <stack-trace-element class-name='yardstick.core$run$fn__5247$fn__5374' file-name='core.clj'
                                      line-number='134' method-name='invoke'/>
-                <stack-trace-element class-name='yardstick.core$run$fn__3942' file-name='core.clj' line-number='133'
+                <stack-trace-element class-name='yardstick.core$run$fn__5247' file-name='core.clj' line-number='133'
                                      method-name='invoke'/>
                 <stack-trace-element class-name='yardstick.core$run' file-name='core.clj' line-number='80'
                                      method-name='invokeStatic'/>
@@ -1630,17 +2039,67 @@
                                      method-name='doInvoke'/>
                 <stack-trace-element class-name='clojure.lang.RestFn' file-name='RestFn.java' line-number='486'
                                      method-name='invoke'/>
-                <stack-trace-element class-name='yardstick.example.runner$_main$fn__4502' file-name='runner.clj'
-                                     line-number='18' method-name='invoke'/>
-                <stack-trace-element class-name='yardstick.example.runner$_main' file-name='runner.clj' line-number='17'
-                                     method-name='invokeStatic'/>
-                <stack-trace-element class-name='yardstick.example.runner$_main' file-name='runner.clj' line-number='14'
-                                     method-name='doInvoke'/>
-                <stack-trace-element class-name='clojure.lang.RestFn' file-name='RestFn.java' line-number='397'
+                <stack-trace-element class-name='yardstick.example.runner$fn__5759$fn__5760' file-name='runner.clj'
+                                     line-number='19' method-name='invoke'/>
+                <stack-trace-element class-name='yardstick.example.runner$fn__5759' file-name='runner.clj'
+                                     line-number='18' method-name='invokeStatic'/>
+                <stack-trace-element class-name='yardstick.example.runner$fn__5759' file-name='runner.clj'
+                                     line-number='15' method-name='invoke'/>
+                <stack-trace-element class-name='clojure.test$test_var$fn__9209' file-name='test.clj' line-number='716'
                                      method-name='invoke'/>
-                <stack-trace-element class-name='user$eval4577' file-name='form-init6748793272846153808.clj'
+                <stack-trace-element class-name='clojure.test$test_var' file-name='test.clj' line-number='716'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$test_var' file-name='test.clj' line-number='707'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='clojure.test$test_vars$fn__9235$fn__9240' file-name='test.clj'
+                                     line-number='734' method-name='invoke'/>
+                <stack-trace-element class-name='clojure.test$default_fixture' file-name='test.clj' line-number='686'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$default_fixture' file-name='test.clj' line-number='682'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='clojure.test$test_vars$fn__9235' file-name='test.clj' line-number='734'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='clojure.test$default_fixture' file-name='test.clj' line-number='686'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$default_fixture' file-name='test.clj' line-number='682'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='clojure.test$test_vars' file-name='test.clj' line-number='730'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$test_all_vars' file-name='test.clj' line-number='736'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$test_ns' file-name='test.clj' line-number='757'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$test_ns' file-name='test.clj' line-number='742'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='clojure.core$map$fn__5587' file-name='core.clj' line-number='2747'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='clojure.lang.LazySeq' file-name='LazySeq.java' line-number='40'
+                                     method-name='sval'/>
+                <stack-trace-element class-name='clojure.lang.LazySeq' file-name='LazySeq.java' line-number='49'
+                                     method-name='seq'/>
+                <stack-trace-element class-name='clojure.lang.Cons' file-name='Cons.java' line-number='39'
+                                     method-name='next'/>
+                <stack-trace-element class-name='clojure.lang.RT' file-name='RT.java' line-number='1785'
+                                     method-name='boundedLength'/>
+                <stack-trace-element class-name='clojure.lang.RestFn' file-name='RestFn.java' line-number='130'
+                                     method-name='applyTo'/>
+                <stack-trace-element class-name='clojure.core$apply' file-name='core.clj' line-number='659'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$run_tests' file-name='test.clj' line-number='767'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.test$run_tests' file-name='test.clj' line-number='767'
+                                     method-name='doInvoke'/>
+                <stack-trace-element class-name='clojure.lang.RestFn' file-name='RestFn.java' line-number='408'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='user$eval5767$fn__5806' file-name='form-init6524563332068273430.clj'
+                                     line-number='1' method-name='invoke'/>
+                <stack-trace-element class-name='clojure.core$with_redefs_fn' file-name='core.clj' line-number='7434'
+                                     method-name='invokeStatic'/>
+                <stack-trace-element class-name='clojure.core$with_redefs_fn' file-name='core.clj' line-number='7418'
+                                     method-name='invoke'/>
+                <stack-trace-element class-name='user$eval5767' file-name='form-init6524563332068273430.clj'
                                      line-number='1' method-name='invokeStatic'/>
-                <stack-trace-element class-name='user$eval4577' file-name='form-init6748793272846153808.clj'
+                <stack-trace-element class-name='user$eval5767' file-name='form-init6524563332068273430.clj'
                                      line-number='1' method-name='invoke'/>
                 <stack-trace-element class-name='clojure.lang.Compiler' file-name='Compiler.java' line-number='7062'
                                      method-name='eval'/>
