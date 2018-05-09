@@ -14,4 +14,3 @@
                 (throw (Exception. "This is another example exception"))
                 ))
   )
-
