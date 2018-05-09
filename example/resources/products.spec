@@ -27,8 +27,8 @@ tags: admin, product, edit
 "Find and store productId for" and "Open product edit page for stored productId" uses the sceanrio datastore
 
 * Open product edit page for stored productId
-* Update product specifier to new value <table:resources/product_data.csv>
-* Check product specifier has new value <table:resources/product_data.csv>
+* Update product specifier to new value <table:example/resources/product_data.csv>
+* Check product specifier has new value <table:example/resources/product_data.csv>
 
 Delete a product
 ----------------

@@ -4,7 +4,7 @@
             [clojure.set :as set]
             [clojure.pprint :as pp]))
 
-(def ^:private expressions ["!TagA" "TagA & TagB" "TagA & !TagB" "TagA | TagB" "(TagA & TagB) | TagC" "!(TagA & TagB) | TagC" "(TagA | TagB) & TagC"])
+(def ^:private expressions ["" "!TagA" "TagA & TagB" "TagA & !TagB" "TagA | TagB" "(TagA & TagB) | TagC" "!(TagA & TagB) | TagC" "(TagA | TagB) & TagC"])
 
 (def ^:private base-tag-set #{"TagA" "TagB" "TagC"})
 

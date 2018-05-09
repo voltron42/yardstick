@@ -40,4 +40,6 @@
     tag = #'[a-zA-Z][a-zA-Z0-9]+'"))
 
 (defn parse-tag-validator [expression]
-  (build-tag-validator (parse-tags expression)))
+  (if (empty? expression)
+    (constantly true)
+    (build-tag-validator (parse-tags expression))))

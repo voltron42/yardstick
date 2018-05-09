@@ -1,9 +1,6 @@
 (ns yardstick.parse
   (:require [clojure.xml :as xml]
             [clojure.string :as str]
-            [clojure.pprint :as pp]
-            [endophile.core :as e]
-            [endophile.hiccup :refer [to-hiccup]]
             [clojure.spec.alpha :as s]
             [markdown.core :as md]
             [clojure.data.csv :as csv]
@@ -42,12 +39,6 @@
   (if (nil? table)
     (parse-spec (str/join step))
     (parse-spec (str/join step) table)))
-
-(defmulti spec-steps first)
-
-(defmethod spec-steps :simple [[_ steps]])
-
-(defmethod spec-steps :with-tables [[_ {}]])
 
 (defn- spec-scenario [{{header :header} :scenario-header {tags :tags} :tags {steps :step} :steps :or {tags ""}}]
   {:scenario header

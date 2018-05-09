@@ -1,10 +1,9 @@
 (ns yardstick.parse-test
   (:require [clojure.test :refer :all]
-            [yardstick.parse :refer :all]
-            [clojure.pprint :as pp]))
+            [yardstick.parse :refer :all]))
 
 (deftest test-parse-customer
-  (is (= (parse-test-file (slurp "resources/examples/customer.spec"))
+  (is (= (parse-test-file (slurp "example/resources/customer.spec"))
         {:spec "Customers",
          :tags #{},
          :for-each [["On the customer page"]],
@@ -21,8 +20,7 @@
                      {"# users" "ScroogeMcduck"}]]]}]})))
 
 (deftest test-parse-products
-  (pp/pprint (parse-test-file (slurp "resources/examples/products.spec")))
-  (is (= (parse-test-file (slurp "resources/examples/products.spec"))
+  (is (= (parse-test-file (slurp "example/resources/products.spec"))
          {:spec "Products",
           :tags #{},
           :for-each [],
@@ -72,7 +70,7 @@
             :steps [["Delete product %1s" "Learning Go"]]}]})))
 
 (deftest test-parse-user
-  (is (= (parse-test-file (slurp "resources/examples/user.spec"))
+  (is (= (parse-test-file (slurp "example/resources/user.spec"))
          {:spec "Signup",
           :tags #{},
           :for-each [],

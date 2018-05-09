@@ -1,5 +1,39 @@
+steps:
+{"Search for customers"
+ #object[example.steps$def_steps$fn__4095 0x40d093ef "example.steps$def_steps$fn__4095@40d093ef"],
+ "Verify product %1s as %2s"
+ #object[example.steps$def_steps$fn__4087 0x31376489 "example.steps$def_steps$fn__4087@31376489"],
+ "Update product specifier to new value"
+ #object[example.steps$def_steps$fn__4097 0x1ac23e4 "example.steps$def_steps$fn__4097@1ac23e4"],
+ "Find and Open product page for %1s"
+ #object[example.steps$def_steps$fn__4085 0x2feea6f1 "example.steps$def_steps$fn__4085@2feea6f1"],
+ "On the customer page"
+ #object[example.steps$def_steps$fn__4079 0x5d998fb1 "example.steps$def_steps$fn__4079@5d998fb1"],
+ "Create a product"
+ #object[example.steps$def_steps$fn__4091 0x4b53e877 "example.steps$def_steps$fn__4091@4b53e877"],
+ "Search for customer %1s"
+ #object[example.steps$def_steps$fn__4081 0x5e5ea741 "example.steps$def_steps$fn__4081@5e5ea741"],
+ "The customer %1s is listed"
+ #object[example.steps$def_steps$fn__4083 0x6ad63b9c "example.steps$def_steps$fn__4083@6ad63b9c"],
+ "Check product specifier has new value"
+ #object[example.steps$def_steps$fn__4099 0x23d17c53 "example.steps$def_steps$fn__4099@23d17c53"],
+ "Delete product %1s"
+ #object[example.steps$def_steps$fn__4089 0x28571652 "example.steps$def_steps$fn__4089@28571652"]}
+
+hooks:
+{:before-spec [],
+ :after-spec
+ [[#object[clojure.core$constantly$fn__5394 0x2da483d1 "clojure.core$constantly$fn__5394@2da483d1"]
+   #object[example.hooks$def_hooks$fn__4045 0xba4b26b "example.hooks$def_hooks$fn__4045@ba4b26b"]]],
+ :before-scenario [],
+ :after-scenario
+ [[#object[clojure.core$constantly$fn__5394 0x217c555e "clojure.core$constantly$fn__5394@217c555e"]
+   #object[example.hooks$def_hooks$fn__4047 0x7ec971a9 "example.hooks$def_hooks$fn__4047@7ec971a9"]]],
+ :before-step [],
+ :after-step []}
+
 The following file could not be parsed due to the following reason:
-	C:\practice\code\yardstick\resources\examples\bad-example.spec
+	C:\practice\code\yardstick\example\resources\bad-example.spec
 	File does not conform to test structure:
 {:error
  #:clojure.spec.alpha{:problems
@@ -19,12 +53,22 @@ The following file could not be parsed due to the following reason:
 Beginning tests:
 # Customers
 ## Search for a customer
+On the customer page
+true
 > On the customer page - SUCCESS!
+Search for customer %1s
+true
 > Search for customer "ScroogeMcduck" - SUCCESS!
+The customer %1s is listed
+true
 > The customer "ScroogeMcduck" is listed - SUCCESS!
 
 ## Verify a bunch of customers
+On the customer page
+true
 > On the customer page - SUCCESS!
+Search for customers
+true
 I have a table of users!
 [{"# users" "FredFlintstone"}
  {"# users" "JohnnyQuest"}
@@ -34,6 +78,8 @@ I have a table of users!
 
 # Products
 ## Create a new product
+Create a product
+true
 I have a table of stuff!
 [{"Title" "Go Programming",
   "Description" "ISBN: 978-1453636671",
@@ -54,22 +100,32 @@ I have a table of stuff!
 > Create a product - SUCCESS!
 
 ## Search for a product
+Find and Open product page for %1s
+true
 > Find and Open product page for "Go Programming" - SUCCESS!
+Verify product %1s as %2s
+true
 > Verify product "author" as "John P. Baugh" - SUCCESS!
 
 ## Search and edit and existing product
+Open product edit page for stored productId
+false
 > Open product edit page for stored productId - fails
 	java.lang.IllegalArgumentException: Step Not Implemented: Open product edit page for stored productId
-([yardstick.core$eval5098$fn__5099 doInvoke "core.clj" 18]
- [clojure.lang.RestFn invoke "RestFn.java" 410]
- [clojure.lang.MultiFn invoke "MultiFn.java" 229])
+([yardstick.core$do_step invokeStatic "core.clj" 27]
+ [yardstick.core$do_step doInvoke "core.clj" 21]
+ [clojure.lang.RestFn invoke "RestFn.java" 410])
 ...
 
+Update product specifier to new value
+true
 I have a table of products!
 [{"specifier" "title", "value" "The Way to Go On"}
  {"specifier" "author", "value" "Ivo Jay Balbaert"}
  {"specifier" "description", "value" "hohoho"}]
 > Update product specifier to new value - SUCCESS!
+Check product specifier has new value
+true
 I have a table of products!
 [{"specifier" "title", "value" "The Way to Go On"}
  {"specifier" "author", "value" "Ivo Jay Balbaert"}
@@ -77,26 +133,33 @@ I have a table of products!
 > Check product specifier has new value - SUCCESS!
 
 ## Delete a product
+Delete product %1s
+true
 > Delete product "Learning Go" - SUCCESS!
 
 
 # Signup
 ## Register a customer
+Sign up a new customer
+false
 > Sign up a new customer - fails
 	java.lang.IllegalArgumentException: Step Not Implemented: Sign up a new customer
-([yardstick.core$eval5098$fn__5099 doInvoke "core.clj" 18]
- [clojure.lang.RestFn invoke "RestFn.java" 410]
- [clojure.lang.MultiFn invoke "MultiFn.java" 229])
+([yardstick.core$do_step invokeStatic "core.clj" 27]
+ [yardstick.core$do_step doInvoke "core.clj" 21]
+ [clojure.lang.RestFn invoke "RestFn.java" 410])
 ...
 
+On the customer page
+true
 > On the customer page - SUCCESS!
+Just registered customer is listed
+false
 > Just registered customer is listed - fails
 	java.lang.IllegalArgumentException: Step Not Implemented: Just registered customer is listed
-([yardstick.core$eval5098$fn__5099 doInvoke "core.clj" 18]
- [clojure.lang.RestFn invoke "RestFn.java" 410]
- [clojure.lang.MultiFn invoke "MultiFn.java" 229])
+([yardstick.core$do_step invokeStatic "core.clj" 27]
+ [yardstick.core$do_step doInvoke "core.clj" 21]
+ [clojure.lang.RestFn invoke "RestFn.java" 410])
 ...
 
 
 
-All tests completed.
