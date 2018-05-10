@@ -1,59 +1,58 @@
 (ns example.steps
   (:require [yardstick.core :as y]
-            [clojure.pprint :as pp]))
+            [clojure.pprint :as pp])
+  (:gen-class))
 
-(defn def-steps []
-  (y/def-step "On the customer page" []
-                ;TODO
-                )
+(defmethod y/do-step "On the customer page" [_]
+              ;TODO
+              )
 
-  (y/def-step "Search for customer %1s"
-              [customer-name]
-                ;TODO
-                )
+(defmethod y/do-step "Search for customer %1s"
+            [_ customer-name]
+              ;TODO
+              )
 
-  (y/def-step "The customer %1s is listed"
-              [customer-name]
-                ;TODO
-                )
+(defmethod y/do-step "The customer %1s is listed"
+            [_ customer-name]
+              ;TODO
+              )
 
-  (y/def-step "Find and Open product page for %1s"
-              [product]
-                ;TODO
-                )
+(defmethod y/do-step "Find and Open product page for %1s"
+            [_ product]
+              ;TODO
+              )
 
-  (y/def-step "Verify product %1s as %2s"
-              [property value]
-                ;TODO
-                )
+(defmethod y/do-step "Verify product %1s as %2s"
+            [_ property value]
+              ;TODO
+              )
 
-  (y/def-step "Delete product %1s"
-              [product]
-                ;TODO
-                )
+(defmethod y/do-step "Delete product %1s"
+            [_ product]
+              ;TODO
+              )
 
-  (y/def-step "Create a product"
-              [table]
-                (println "I have a table of stuff!")
-                (pp/pprint table))
+(defmethod y/do-step "Create a product"
+            [_ table]
+              (println "I have a table of stuff!")
+              (pp/pprint table))
 
-  (y/def-step "Search for customers"
-              [table]
-                (println "I have a table of users!")
-                (pp/pprint table))
+(defmethod y/do-step "Search for customers"
+            [_ table]
+              (println "I have a table of users!")
+              (pp/pprint table))
 
-  (y/def-step "Search for customers"
-              [table]
-                (println "I have a table of users!")
-                (pp/pprint table))
+(defmethod y/do-step "Search for customers"
+            [_ table]
+              (println "I have a table of users!")
+              (pp/pprint table))
 
-  (y/def-step "Update product specifier to new value"
-              [table]
-                (println "I have a table of products!")
-                (pp/pprint table))
+(defmethod y/do-step "Update product specifier to new value"
+            [_ table]
+              (println "I have a table of products!")
+              (pp/pprint table))
 
-  (y/def-step "Check product specifier has new value"
-              [table]
-                (println "I have a table of products!")
-                (pp/pprint table))
-  )
+(defmethod y/do-step "Check product specifier has new value"
+            [_ table]
+              (println "I have a table of products!")
+              (pp/pprint table))

@@ -1,0 +1,4680 @@
+[
+  {
+    "event": "bad-file",
+    "file": "C:\\code\\yardstick\\example\\resources\\bad-example.spec",
+    "error": {
+      "type": "class clojure.lang.ExceptionInfo",
+      "message": "File does not conform to test structure:",
+      "stack-trace": [
+        {
+          "class-name": "yardstick.parse$parse_test_file",
+          "file-name": "parse.clj",
+          "line-number": 73,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "yardstick.parse$parse_test_file",
+          "file-name": "parse.clj",
+          "line-number": 63,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "yardstick.core$run$fn__3985",
+          "file-name": "core.clj",
+          "line-number": 89,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.lang.ArrayChunk",
+          "file-name": "ArrayChunk.java",
+          "line-number": 58,
+          "method-name": "reduce"
+        },
+        {
+          "class-name": "clojure.core.protocols$fn__7847",
+          "file-name": "protocols.clj",
+          "line-number": 136,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.core.protocols$fn__7847",
+          "file-name": "protocols.clj",
+          "line-number": 124,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.core.protocols$fn__7807$G__7802__7816",
+          "file-name": "protocols.clj",
+          "line-number": 19,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.core.protocols$seq_reduce",
+          "file-name": "protocols.clj",
+          "line-number": 31,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.core.protocols$fn__7835",
+          "file-name": "protocols.clj",
+          "line-number": 75,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.core.protocols$fn__7835",
+          "file-name": "protocols.clj",
+          "line-number": 75,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.core.protocols$fn__7781$G__7776__7794",
+          "file-name": "protocols.clj",
+          "line-number": 13,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.core$reduce",
+          "file-name": "core.clj",
+          "line-number": 6748,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.core$reduce",
+          "file-name": "core.clj",
+          "line-number": 6730,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "yardstick.core$run",
+          "file-name": "core.clj",
+          "line-number": 86,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "yardstick.core$run",
+          "file-name": "core.clj",
+          "line-number": 77,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "yardstick.core$run",
+          "file-name": "core.clj",
+          "line-number": 78,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "yardstick.core$run",
+          "file-name": "core.clj",
+          "line-number": 77,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "example.runner$fn__4425",
+          "file-name": "runner.clj",
+          "line-number": 20,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "example.runner$fn__4425",
+          "file-name": "runner.clj",
+          "line-number": 12,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.test$test_var$fn__9209",
+          "file-name": "test.clj",
+          "line-number": 716,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.test$test_var",
+          "file-name": "test.clj",
+          "line-number": 716,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.test$test_var",
+          "file-name": "test.clj",
+          "line-number": 707,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "user$eval4430$fn__4465$fn__4466$fn__4467",
+          "file-name": "form-init8341403935590923813.clj",
+          "line-number": 1,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.test$default_fixture",
+          "file-name": "test.clj",
+          "line-number": 686,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.test$default_fixture",
+          "file-name": "test.clj",
+          "line-number": 682,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "user$eval4430$fn__4465$fn__4466",
+          "file-name": "form-init8341403935590923813.clj",
+          "line-number": 1,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.test$default_fixture",
+          "file-name": "test.clj",
+          "line-number": 686,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.test$default_fixture",
+          "file-name": "test.clj",
+          "line-number": 682,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "user$eval4430$fn__4465",
+          "file-name": "form-init8341403935590923813.clj",
+          "line-number": 1,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.core$with_redefs_fn",
+          "file-name": "core.clj",
+          "line-number": 7434,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.core$with_redefs_fn",
+          "file-name": "core.clj",
+          "line-number": 7418,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "user$eval4430",
+          "file-name": "form-init8341403935590923813.clj",
+          "line-number": 1,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "user$eval4430",
+          "file-name": "form-init8341403935590923813.clj",
+          "line-number": 1,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.lang.Compiler",
+          "file-name": "Compiler.java",
+          "line-number": 7062,
+          "method-name": "eval"
+        },
+        {
+          "class-name": "clojure.lang.Compiler",
+          "file-name": "Compiler.java",
+          "line-number": 7025,
+          "method-name": "eval"
+        },
+        {
+          "class-name": "clojure.core$eval",
+          "file-name": "core.clj",
+          "line-number": 3206,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.core$eval",
+          "file-name": "core.clj",
+          "line-number": 3202,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.main$repl$read_eval_print__8572$fn__8575",
+          "file-name": "main.clj",
+          "line-number": 243,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.main$repl$read_eval_print__8572",
+          "file-name": "main.clj",
+          "line-number": 243,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.main$repl$fn__8581",
+          "file-name": "main.clj",
+          "line-number": 261,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.main$repl",
+          "file-name": "main.clj",
+          "line-number": 261,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.main$repl",
+          "file-name": "main.clj",
+          "line-number": 177,
+          "method-name": "doInvoke"
+        },
+        {
+          "class-name": "clojure.lang.RestFn",
+          "file-name": "RestFn.java",
+          "line-number": 1523,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.tools.nrepl.middleware.interruptible_eval$evaluate$fn__820",
+          "file-name": "interruptible_eval.clj",
+          "line-number": 87,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.lang.AFn",
+          "file-name": "AFn.java",
+          "line-number": 152,
+          "method-name": "applyToHelper"
+        },
+        {
+          "class-name": "clojure.lang.AFn",
+          "file-name": "AFn.java",
+          "line-number": 144,
+          "method-name": "applyTo"
+        },
+        {
+          "class-name": "clojure.core$apply",
+          "file-name": "core.clj",
+          "line-number": 657,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.core$with_bindings_STAR_",
+          "file-name": "core.clj",
+          "line-number": 1965,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.core$with_bindings_STAR_",
+          "file-name": "core.clj",
+          "line-number": 1965,
+          "method-name": "doInvoke"
+        },
+        {
+          "class-name": "clojure.lang.RestFn",
+          "file-name": "RestFn.java",
+          "line-number": 425,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.tools.nrepl.middleware.interruptible_eval$evaluate",
+          "file-name": "interruptible_eval.clj",
+          "line-number": 85,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.tools.nrepl.middleware.interruptible_eval$evaluate",
+          "file-name": "interruptible_eval.clj",
+          "line-number": 55,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.tools.nrepl.middleware.interruptible_eval$interruptible_eval$fn__865$fn__868",
+          "file-name": "interruptible_eval.clj",
+          "line-number": 222,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.tools.nrepl.middleware.interruptible_eval$run_next$fn__860",
+          "file-name": "interruptible_eval.clj",
+          "line-number": 190,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.lang.AFn",
+          "file-name": "AFn.java",
+          "line-number": 22,
+          "method-name": "run"
+        },
+        {
+          "class-name": "java.util.concurrent.ThreadPoolExecutor",
+          "file-name": "ThreadPoolExecutor.java",
+          "line-number": 1149,
+          "method-name": "runWorker"
+        },
+        {
+          "class-name": "java.util.concurrent.ThreadPoolExecutor$Worker",
+          "file-name": "ThreadPoolExecutor.java",
+          "line-number": 624,
+          "method-name": "run"
+        },
+        {
+          "class-name": "java.lang.Thread",
+          "file-name": "Thread.java",
+          "line-number": 748,
+          "method-name": "run"
+        }
+      ]
+    }
+  },
+  {
+    "event": "suite-start"
+  },
+  {
+    "event": "spec-start",
+    "spec": "Customers"
+  },
+  {
+    "event": "scenario-start",
+    "spec": "Customers",
+    "scenario": "Search for a customer"
+  },
+  {
+    "event": "step",
+    "spec": "Customers",
+    "scenario": "Search for a customer",
+    "step": "On the customer page"
+  },
+  {
+    "event": "step",
+    "spec": "Customers",
+    "scenario": "Search for a customer",
+    "step": "Search for customer \"ScroogeMcduck\""
+  },
+  {
+    "event": "step",
+    "spec": "Customers",
+    "scenario": "Search for a customer",
+    "step": "The customer \"ScroogeMcduck\" is listed"
+  },
+  {
+    "error": {
+      "type": "class java.lang.Exception",
+      "message": "This is another example exception",
+      "stack-trace": [
+        {
+          "class-name": "example.hooks$def_hooks$fn__4323",
+          "file-name": "hooks.clj",
+          "line-number": 14,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.core$juxt$fn__5542",
+          "file-name": "core.clj",
+          "line-number": 2580,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "yardstick.core$run$fn__3996$fn__4002$fn__4015",
+          "file-name": "core.clj",
+          "line-number": 134,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "yardstick.core$run$fn__3996$fn__4002",
+          "file-name": "core.clj",
+          "line-number": 133,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "yardstick.core$run$fn__3996",
+          "file-name": "core.clj",
+          "line-number": 111,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "yardstick.core$run",
+          "file-name": "core.clj",
+          "line-number": 102,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "yardstick.core$run",
+          "file-name": "core.clj",
+          "line-number": 77,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "yardstick.core$run",
+          "file-name": "core.clj",
+          "line-number": 78,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "yardstick.core$run",
+          "file-name": "core.clj",
+          "line-number": 77,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "example.runner$fn__4425",
+          "file-name": "runner.clj",
+          "line-number": 20,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "example.runner$fn__4425",
+          "file-name": "runner.clj",
+          "line-number": 12,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.test$test_var$fn__9209",
+          "file-name": "test.clj",
+          "line-number": 716,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.test$test_var",
+          "file-name": "test.clj",
+          "line-number": 716,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.test$test_var",
+          "file-name": "test.clj",
+          "line-number": 707,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "user$eval4430$fn__4465$fn__4466$fn__4467",
+          "file-name": "form-init8341403935590923813.clj",
+          "line-number": 1,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.test$default_fixture",
+          "file-name": "test.clj",
+          "line-number": 686,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.test$default_fixture",
+          "file-name": "test.clj",
+          "line-number": 682,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "user$eval4430$fn__4465$fn__4466",
+          "file-name": "form-init8341403935590923813.clj",
+          "line-number": 1,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.test$default_fixture",
+          "file-name": "test.clj",
+          "line-number": 686,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.test$default_fixture",
+          "file-name": "test.clj",
+          "line-number": 682,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "user$eval4430$fn__4465",
+          "file-name": "form-init8341403935590923813.clj",
+          "line-number": 1,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.core$with_redefs_fn",
+          "file-name": "core.clj",
+          "line-number": 7434,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.core$with_redefs_fn",
+          "file-name": "core.clj",
+          "line-number": 7418,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "user$eval4430",
+          "file-name": "form-init8341403935590923813.clj",
+          "line-number": 1,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "user$eval4430",
+          "file-name": "form-init8341403935590923813.clj",
+          "line-number": 1,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.lang.Compiler",
+          "file-name": "Compiler.java",
+          "line-number": 7062,
+          "method-name": "eval"
+        },
+        {
+          "class-name": "clojure.lang.Compiler",
+          "file-name": "Compiler.java",
+          "line-number": 7025,
+          "method-name": "eval"
+        },
+        {
+          "class-name": "clojure.core$eval",
+          "file-name": "core.clj",
+          "line-number": 3206,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.core$eval",
+          "file-name": "core.clj",
+          "line-number": 3202,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.main$repl$read_eval_print__8572$fn__8575",
+          "file-name": "main.clj",
+          "line-number": 243,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.main$repl$read_eval_print__8572",
+          "file-name": "main.clj",
+          "line-number": 243,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.main$repl$fn__8581",
+          "file-name": "main.clj",
+          "line-number": 261,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.main$repl",
+          "file-name": "main.clj",
+          "line-number": 261,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.main$repl",
+          "file-name": "main.clj",
+          "line-number": 177,
+          "method-name": "doInvoke"
+        },
+        {
+          "class-name": "clojure.lang.RestFn",
+          "file-name": "RestFn.java",
+          "line-number": 1523,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.tools.nrepl.middleware.interruptible_eval$evaluate$fn__820",
+          "file-name": "interruptible_eval.clj",
+          "line-number": 87,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.lang.AFn",
+          "file-name": "AFn.java",
+          "line-number": 152,
+          "method-name": "applyToHelper"
+        },
+        {
+          "class-name": "clojure.lang.AFn",
+          "file-name": "AFn.java",
+          "line-number": 144,
+          "method-name": "applyTo"
+        },
+        {
+          "class-name": "clojure.core$apply",
+          "file-name": "core.clj",
+          "line-number": 657,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.core$with_bindings_STAR_",
+          "file-name": "core.clj",
+          "line-number": 1965,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.core$with_bindings_STAR_",
+          "file-name": "core.clj",
+          "line-number": 1965,
+          "method-name": "doInvoke"
+        },
+        {
+          "class-name": "clojure.lang.RestFn",
+          "file-name": "RestFn.java",
+          "line-number": 425,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.tools.nrepl.middleware.interruptible_eval$evaluate",
+          "file-name": "interruptible_eval.clj",
+          "line-number": 85,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.tools.nrepl.middleware.interruptible_eval$evaluate",
+          "file-name": "interruptible_eval.clj",
+          "line-number": 55,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.tools.nrepl.middleware.interruptible_eval$interruptible_eval$fn__865$fn__868",
+          "file-name": "interruptible_eval.clj",
+          "line-number": 222,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.tools.nrepl.middleware.interruptible_eval$run_next$fn__860",
+          "file-name": "interruptible_eval.clj",
+          "line-number": 190,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.lang.AFn",
+          "file-name": "AFn.java",
+          "line-number": 22,
+          "method-name": "run"
+        },
+        {
+          "class-name": "java.util.concurrent.ThreadPoolExecutor",
+          "file-name": "ThreadPoolExecutor.java",
+          "line-number": 1149,
+          "method-name": "runWorker"
+        },
+        {
+          "class-name": "java.util.concurrent.ThreadPoolExecutor$Worker",
+          "file-name": "ThreadPoolExecutor.java",
+          "line-number": 624,
+          "method-name": "run"
+        },
+        {
+          "class-name": "java.lang.Thread",
+          "file-name": "Thread.java",
+          "line-number": 748,
+          "method-name": "run"
+        }
+      ]
+    },
+    "event": "after-scenario",
+    "spec": "Customers",
+    "scenario": "Search for a customer"
+  },
+  {
+    "event": "scenario-end",
+    "spec": "Customers",
+    "scenario": "Search for a customer"
+  },
+  {
+    "event": "scenario-start",
+    "spec": "Customers",
+    "scenario": "Verify a bunch of customers"
+  },
+  {
+    "event": "step",
+    "spec": "Customers",
+    "scenario": "Verify a bunch of customers",
+    "step": "On the customer page"
+  },
+  {
+    "event": "step",
+    "spec": "Customers",
+    "scenario": "Verify a bunch of customers",
+    "step": "Search for customers"
+  },
+  {
+    "error": {
+      "type": "class java.lang.Exception",
+      "message": "This is another example exception",
+      "stack-trace": [
+        {
+          "class-name": "example.hooks$def_hooks$fn__4323",
+          "file-name": "hooks.clj",
+          "line-number": 14,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.core$juxt$fn__5542",
+          "file-name": "core.clj",
+          "line-number": 2580,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "yardstick.core$run$fn__3996$fn__4002$fn__4015",
+          "file-name": "core.clj",
+          "line-number": 134,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "yardstick.core$run$fn__3996$fn__4002",
+          "file-name": "core.clj",
+          "line-number": 133,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "yardstick.core$run$fn__3996",
+          "file-name": "core.clj",
+          "line-number": 111,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "yardstick.core$run",
+          "file-name": "core.clj",
+          "line-number": 102,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "yardstick.core$run",
+          "file-name": "core.clj",
+          "line-number": 77,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "yardstick.core$run",
+          "file-name": "core.clj",
+          "line-number": 78,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "yardstick.core$run",
+          "file-name": "core.clj",
+          "line-number": 77,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "example.runner$fn__4425",
+          "file-name": "runner.clj",
+          "line-number": 20,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "example.runner$fn__4425",
+          "file-name": "runner.clj",
+          "line-number": 12,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.test$test_var$fn__9209",
+          "file-name": "test.clj",
+          "line-number": 716,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.test$test_var",
+          "file-name": "test.clj",
+          "line-number": 716,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.test$test_var",
+          "file-name": "test.clj",
+          "line-number": 707,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "user$eval4430$fn__4465$fn__4466$fn__4467",
+          "file-name": "form-init8341403935590923813.clj",
+          "line-number": 1,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.test$default_fixture",
+          "file-name": "test.clj",
+          "line-number": 686,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.test$default_fixture",
+          "file-name": "test.clj",
+          "line-number": 682,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "user$eval4430$fn__4465$fn__4466",
+          "file-name": "form-init8341403935590923813.clj",
+          "line-number": 1,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.test$default_fixture",
+          "file-name": "test.clj",
+          "line-number": 686,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.test$default_fixture",
+          "file-name": "test.clj",
+          "line-number": 682,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "user$eval4430$fn__4465",
+          "file-name": "form-init8341403935590923813.clj",
+          "line-number": 1,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.core$with_redefs_fn",
+          "file-name": "core.clj",
+          "line-number": 7434,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.core$with_redefs_fn",
+          "file-name": "core.clj",
+          "line-number": 7418,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "user$eval4430",
+          "file-name": "form-init8341403935590923813.clj",
+          "line-number": 1,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "user$eval4430",
+          "file-name": "form-init8341403935590923813.clj",
+          "line-number": 1,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.lang.Compiler",
+          "file-name": "Compiler.java",
+          "line-number": 7062,
+          "method-name": "eval"
+        },
+        {
+          "class-name": "clojure.lang.Compiler",
+          "file-name": "Compiler.java",
+          "line-number": 7025,
+          "method-name": "eval"
+        },
+        {
+          "class-name": "clojure.core$eval",
+          "file-name": "core.clj",
+          "line-number": 3206,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.core$eval",
+          "file-name": "core.clj",
+          "line-number": 3202,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.main$repl$read_eval_print__8572$fn__8575",
+          "file-name": "main.clj",
+          "line-number": 243,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.main$repl$read_eval_print__8572",
+          "file-name": "main.clj",
+          "line-number": 243,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.main$repl$fn__8581",
+          "file-name": "main.clj",
+          "line-number": 261,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.main$repl",
+          "file-name": "main.clj",
+          "line-number": 261,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.main$repl",
+          "file-name": "main.clj",
+          "line-number": 177,
+          "method-name": "doInvoke"
+        },
+        {
+          "class-name": "clojure.lang.RestFn",
+          "file-name": "RestFn.java",
+          "line-number": 1523,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.tools.nrepl.middleware.interruptible_eval$evaluate$fn__820",
+          "file-name": "interruptible_eval.clj",
+          "line-number": 87,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.lang.AFn",
+          "file-name": "AFn.java",
+          "line-number": 152,
+          "method-name": "applyToHelper"
+        },
+        {
+          "class-name": "clojure.lang.AFn",
+          "file-name": "AFn.java",
+          "line-number": 144,
+          "method-name": "applyTo"
+        },
+        {
+          "class-name": "clojure.core$apply",
+          "file-name": "core.clj",
+          "line-number": 657,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.core$with_bindings_STAR_",
+          "file-name": "core.clj",
+          "line-number": 1965,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.core$with_bindings_STAR_",
+          "file-name": "core.clj",
+          "line-number": 1965,
+          "method-name": "doInvoke"
+        },
+        {
+          "class-name": "clojure.lang.RestFn",
+          "file-name": "RestFn.java",
+          "line-number": 425,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.tools.nrepl.middleware.interruptible_eval$evaluate",
+          "file-name": "interruptible_eval.clj",
+          "line-number": 85,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.tools.nrepl.middleware.interruptible_eval$evaluate",
+          "file-name": "interruptible_eval.clj",
+          "line-number": 55,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.tools.nrepl.middleware.interruptible_eval$interruptible_eval$fn__865$fn__868",
+          "file-name": "interruptible_eval.clj",
+          "line-number": 222,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.tools.nrepl.middleware.interruptible_eval$run_next$fn__860",
+          "file-name": "interruptible_eval.clj",
+          "line-number": 190,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.lang.AFn",
+          "file-name": "AFn.java",
+          "line-number": 22,
+          "method-name": "run"
+        },
+        {
+          "class-name": "java.util.concurrent.ThreadPoolExecutor",
+          "file-name": "ThreadPoolExecutor.java",
+          "line-number": 1149,
+          "method-name": "runWorker"
+        },
+        {
+          "class-name": "java.util.concurrent.ThreadPoolExecutor$Worker",
+          "file-name": "ThreadPoolExecutor.java",
+          "line-number": 624,
+          "method-name": "run"
+        },
+        {
+          "class-name": "java.lang.Thread",
+          "file-name": "Thread.java",
+          "line-number": 748,
+          "method-name": "run"
+        }
+      ]
+    },
+    "event": "after-scenario",
+    "spec": "Customers",
+    "scenario": "Verify a bunch of customers"
+  },
+  {
+    "event": "scenario-end",
+    "spec": "Customers",
+    "scenario": "Verify a bunch of customers"
+  },
+  {
+    "error": {
+      "type": "class java.lang.AssertionError",
+      "message": "This is also an example exception",
+      "stack-trace": [
+        {
+          "class-name": "org.junit.Assert",
+          "file-name": "Assert.java",
+          "line-number": 88,
+          "method-name": "fail"
+        },
+        {
+          "class-name": "org.junit.Assert",
+          "file-name": "Assert.java",
+          "line-number": 41,
+          "method-name": "assertTrue"
+        },
+        {
+          "class-name": "example.hooks$def_hooks$fn__4321",
+          "file-name": "hooks.clj",
+          "line-number": 10,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.core$juxt$fn__5542",
+          "file-name": "core.clj",
+          "line-number": 2579,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "yardstick.core$run$fn__3996$fn__4039",
+          "file-name": "core.clj",
+          "line-number": 145,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "yardstick.core$run$fn__3996",
+          "file-name": "core.clj",
+          "line-number": 144,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "yardstick.core$run",
+          "file-name": "core.clj",
+          "line-number": 102,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "yardstick.core$run",
+          "file-name": "core.clj",
+          "line-number": 77,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "yardstick.core$run",
+          "file-name": "core.clj",
+          "line-number": 78,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "yardstick.core$run",
+          "file-name": "core.clj",
+          "line-number": 77,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "example.runner$fn__4425",
+          "file-name": "runner.clj",
+          "line-number": 20,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "example.runner$fn__4425",
+          "file-name": "runner.clj",
+          "line-number": 12,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.test$test_var$fn__9209",
+          "file-name": "test.clj",
+          "line-number": 716,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.test$test_var",
+          "file-name": "test.clj",
+          "line-number": 716,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.test$test_var",
+          "file-name": "test.clj",
+          "line-number": 707,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "user$eval4430$fn__4465$fn__4466$fn__4467",
+          "file-name": "form-init8341403935590923813.clj",
+          "line-number": 1,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.test$default_fixture",
+          "file-name": "test.clj",
+          "line-number": 686,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.test$default_fixture",
+          "file-name": "test.clj",
+          "line-number": 682,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "user$eval4430$fn__4465$fn__4466",
+          "file-name": "form-init8341403935590923813.clj",
+          "line-number": 1,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.test$default_fixture",
+          "file-name": "test.clj",
+          "line-number": 686,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.test$default_fixture",
+          "file-name": "test.clj",
+          "line-number": 682,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "user$eval4430$fn__4465",
+          "file-name": "form-init8341403935590923813.clj",
+          "line-number": 1,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.core$with_redefs_fn",
+          "file-name": "core.clj",
+          "line-number": 7434,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.core$with_redefs_fn",
+          "file-name": "core.clj",
+          "line-number": 7418,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "user$eval4430",
+          "file-name": "form-init8341403935590923813.clj",
+          "line-number": 1,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "user$eval4430",
+          "file-name": "form-init8341403935590923813.clj",
+          "line-number": 1,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.lang.Compiler",
+          "file-name": "Compiler.java",
+          "line-number": 7062,
+          "method-name": "eval"
+        },
+        {
+          "class-name": "clojure.lang.Compiler",
+          "file-name": "Compiler.java",
+          "line-number": 7025,
+          "method-name": "eval"
+        },
+        {
+          "class-name": "clojure.core$eval",
+          "file-name": "core.clj",
+          "line-number": 3206,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.core$eval",
+          "file-name": "core.clj",
+          "line-number": 3202,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.main$repl$read_eval_print__8572$fn__8575",
+          "file-name": "main.clj",
+          "line-number": 243,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.main$repl$read_eval_print__8572",
+          "file-name": "main.clj",
+          "line-number": 243,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.main$repl$fn__8581",
+          "file-name": "main.clj",
+          "line-number": 261,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.main$repl",
+          "file-name": "main.clj",
+          "line-number": 261,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.main$repl",
+          "file-name": "main.clj",
+          "line-number": 177,
+          "method-name": "doInvoke"
+        },
+        {
+          "class-name": "clojure.lang.RestFn",
+          "file-name": "RestFn.java",
+          "line-number": 1523,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.tools.nrepl.middleware.interruptible_eval$evaluate$fn__820",
+          "file-name": "interruptible_eval.clj",
+          "line-number": 87,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.lang.AFn",
+          "file-name": "AFn.java",
+          "line-number": 152,
+          "method-name": "applyToHelper"
+        },
+        {
+          "class-name": "clojure.lang.AFn",
+          "file-name": "AFn.java",
+          "line-number": 144,
+          "method-name": "applyTo"
+        },
+        {
+          "class-name": "clojure.core$apply",
+          "file-name": "core.clj",
+          "line-number": 657,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.core$with_bindings_STAR_",
+          "file-name": "core.clj",
+          "line-number": 1965,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.core$with_bindings_STAR_",
+          "file-name": "core.clj",
+          "line-number": 1965,
+          "method-name": "doInvoke"
+        },
+        {
+          "class-name": "clojure.lang.RestFn",
+          "file-name": "RestFn.java",
+          "line-number": 425,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.tools.nrepl.middleware.interruptible_eval$evaluate",
+          "file-name": "interruptible_eval.clj",
+          "line-number": 85,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.tools.nrepl.middleware.interruptible_eval$evaluate",
+          "file-name": "interruptible_eval.clj",
+          "line-number": 55,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.tools.nrepl.middleware.interruptible_eval$interruptible_eval$fn__865$fn__868",
+          "file-name": "interruptible_eval.clj",
+          "line-number": 222,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.tools.nrepl.middleware.interruptible_eval$run_next$fn__860",
+          "file-name": "interruptible_eval.clj",
+          "line-number": 190,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.lang.AFn",
+          "file-name": "AFn.java",
+          "line-number": 22,
+          "method-name": "run"
+        },
+        {
+          "class-name": "java.util.concurrent.ThreadPoolExecutor",
+          "file-name": "ThreadPoolExecutor.java",
+          "line-number": 1149,
+          "method-name": "runWorker"
+        },
+        {
+          "class-name": "java.util.concurrent.ThreadPoolExecutor$Worker",
+          "file-name": "ThreadPoolExecutor.java",
+          "line-number": 624,
+          "method-name": "run"
+        },
+        {
+          "class-name": "java.lang.Thread",
+          "file-name": "Thread.java",
+          "line-number": 748,
+          "method-name": "run"
+        }
+      ]
+    },
+    "event": "after-spec",
+    "spec": "Customers"
+  },
+  {
+    "event": "suite-end",
+    "spec": "Customers"
+  },
+  {
+    "event": "spec-start",
+    "spec": "Products"
+  },
+  {
+    "event": "scenario-start",
+    "spec": "Products",
+    "scenario": "Create a new product"
+  },
+  {
+    "event": "step",
+    "spec": "Products",
+    "scenario": "Create a new product",
+    "step": "Create a product"
+  },
+  {
+    "error": {
+      "type": "class java.lang.Exception",
+      "message": "This is another example exception",
+      "stack-trace": [
+        {
+          "class-name": "example.hooks$def_hooks$fn__4323",
+          "file-name": "hooks.clj",
+          "line-number": 14,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.core$juxt$fn__5542",
+          "file-name": "core.clj",
+          "line-number": 2580,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "yardstick.core$run$fn__3996$fn__4002$fn__4015",
+          "file-name": "core.clj",
+          "line-number": 134,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "yardstick.core$run$fn__3996$fn__4002",
+          "file-name": "core.clj",
+          "line-number": 133,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "yardstick.core$run$fn__3996",
+          "file-name": "core.clj",
+          "line-number": 111,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "yardstick.core$run",
+          "file-name": "core.clj",
+          "line-number": 102,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "yardstick.core$run",
+          "file-name": "core.clj",
+          "line-number": 77,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "yardstick.core$run",
+          "file-name": "core.clj",
+          "line-number": 78,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "yardstick.core$run",
+          "file-name": "core.clj",
+          "line-number": 77,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "example.runner$fn__4425",
+          "file-name": "runner.clj",
+          "line-number": 20,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "example.runner$fn__4425",
+          "file-name": "runner.clj",
+          "line-number": 12,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.test$test_var$fn__9209",
+          "file-name": "test.clj",
+          "line-number": 716,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.test$test_var",
+          "file-name": "test.clj",
+          "line-number": 716,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.test$test_var",
+          "file-name": "test.clj",
+          "line-number": 707,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "user$eval4430$fn__4465$fn__4466$fn__4467",
+          "file-name": "form-init8341403935590923813.clj",
+          "line-number": 1,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.test$default_fixture",
+          "file-name": "test.clj",
+          "line-number": 686,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.test$default_fixture",
+          "file-name": "test.clj",
+          "line-number": 682,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "user$eval4430$fn__4465$fn__4466",
+          "file-name": "form-init8341403935590923813.clj",
+          "line-number": 1,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.test$default_fixture",
+          "file-name": "test.clj",
+          "line-number": 686,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.test$default_fixture",
+          "file-name": "test.clj",
+          "line-number": 682,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "user$eval4430$fn__4465",
+          "file-name": "form-init8341403935590923813.clj",
+          "line-number": 1,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.core$with_redefs_fn",
+          "file-name": "core.clj",
+          "line-number": 7434,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.core$with_redefs_fn",
+          "file-name": "core.clj",
+          "line-number": 7418,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "user$eval4430",
+          "file-name": "form-init8341403935590923813.clj",
+          "line-number": 1,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "user$eval4430",
+          "file-name": "form-init8341403935590923813.clj",
+          "line-number": 1,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.lang.Compiler",
+          "file-name": "Compiler.java",
+          "line-number": 7062,
+          "method-name": "eval"
+        },
+        {
+          "class-name": "clojure.lang.Compiler",
+          "file-name": "Compiler.java",
+          "line-number": 7025,
+          "method-name": "eval"
+        },
+        {
+          "class-name": "clojure.core$eval",
+          "file-name": "core.clj",
+          "line-number": 3206,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.core$eval",
+          "file-name": "core.clj",
+          "line-number": 3202,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.main$repl$read_eval_print__8572$fn__8575",
+          "file-name": "main.clj",
+          "line-number": 243,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.main$repl$read_eval_print__8572",
+          "file-name": "main.clj",
+          "line-number": 243,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.main$repl$fn__8581",
+          "file-name": "main.clj",
+          "line-number": 261,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.main$repl",
+          "file-name": "main.clj",
+          "line-number": 261,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.main$repl",
+          "file-name": "main.clj",
+          "line-number": 177,
+          "method-name": "doInvoke"
+        },
+        {
+          "class-name": "clojure.lang.RestFn",
+          "file-name": "RestFn.java",
+          "line-number": 1523,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.tools.nrepl.middleware.interruptible_eval$evaluate$fn__820",
+          "file-name": "interruptible_eval.clj",
+          "line-number": 87,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.lang.AFn",
+          "file-name": "AFn.java",
+          "line-number": 152,
+          "method-name": "applyToHelper"
+        },
+        {
+          "class-name": "clojure.lang.AFn",
+          "file-name": "AFn.java",
+          "line-number": 144,
+          "method-name": "applyTo"
+        },
+        {
+          "class-name": "clojure.core$apply",
+          "file-name": "core.clj",
+          "line-number": 657,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.core$with_bindings_STAR_",
+          "file-name": "core.clj",
+          "line-number": 1965,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.core$with_bindings_STAR_",
+          "file-name": "core.clj",
+          "line-number": 1965,
+          "method-name": "doInvoke"
+        },
+        {
+          "class-name": "clojure.lang.RestFn",
+          "file-name": "RestFn.java",
+          "line-number": 425,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.tools.nrepl.middleware.interruptible_eval$evaluate",
+          "file-name": "interruptible_eval.clj",
+          "line-number": 85,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.tools.nrepl.middleware.interruptible_eval$evaluate",
+          "file-name": "interruptible_eval.clj",
+          "line-number": 55,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.tools.nrepl.middleware.interruptible_eval$interruptible_eval$fn__865$fn__868",
+          "file-name": "interruptible_eval.clj",
+          "line-number": 222,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.tools.nrepl.middleware.interruptible_eval$run_next$fn__860",
+          "file-name": "interruptible_eval.clj",
+          "line-number": 190,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.lang.AFn",
+          "file-name": "AFn.java",
+          "line-number": 22,
+          "method-name": "run"
+        },
+        {
+          "class-name": "java.util.concurrent.ThreadPoolExecutor",
+          "file-name": "ThreadPoolExecutor.java",
+          "line-number": 1149,
+          "method-name": "runWorker"
+        },
+        {
+          "class-name": "java.util.concurrent.ThreadPoolExecutor$Worker",
+          "file-name": "ThreadPoolExecutor.java",
+          "line-number": 624,
+          "method-name": "run"
+        },
+        {
+          "class-name": "java.lang.Thread",
+          "file-name": "Thread.java",
+          "line-number": 748,
+          "method-name": "run"
+        }
+      ]
+    },
+    "event": "after-scenario",
+    "spec": "Products",
+    "scenario": "Create a new product"
+  },
+  {
+    "event": "scenario-end",
+    "spec": "Products",
+    "scenario": "Create a new product"
+  },
+  {
+    "event": "scenario-start",
+    "spec": "Products",
+    "scenario": "Search for a product"
+  },
+  {
+    "event": "step",
+    "spec": "Products",
+    "scenario": "Search for a product",
+    "step": "Find and Open product page for \"Go Programming\""
+  },
+  {
+    "event": "step",
+    "spec": "Products",
+    "scenario": "Search for a product",
+    "step": "Verify product \"author\" as \"John P. Baugh\""
+  },
+  {
+    "error": {
+      "type": "class java.lang.Exception",
+      "message": "This is another example exception",
+      "stack-trace": [
+        {
+          "class-name": "example.hooks$def_hooks$fn__4323",
+          "file-name": "hooks.clj",
+          "line-number": 14,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.core$juxt$fn__5542",
+          "file-name": "core.clj",
+          "line-number": 2580,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "yardstick.core$run$fn__3996$fn__4002$fn__4015",
+          "file-name": "core.clj",
+          "line-number": 134,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "yardstick.core$run$fn__3996$fn__4002",
+          "file-name": "core.clj",
+          "line-number": 133,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "yardstick.core$run$fn__3996",
+          "file-name": "core.clj",
+          "line-number": 111,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "yardstick.core$run",
+          "file-name": "core.clj",
+          "line-number": 102,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "yardstick.core$run",
+          "file-name": "core.clj",
+          "line-number": 77,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "yardstick.core$run",
+          "file-name": "core.clj",
+          "line-number": 78,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "yardstick.core$run",
+          "file-name": "core.clj",
+          "line-number": 77,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "example.runner$fn__4425",
+          "file-name": "runner.clj",
+          "line-number": 20,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "example.runner$fn__4425",
+          "file-name": "runner.clj",
+          "line-number": 12,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.test$test_var$fn__9209",
+          "file-name": "test.clj",
+          "line-number": 716,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.test$test_var",
+          "file-name": "test.clj",
+          "line-number": 716,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.test$test_var",
+          "file-name": "test.clj",
+          "line-number": 707,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "user$eval4430$fn__4465$fn__4466$fn__4467",
+          "file-name": "form-init8341403935590923813.clj",
+          "line-number": 1,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.test$default_fixture",
+          "file-name": "test.clj",
+          "line-number": 686,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.test$default_fixture",
+          "file-name": "test.clj",
+          "line-number": 682,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "user$eval4430$fn__4465$fn__4466",
+          "file-name": "form-init8341403935590923813.clj",
+          "line-number": 1,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.test$default_fixture",
+          "file-name": "test.clj",
+          "line-number": 686,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.test$default_fixture",
+          "file-name": "test.clj",
+          "line-number": 682,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "user$eval4430$fn__4465",
+          "file-name": "form-init8341403935590923813.clj",
+          "line-number": 1,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.core$with_redefs_fn",
+          "file-name": "core.clj",
+          "line-number": 7434,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.core$with_redefs_fn",
+          "file-name": "core.clj",
+          "line-number": 7418,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "user$eval4430",
+          "file-name": "form-init8341403935590923813.clj",
+          "line-number": 1,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "user$eval4430",
+          "file-name": "form-init8341403935590923813.clj",
+          "line-number": 1,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.lang.Compiler",
+          "file-name": "Compiler.java",
+          "line-number": 7062,
+          "method-name": "eval"
+        },
+        {
+          "class-name": "clojure.lang.Compiler",
+          "file-name": "Compiler.java",
+          "line-number": 7025,
+          "method-name": "eval"
+        },
+        {
+          "class-name": "clojure.core$eval",
+          "file-name": "core.clj",
+          "line-number": 3206,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.core$eval",
+          "file-name": "core.clj",
+          "line-number": 3202,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.main$repl$read_eval_print__8572$fn__8575",
+          "file-name": "main.clj",
+          "line-number": 243,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.main$repl$read_eval_print__8572",
+          "file-name": "main.clj",
+          "line-number": 243,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.main$repl$fn__8581",
+          "file-name": "main.clj",
+          "line-number": 261,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.main$repl",
+          "file-name": "main.clj",
+          "line-number": 261,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.main$repl",
+          "file-name": "main.clj",
+          "line-number": 177,
+          "method-name": "doInvoke"
+        },
+        {
+          "class-name": "clojure.lang.RestFn",
+          "file-name": "RestFn.java",
+          "line-number": 1523,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.tools.nrepl.middleware.interruptible_eval$evaluate$fn__820",
+          "file-name": "interruptible_eval.clj",
+          "line-number": 87,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.lang.AFn",
+          "file-name": "AFn.java",
+          "line-number": 152,
+          "method-name": "applyToHelper"
+        },
+        {
+          "class-name": "clojure.lang.AFn",
+          "file-name": "AFn.java",
+          "line-number": 144,
+          "method-name": "applyTo"
+        },
+        {
+          "class-name": "clojure.core$apply",
+          "file-name": "core.clj",
+          "line-number": 657,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.core$with_bindings_STAR_",
+          "file-name": "core.clj",
+          "line-number": 1965,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.core$with_bindings_STAR_",
+          "file-name": "core.clj",
+          "line-number": 1965,
+          "method-name": "doInvoke"
+        },
+        {
+          "class-name": "clojure.lang.RestFn",
+          "file-name": "RestFn.java",
+          "line-number": 425,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.tools.nrepl.middleware.interruptible_eval$evaluate",
+          "file-name": "interruptible_eval.clj",
+          "line-number": 85,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.tools.nrepl.middleware.interruptible_eval$evaluate",
+          "file-name": "interruptible_eval.clj",
+          "line-number": 55,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.tools.nrepl.middleware.interruptible_eval$interruptible_eval$fn__865$fn__868",
+          "file-name": "interruptible_eval.clj",
+          "line-number": 222,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.tools.nrepl.middleware.interruptible_eval$run_next$fn__860",
+          "file-name": "interruptible_eval.clj",
+          "line-number": 190,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.lang.AFn",
+          "file-name": "AFn.java",
+          "line-number": 22,
+          "method-name": "run"
+        },
+        {
+          "class-name": "java.util.concurrent.ThreadPoolExecutor",
+          "file-name": "ThreadPoolExecutor.java",
+          "line-number": 1149,
+          "method-name": "runWorker"
+        },
+        {
+          "class-name": "java.util.concurrent.ThreadPoolExecutor$Worker",
+          "file-name": "ThreadPoolExecutor.java",
+          "line-number": 624,
+          "method-name": "run"
+        },
+        {
+          "class-name": "java.lang.Thread",
+          "file-name": "Thread.java",
+          "line-number": 748,
+          "method-name": "run"
+        }
+      ]
+    },
+    "event": "after-scenario",
+    "spec": "Products",
+    "scenario": "Search for a product"
+  },
+  {
+    "event": "scenario-end",
+    "spec": "Products",
+    "scenario": "Search for a product"
+  },
+  {
+    "event": "scenario-start",
+    "spec": "Products",
+    "scenario": "Search and edit and existing product"
+  },
+  {
+    "event": "step",
+    "spec": "Products",
+    "scenario": "Search and edit and existing product",
+    "step": "Open product edit page for stored productId",
+    "error": {
+      "type": "class java.lang.IllegalArgumentException",
+      "message": "Step Not Implemented: Open product edit page for stored productId",
+      "stack-trace": [
+        {
+          "class-name": "yardstick.core$eval3949$fn__3950",
+          "file-name": "core.clj",
+          "line-number": 21,
+          "method-name": "doInvoke"
+        },
+        {
+          "class-name": "clojure.lang.RestFn",
+          "file-name": "RestFn.java",
+          "line-number": 410,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.lang.MultiFn",
+          "file-name": "MultiFn.java",
+          "line-number": 229,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.lang.AFn",
+          "file-name": "AFn.java",
+          "line-number": 154,
+          "method-name": "applyToHelper"
+        },
+        {
+          "class-name": "clojure.lang.AFn",
+          "file-name": "AFn.java",
+          "line-number": 144,
+          "method-name": "applyTo"
+        },
+        {
+          "class-name": "clojure.core$apply",
+          "file-name": "core.clj",
+          "line-number": 657,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.core$apply",
+          "file-name": "core.clj",
+          "line-number": 652,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "yardstick.core$run$fn__3996$fn__4002$fn__4007",
+          "file-name": "core.clj",
+          "line-number": 119,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "yardstick.core$run$fn__3996$fn__4002",
+          "file-name": "core.clj",
+          "line-number": 116,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "yardstick.core$run$fn__3996",
+          "file-name": "core.clj",
+          "line-number": 111,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "yardstick.core$run",
+          "file-name": "core.clj",
+          "line-number": 102,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "yardstick.core$run",
+          "file-name": "core.clj",
+          "line-number": 77,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "yardstick.core$run",
+          "file-name": "core.clj",
+          "line-number": 78,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "yardstick.core$run",
+          "file-name": "core.clj",
+          "line-number": 77,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "example.runner$fn__4425",
+          "file-name": "runner.clj",
+          "line-number": 20,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "example.runner$fn__4425",
+          "file-name": "runner.clj",
+          "line-number": 12,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.test$test_var$fn__9209",
+          "file-name": "test.clj",
+          "line-number": 716,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.test$test_var",
+          "file-name": "test.clj",
+          "line-number": 716,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.test$test_var",
+          "file-name": "test.clj",
+          "line-number": 707,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "user$eval4430$fn__4465$fn__4466$fn__4467",
+          "file-name": "form-init8341403935590923813.clj",
+          "line-number": 1,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.test$default_fixture",
+          "file-name": "test.clj",
+          "line-number": 686,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.test$default_fixture",
+          "file-name": "test.clj",
+          "line-number": 682,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "user$eval4430$fn__4465$fn__4466",
+          "file-name": "form-init8341403935590923813.clj",
+          "line-number": 1,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.test$default_fixture",
+          "file-name": "test.clj",
+          "line-number": 686,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.test$default_fixture",
+          "file-name": "test.clj",
+          "line-number": 682,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "user$eval4430$fn__4465",
+          "file-name": "form-init8341403935590923813.clj",
+          "line-number": 1,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.core$with_redefs_fn",
+          "file-name": "core.clj",
+          "line-number": 7434,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.core$with_redefs_fn",
+          "file-name": "core.clj",
+          "line-number": 7418,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "user$eval4430",
+          "file-name": "form-init8341403935590923813.clj",
+          "line-number": 1,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "user$eval4430",
+          "file-name": "form-init8341403935590923813.clj",
+          "line-number": 1,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.lang.Compiler",
+          "file-name": "Compiler.java",
+          "line-number": 7062,
+          "method-name": "eval"
+        },
+        {
+          "class-name": "clojure.lang.Compiler",
+          "file-name": "Compiler.java",
+          "line-number": 7025,
+          "method-name": "eval"
+        },
+        {
+          "class-name": "clojure.core$eval",
+          "file-name": "core.clj",
+          "line-number": 3206,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.core$eval",
+          "file-name": "core.clj",
+          "line-number": 3202,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.main$repl$read_eval_print__8572$fn__8575",
+          "file-name": "main.clj",
+          "line-number": 243,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.main$repl$read_eval_print__8572",
+          "file-name": "main.clj",
+          "line-number": 243,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.main$repl$fn__8581",
+          "file-name": "main.clj",
+          "line-number": 261,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.main$repl",
+          "file-name": "main.clj",
+          "line-number": 261,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.main$repl",
+          "file-name": "main.clj",
+          "line-number": 177,
+          "method-name": "doInvoke"
+        },
+        {
+          "class-name": "clojure.lang.RestFn",
+          "file-name": "RestFn.java",
+          "line-number": 1523,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.tools.nrepl.middleware.interruptible_eval$evaluate$fn__820",
+          "file-name": "interruptible_eval.clj",
+          "line-number": 87,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.lang.AFn",
+          "file-name": "AFn.java",
+          "line-number": 152,
+          "method-name": "applyToHelper"
+        },
+        {
+          "class-name": "clojure.lang.AFn",
+          "file-name": "AFn.java",
+          "line-number": 144,
+          "method-name": "applyTo"
+        },
+        {
+          "class-name": "clojure.core$apply",
+          "file-name": "core.clj",
+          "line-number": 657,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.core$with_bindings_STAR_",
+          "file-name": "core.clj",
+          "line-number": 1965,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.core$with_bindings_STAR_",
+          "file-name": "core.clj",
+          "line-number": 1965,
+          "method-name": "doInvoke"
+        },
+        {
+          "class-name": "clojure.lang.RestFn",
+          "file-name": "RestFn.java",
+          "line-number": 425,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.tools.nrepl.middleware.interruptible_eval$evaluate",
+          "file-name": "interruptible_eval.clj",
+          "line-number": 85,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.tools.nrepl.middleware.interruptible_eval$evaluate",
+          "file-name": "interruptible_eval.clj",
+          "line-number": 55,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.tools.nrepl.middleware.interruptible_eval$interruptible_eval$fn__865$fn__868",
+          "file-name": "interruptible_eval.clj",
+          "line-number": 222,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.tools.nrepl.middleware.interruptible_eval$run_next$fn__860",
+          "file-name": "interruptible_eval.clj",
+          "line-number": 190,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.lang.AFn",
+          "file-name": "AFn.java",
+          "line-number": 22,
+          "method-name": "run"
+        },
+        {
+          "class-name": "java.util.concurrent.ThreadPoolExecutor",
+          "file-name": "ThreadPoolExecutor.java",
+          "line-number": 1149,
+          "method-name": "runWorker"
+        },
+        {
+          "class-name": "java.util.concurrent.ThreadPoolExecutor$Worker",
+          "file-name": "ThreadPoolExecutor.java",
+          "line-number": 624,
+          "method-name": "run"
+        },
+        {
+          "class-name": "java.lang.Thread",
+          "file-name": "Thread.java",
+          "line-number": 748,
+          "method-name": "run"
+        }
+      ]
+    }
+  },
+  {
+    "event": "step",
+    "spec": "Products",
+    "scenario": "Search and edit and existing product",
+    "step": "Update product specifier to new value"
+  },
+  {
+    "event": "step",
+    "spec": "Products",
+    "scenario": "Search and edit and existing product",
+    "step": "Check product specifier has new value"
+  },
+  {
+    "error": {
+      "type": "class java.lang.Exception",
+      "message": "This is another example exception",
+      "stack-trace": [
+        {
+          "class-name": "example.hooks$def_hooks$fn__4323",
+          "file-name": "hooks.clj",
+          "line-number": 14,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.core$juxt$fn__5542",
+          "file-name": "core.clj",
+          "line-number": 2580,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "yardstick.core$run$fn__3996$fn__4002$fn__4015",
+          "file-name": "core.clj",
+          "line-number": 134,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "yardstick.core$run$fn__3996$fn__4002",
+          "file-name": "core.clj",
+          "line-number": 133,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "yardstick.core$run$fn__3996",
+          "file-name": "core.clj",
+          "line-number": 111,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "yardstick.core$run",
+          "file-name": "core.clj",
+          "line-number": 102,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "yardstick.core$run",
+          "file-name": "core.clj",
+          "line-number": 77,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "yardstick.core$run",
+          "file-name": "core.clj",
+          "line-number": 78,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "yardstick.core$run",
+          "file-name": "core.clj",
+          "line-number": 77,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "example.runner$fn__4425",
+          "file-name": "runner.clj",
+          "line-number": 20,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "example.runner$fn__4425",
+          "file-name": "runner.clj",
+          "line-number": 12,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.test$test_var$fn__9209",
+          "file-name": "test.clj",
+          "line-number": 716,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.test$test_var",
+          "file-name": "test.clj",
+          "line-number": 716,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.test$test_var",
+          "file-name": "test.clj",
+          "line-number": 707,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "user$eval4430$fn__4465$fn__4466$fn__4467",
+          "file-name": "form-init8341403935590923813.clj",
+          "line-number": 1,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.test$default_fixture",
+          "file-name": "test.clj",
+          "line-number": 686,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.test$default_fixture",
+          "file-name": "test.clj",
+          "line-number": 682,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "user$eval4430$fn__4465$fn__4466",
+          "file-name": "form-init8341403935590923813.clj",
+          "line-number": 1,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.test$default_fixture",
+          "file-name": "test.clj",
+          "line-number": 686,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.test$default_fixture",
+          "file-name": "test.clj",
+          "line-number": 682,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "user$eval4430$fn__4465",
+          "file-name": "form-init8341403935590923813.clj",
+          "line-number": 1,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.core$with_redefs_fn",
+          "file-name": "core.clj",
+          "line-number": 7434,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.core$with_redefs_fn",
+          "file-name": "core.clj",
+          "line-number": 7418,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "user$eval4430",
+          "file-name": "form-init8341403935590923813.clj",
+          "line-number": 1,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "user$eval4430",
+          "file-name": "form-init8341403935590923813.clj",
+          "line-number": 1,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.lang.Compiler",
+          "file-name": "Compiler.java",
+          "line-number": 7062,
+          "method-name": "eval"
+        },
+        {
+          "class-name": "clojure.lang.Compiler",
+          "file-name": "Compiler.java",
+          "line-number": 7025,
+          "method-name": "eval"
+        },
+        {
+          "class-name": "clojure.core$eval",
+          "file-name": "core.clj",
+          "line-number": 3206,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.core$eval",
+          "file-name": "core.clj",
+          "line-number": 3202,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.main$repl$read_eval_print__8572$fn__8575",
+          "file-name": "main.clj",
+          "line-number": 243,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.main$repl$read_eval_print__8572",
+          "file-name": "main.clj",
+          "line-number": 243,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.main$repl$fn__8581",
+          "file-name": "main.clj",
+          "line-number": 261,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.main$repl",
+          "file-name": "main.clj",
+          "line-number": 261,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.main$repl",
+          "file-name": "main.clj",
+          "line-number": 177,
+          "method-name": "doInvoke"
+        },
+        {
+          "class-name": "clojure.lang.RestFn",
+          "file-name": "RestFn.java",
+          "line-number": 1523,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.tools.nrepl.middleware.interruptible_eval$evaluate$fn__820",
+          "file-name": "interruptible_eval.clj",
+          "line-number": 87,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.lang.AFn",
+          "file-name": "AFn.java",
+          "line-number": 152,
+          "method-name": "applyToHelper"
+        },
+        {
+          "class-name": "clojure.lang.AFn",
+          "file-name": "AFn.java",
+          "line-number": 144,
+          "method-name": "applyTo"
+        },
+        {
+          "class-name": "clojure.core$apply",
+          "file-name": "core.clj",
+          "line-number": 657,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.core$with_bindings_STAR_",
+          "file-name": "core.clj",
+          "line-number": 1965,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.core$with_bindings_STAR_",
+          "file-name": "core.clj",
+          "line-number": 1965,
+          "method-name": "doInvoke"
+        },
+        {
+          "class-name": "clojure.lang.RestFn",
+          "file-name": "RestFn.java",
+          "line-number": 425,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.tools.nrepl.middleware.interruptible_eval$evaluate",
+          "file-name": "interruptible_eval.clj",
+          "line-number": 85,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.tools.nrepl.middleware.interruptible_eval$evaluate",
+          "file-name": "interruptible_eval.clj",
+          "line-number": 55,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.tools.nrepl.middleware.interruptible_eval$interruptible_eval$fn__865$fn__868",
+          "file-name": "interruptible_eval.clj",
+          "line-number": 222,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.tools.nrepl.middleware.interruptible_eval$run_next$fn__860",
+          "file-name": "interruptible_eval.clj",
+          "line-number": 190,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.lang.AFn",
+          "file-name": "AFn.java",
+          "line-number": 22,
+          "method-name": "run"
+        },
+        {
+          "class-name": "java.util.concurrent.ThreadPoolExecutor",
+          "file-name": "ThreadPoolExecutor.java",
+          "line-number": 1149,
+          "method-name": "runWorker"
+        },
+        {
+          "class-name": "java.util.concurrent.ThreadPoolExecutor$Worker",
+          "file-name": "ThreadPoolExecutor.java",
+          "line-number": 624,
+          "method-name": "run"
+        },
+        {
+          "class-name": "java.lang.Thread",
+          "file-name": "Thread.java",
+          "line-number": 748,
+          "method-name": "run"
+        }
+      ]
+    },
+    "event": "after-scenario",
+    "spec": "Products",
+    "scenario": "Search and edit and existing product"
+  },
+  {
+    "event": "scenario-end",
+    "spec": "Products",
+    "scenario": "Search and edit and existing product"
+  },
+  {
+    "event": "scenario-start",
+    "spec": "Products",
+    "scenario": "Delete a product"
+  },
+  {
+    "event": "step",
+    "spec": "Products",
+    "scenario": "Delete a product",
+    "step": "Delete product \"Learning Go\""
+  },
+  {
+    "error": {
+      "type": "class java.lang.Exception",
+      "message": "This is another example exception",
+      "stack-trace": [
+        {
+          "class-name": "example.hooks$def_hooks$fn__4323",
+          "file-name": "hooks.clj",
+          "line-number": 14,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.core$juxt$fn__5542",
+          "file-name": "core.clj",
+          "line-number": 2580,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "yardstick.core$run$fn__3996$fn__4002$fn__4015",
+          "file-name": "core.clj",
+          "line-number": 134,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "yardstick.core$run$fn__3996$fn__4002",
+          "file-name": "core.clj",
+          "line-number": 133,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "yardstick.core$run$fn__3996",
+          "file-name": "core.clj",
+          "line-number": 111,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "yardstick.core$run",
+          "file-name": "core.clj",
+          "line-number": 102,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "yardstick.core$run",
+          "file-name": "core.clj",
+          "line-number": 77,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "yardstick.core$run",
+          "file-name": "core.clj",
+          "line-number": 78,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "yardstick.core$run",
+          "file-name": "core.clj",
+          "line-number": 77,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "example.runner$fn__4425",
+          "file-name": "runner.clj",
+          "line-number": 20,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "example.runner$fn__4425",
+          "file-name": "runner.clj",
+          "line-number": 12,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.test$test_var$fn__9209",
+          "file-name": "test.clj",
+          "line-number": 716,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.test$test_var",
+          "file-name": "test.clj",
+          "line-number": 716,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.test$test_var",
+          "file-name": "test.clj",
+          "line-number": 707,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "user$eval4430$fn__4465$fn__4466$fn__4467",
+          "file-name": "form-init8341403935590923813.clj",
+          "line-number": 1,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.test$default_fixture",
+          "file-name": "test.clj",
+          "line-number": 686,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.test$default_fixture",
+          "file-name": "test.clj",
+          "line-number": 682,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "user$eval4430$fn__4465$fn__4466",
+          "file-name": "form-init8341403935590923813.clj",
+          "line-number": 1,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.test$default_fixture",
+          "file-name": "test.clj",
+          "line-number": 686,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.test$default_fixture",
+          "file-name": "test.clj",
+          "line-number": 682,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "user$eval4430$fn__4465",
+          "file-name": "form-init8341403935590923813.clj",
+          "line-number": 1,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.core$with_redefs_fn",
+          "file-name": "core.clj",
+          "line-number": 7434,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.core$with_redefs_fn",
+          "file-name": "core.clj",
+          "line-number": 7418,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "user$eval4430",
+          "file-name": "form-init8341403935590923813.clj",
+          "line-number": 1,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "user$eval4430",
+          "file-name": "form-init8341403935590923813.clj",
+          "line-number": 1,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.lang.Compiler",
+          "file-name": "Compiler.java",
+          "line-number": 7062,
+          "method-name": "eval"
+        },
+        {
+          "class-name": "clojure.lang.Compiler",
+          "file-name": "Compiler.java",
+          "line-number": 7025,
+          "method-name": "eval"
+        },
+        {
+          "class-name": "clojure.core$eval",
+          "file-name": "core.clj",
+          "line-number": 3206,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.core$eval",
+          "file-name": "core.clj",
+          "line-number": 3202,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.main$repl$read_eval_print__8572$fn__8575",
+          "file-name": "main.clj",
+          "line-number": 243,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.main$repl$read_eval_print__8572",
+          "file-name": "main.clj",
+          "line-number": 243,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.main$repl$fn__8581",
+          "file-name": "main.clj",
+          "line-number": 261,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.main$repl",
+          "file-name": "main.clj",
+          "line-number": 261,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.main$repl",
+          "file-name": "main.clj",
+          "line-number": 177,
+          "method-name": "doInvoke"
+        },
+        {
+          "class-name": "clojure.lang.RestFn",
+          "file-name": "RestFn.java",
+          "line-number": 1523,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.tools.nrepl.middleware.interruptible_eval$evaluate$fn__820",
+          "file-name": "interruptible_eval.clj",
+          "line-number": 87,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.lang.AFn",
+          "file-name": "AFn.java",
+          "line-number": 152,
+          "method-name": "applyToHelper"
+        },
+        {
+          "class-name": "clojure.lang.AFn",
+          "file-name": "AFn.java",
+          "line-number": 144,
+          "method-name": "applyTo"
+        },
+        {
+          "class-name": "clojure.core$apply",
+          "file-name": "core.clj",
+          "line-number": 657,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.core$with_bindings_STAR_",
+          "file-name": "core.clj",
+          "line-number": 1965,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.core$with_bindings_STAR_",
+          "file-name": "core.clj",
+          "line-number": 1965,
+          "method-name": "doInvoke"
+        },
+        {
+          "class-name": "clojure.lang.RestFn",
+          "file-name": "RestFn.java",
+          "line-number": 425,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.tools.nrepl.middleware.interruptible_eval$evaluate",
+          "file-name": "interruptible_eval.clj",
+          "line-number": 85,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.tools.nrepl.middleware.interruptible_eval$evaluate",
+          "file-name": "interruptible_eval.clj",
+          "line-number": 55,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.tools.nrepl.middleware.interruptible_eval$interruptible_eval$fn__865$fn__868",
+          "file-name": "interruptible_eval.clj",
+          "line-number": 222,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.tools.nrepl.middleware.interruptible_eval$run_next$fn__860",
+          "file-name": "interruptible_eval.clj",
+          "line-number": 190,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.lang.AFn",
+          "file-name": "AFn.java",
+          "line-number": 22,
+          "method-name": "run"
+        },
+        {
+          "class-name": "java.util.concurrent.ThreadPoolExecutor",
+          "file-name": "ThreadPoolExecutor.java",
+          "line-number": 1149,
+          "method-name": "runWorker"
+        },
+        {
+          "class-name": "java.util.concurrent.ThreadPoolExecutor$Worker",
+          "file-name": "ThreadPoolExecutor.java",
+          "line-number": 624,
+          "method-name": "run"
+        },
+        {
+          "class-name": "java.lang.Thread",
+          "file-name": "Thread.java",
+          "line-number": 748,
+          "method-name": "run"
+        }
+      ]
+    },
+    "event": "after-scenario",
+    "spec": "Products",
+    "scenario": "Delete a product"
+  },
+  {
+    "event": "scenario-end",
+    "spec": "Products",
+    "scenario": "Delete a product"
+  },
+  {
+    "error": {
+      "type": "class java.lang.AssertionError",
+      "message": "This is also an example exception",
+      "stack-trace": [
+        {
+          "class-name": "org.junit.Assert",
+          "file-name": "Assert.java",
+          "line-number": 88,
+          "method-name": "fail"
+        },
+        {
+          "class-name": "org.junit.Assert",
+          "file-name": "Assert.java",
+          "line-number": 41,
+          "method-name": "assertTrue"
+        },
+        {
+          "class-name": "example.hooks$def_hooks$fn__4321",
+          "file-name": "hooks.clj",
+          "line-number": 10,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.core$juxt$fn__5542",
+          "file-name": "core.clj",
+          "line-number": 2579,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "yardstick.core$run$fn__3996$fn__4039",
+          "file-name": "core.clj",
+          "line-number": 145,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "yardstick.core$run$fn__3996",
+          "file-name": "core.clj",
+          "line-number": 144,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "yardstick.core$run",
+          "file-name": "core.clj",
+          "line-number": 102,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "yardstick.core$run",
+          "file-name": "core.clj",
+          "line-number": 77,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "yardstick.core$run",
+          "file-name": "core.clj",
+          "line-number": 78,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "yardstick.core$run",
+          "file-name": "core.clj",
+          "line-number": 77,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "example.runner$fn__4425",
+          "file-name": "runner.clj",
+          "line-number": 20,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "example.runner$fn__4425",
+          "file-name": "runner.clj",
+          "line-number": 12,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.test$test_var$fn__9209",
+          "file-name": "test.clj",
+          "line-number": 716,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.test$test_var",
+          "file-name": "test.clj",
+          "line-number": 716,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.test$test_var",
+          "file-name": "test.clj",
+          "line-number": 707,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "user$eval4430$fn__4465$fn__4466$fn__4467",
+          "file-name": "form-init8341403935590923813.clj",
+          "line-number": 1,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.test$default_fixture",
+          "file-name": "test.clj",
+          "line-number": 686,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.test$default_fixture",
+          "file-name": "test.clj",
+          "line-number": 682,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "user$eval4430$fn__4465$fn__4466",
+          "file-name": "form-init8341403935590923813.clj",
+          "line-number": 1,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.test$default_fixture",
+          "file-name": "test.clj",
+          "line-number": 686,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.test$default_fixture",
+          "file-name": "test.clj",
+          "line-number": 682,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "user$eval4430$fn__4465",
+          "file-name": "form-init8341403935590923813.clj",
+          "line-number": 1,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.core$with_redefs_fn",
+          "file-name": "core.clj",
+          "line-number": 7434,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.core$with_redefs_fn",
+          "file-name": "core.clj",
+          "line-number": 7418,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "user$eval4430",
+          "file-name": "form-init8341403935590923813.clj",
+          "line-number": 1,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "user$eval4430",
+          "file-name": "form-init8341403935590923813.clj",
+          "line-number": 1,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.lang.Compiler",
+          "file-name": "Compiler.java",
+          "line-number": 7062,
+          "method-name": "eval"
+        },
+        {
+          "class-name": "clojure.lang.Compiler",
+          "file-name": "Compiler.java",
+          "line-number": 7025,
+          "method-name": "eval"
+        },
+        {
+          "class-name": "clojure.core$eval",
+          "file-name": "core.clj",
+          "line-number": 3206,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.core$eval",
+          "file-name": "core.clj",
+          "line-number": 3202,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.main$repl$read_eval_print__8572$fn__8575",
+          "file-name": "main.clj",
+          "line-number": 243,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.main$repl$read_eval_print__8572",
+          "file-name": "main.clj",
+          "line-number": 243,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.main$repl$fn__8581",
+          "file-name": "main.clj",
+          "line-number": 261,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.main$repl",
+          "file-name": "main.clj",
+          "line-number": 261,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.main$repl",
+          "file-name": "main.clj",
+          "line-number": 177,
+          "method-name": "doInvoke"
+        },
+        {
+          "class-name": "clojure.lang.RestFn",
+          "file-name": "RestFn.java",
+          "line-number": 1523,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.tools.nrepl.middleware.interruptible_eval$evaluate$fn__820",
+          "file-name": "interruptible_eval.clj",
+          "line-number": 87,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.lang.AFn",
+          "file-name": "AFn.java",
+          "line-number": 152,
+          "method-name": "applyToHelper"
+        },
+        {
+          "class-name": "clojure.lang.AFn",
+          "file-name": "AFn.java",
+          "line-number": 144,
+          "method-name": "applyTo"
+        },
+        {
+          "class-name": "clojure.core$apply",
+          "file-name": "core.clj",
+          "line-number": 657,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.core$with_bindings_STAR_",
+          "file-name": "core.clj",
+          "line-number": 1965,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.core$with_bindings_STAR_",
+          "file-name": "core.clj",
+          "line-number": 1965,
+          "method-name": "doInvoke"
+        },
+        {
+          "class-name": "clojure.lang.RestFn",
+          "file-name": "RestFn.java",
+          "line-number": 425,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.tools.nrepl.middleware.interruptible_eval$evaluate",
+          "file-name": "interruptible_eval.clj",
+          "line-number": 85,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.tools.nrepl.middleware.interruptible_eval$evaluate",
+          "file-name": "interruptible_eval.clj",
+          "line-number": 55,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.tools.nrepl.middleware.interruptible_eval$interruptible_eval$fn__865$fn__868",
+          "file-name": "interruptible_eval.clj",
+          "line-number": 222,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.tools.nrepl.middleware.interruptible_eval$run_next$fn__860",
+          "file-name": "interruptible_eval.clj",
+          "line-number": 190,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.lang.AFn",
+          "file-name": "AFn.java",
+          "line-number": 22,
+          "method-name": "run"
+        },
+        {
+          "class-name": "java.util.concurrent.ThreadPoolExecutor",
+          "file-name": "ThreadPoolExecutor.java",
+          "line-number": 1149,
+          "method-name": "runWorker"
+        },
+        {
+          "class-name": "java.util.concurrent.ThreadPoolExecutor$Worker",
+          "file-name": "ThreadPoolExecutor.java",
+          "line-number": 624,
+          "method-name": "run"
+        },
+        {
+          "class-name": "java.lang.Thread",
+          "file-name": "Thread.java",
+          "line-number": 748,
+          "method-name": "run"
+        }
+      ]
+    },
+    "event": "after-spec",
+    "spec": "Products"
+  },
+  {
+    "event": "suite-end",
+    "spec": "Products"
+  },
+  {
+    "event": "spec-start",
+    "spec": "Signup"
+  },
+  {
+    "event": "scenario-start",
+    "spec": "Signup",
+    "scenario": "Register a customer"
+  },
+  {
+    "event": "step",
+    "spec": "Signup",
+    "scenario": "Register a customer",
+    "step": "Sign up a new customer",
+    "error": {
+      "type": "class java.lang.IllegalArgumentException",
+      "message": "Step Not Implemented: Sign up a new customer",
+      "stack-trace": [
+        {
+          "class-name": "yardstick.core$eval3949$fn__3950",
+          "file-name": "core.clj",
+          "line-number": 21,
+          "method-name": "doInvoke"
+        },
+        {
+          "class-name": "clojure.lang.RestFn",
+          "file-name": "RestFn.java",
+          "line-number": 410,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.lang.MultiFn",
+          "file-name": "MultiFn.java",
+          "line-number": 229,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.lang.AFn",
+          "file-name": "AFn.java",
+          "line-number": 154,
+          "method-name": "applyToHelper"
+        },
+        {
+          "class-name": "clojure.lang.AFn",
+          "file-name": "AFn.java",
+          "line-number": 144,
+          "method-name": "applyTo"
+        },
+        {
+          "class-name": "clojure.core$apply",
+          "file-name": "core.clj",
+          "line-number": 657,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.core$apply",
+          "file-name": "core.clj",
+          "line-number": 652,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "yardstick.core$run$fn__3996$fn__4002$fn__4007",
+          "file-name": "core.clj",
+          "line-number": 119,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "yardstick.core$run$fn__3996$fn__4002",
+          "file-name": "core.clj",
+          "line-number": 116,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "yardstick.core$run$fn__3996",
+          "file-name": "core.clj",
+          "line-number": 111,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "yardstick.core$run",
+          "file-name": "core.clj",
+          "line-number": 102,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "yardstick.core$run",
+          "file-name": "core.clj",
+          "line-number": 77,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "yardstick.core$run",
+          "file-name": "core.clj",
+          "line-number": 78,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "yardstick.core$run",
+          "file-name": "core.clj",
+          "line-number": 77,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "example.runner$fn__4425",
+          "file-name": "runner.clj",
+          "line-number": 20,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "example.runner$fn__4425",
+          "file-name": "runner.clj",
+          "line-number": 12,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.test$test_var$fn__9209",
+          "file-name": "test.clj",
+          "line-number": 716,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.test$test_var",
+          "file-name": "test.clj",
+          "line-number": 716,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.test$test_var",
+          "file-name": "test.clj",
+          "line-number": 707,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "user$eval4430$fn__4465$fn__4466$fn__4467",
+          "file-name": "form-init8341403935590923813.clj",
+          "line-number": 1,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.test$default_fixture",
+          "file-name": "test.clj",
+          "line-number": 686,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.test$default_fixture",
+          "file-name": "test.clj",
+          "line-number": 682,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "user$eval4430$fn__4465$fn__4466",
+          "file-name": "form-init8341403935590923813.clj",
+          "line-number": 1,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.test$default_fixture",
+          "file-name": "test.clj",
+          "line-number": 686,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.test$default_fixture",
+          "file-name": "test.clj",
+          "line-number": 682,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "user$eval4430$fn__4465",
+          "file-name": "form-init8341403935590923813.clj",
+          "line-number": 1,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.core$with_redefs_fn",
+          "file-name": "core.clj",
+          "line-number": 7434,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.core$with_redefs_fn",
+          "file-name": "core.clj",
+          "line-number": 7418,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "user$eval4430",
+          "file-name": "form-init8341403935590923813.clj",
+          "line-number": 1,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "user$eval4430",
+          "file-name": "form-init8341403935590923813.clj",
+          "line-number": 1,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.lang.Compiler",
+          "file-name": "Compiler.java",
+          "line-number": 7062,
+          "method-name": "eval"
+        },
+        {
+          "class-name": "clojure.lang.Compiler",
+          "file-name": "Compiler.java",
+          "line-number": 7025,
+          "method-name": "eval"
+        },
+        {
+          "class-name": "clojure.core$eval",
+          "file-name": "core.clj",
+          "line-number": 3206,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.core$eval",
+          "file-name": "core.clj",
+          "line-number": 3202,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.main$repl$read_eval_print__8572$fn__8575",
+          "file-name": "main.clj",
+          "line-number": 243,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.main$repl$read_eval_print__8572",
+          "file-name": "main.clj",
+          "line-number": 243,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.main$repl$fn__8581",
+          "file-name": "main.clj",
+          "line-number": 261,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.main$repl",
+          "file-name": "main.clj",
+          "line-number": 261,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.main$repl",
+          "file-name": "main.clj",
+          "line-number": 177,
+          "method-name": "doInvoke"
+        },
+        {
+          "class-name": "clojure.lang.RestFn",
+          "file-name": "RestFn.java",
+          "line-number": 1523,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.tools.nrepl.middleware.interruptible_eval$evaluate$fn__820",
+          "file-name": "interruptible_eval.clj",
+          "line-number": 87,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.lang.AFn",
+          "file-name": "AFn.java",
+          "line-number": 152,
+          "method-name": "applyToHelper"
+        },
+        {
+          "class-name": "clojure.lang.AFn",
+          "file-name": "AFn.java",
+          "line-number": 144,
+          "method-name": "applyTo"
+        },
+        {
+          "class-name": "clojure.core$apply",
+          "file-name": "core.clj",
+          "line-number": 657,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.core$with_bindings_STAR_",
+          "file-name": "core.clj",
+          "line-number": 1965,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.core$with_bindings_STAR_",
+          "file-name": "core.clj",
+          "line-number": 1965,
+          "method-name": "doInvoke"
+        },
+        {
+          "class-name": "clojure.lang.RestFn",
+          "file-name": "RestFn.java",
+          "line-number": 425,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.tools.nrepl.middleware.interruptible_eval$evaluate",
+          "file-name": "interruptible_eval.clj",
+          "line-number": 85,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.tools.nrepl.middleware.interruptible_eval$evaluate",
+          "file-name": "interruptible_eval.clj",
+          "line-number": 55,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.tools.nrepl.middleware.interruptible_eval$interruptible_eval$fn__865$fn__868",
+          "file-name": "interruptible_eval.clj",
+          "line-number": 222,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.tools.nrepl.middleware.interruptible_eval$run_next$fn__860",
+          "file-name": "interruptible_eval.clj",
+          "line-number": 190,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.lang.AFn",
+          "file-name": "AFn.java",
+          "line-number": 22,
+          "method-name": "run"
+        },
+        {
+          "class-name": "java.util.concurrent.ThreadPoolExecutor",
+          "file-name": "ThreadPoolExecutor.java",
+          "line-number": 1149,
+          "method-name": "runWorker"
+        },
+        {
+          "class-name": "java.util.concurrent.ThreadPoolExecutor$Worker",
+          "file-name": "ThreadPoolExecutor.java",
+          "line-number": 624,
+          "method-name": "run"
+        },
+        {
+          "class-name": "java.lang.Thread",
+          "file-name": "Thread.java",
+          "line-number": 748,
+          "method-name": "run"
+        }
+      ]
+    }
+  },
+  {
+    "event": "step",
+    "spec": "Signup",
+    "scenario": "Register a customer",
+    "step": "On the customer page"
+  },
+  {
+    "event": "step",
+    "spec": "Signup",
+    "scenario": "Register a customer",
+    "step": "Just registered customer is listed",
+    "error": {
+      "type": "class java.lang.IllegalArgumentException",
+      "message": "Step Not Implemented: Just registered customer is listed",
+      "stack-trace": [
+        {
+          "class-name": "yardstick.core$eval3949$fn__3950",
+          "file-name": "core.clj",
+          "line-number": 21,
+          "method-name": "doInvoke"
+        },
+        {
+          "class-name": "clojure.lang.RestFn",
+          "file-name": "RestFn.java",
+          "line-number": 410,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.lang.MultiFn",
+          "file-name": "MultiFn.java",
+          "line-number": 229,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.lang.AFn",
+          "file-name": "AFn.java",
+          "line-number": 154,
+          "method-name": "applyToHelper"
+        },
+        {
+          "class-name": "clojure.lang.AFn",
+          "file-name": "AFn.java",
+          "line-number": 144,
+          "method-name": "applyTo"
+        },
+        {
+          "class-name": "clojure.core$apply",
+          "file-name": "core.clj",
+          "line-number": 657,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.core$apply",
+          "file-name": "core.clj",
+          "line-number": 652,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "yardstick.core$run$fn__3996$fn__4002$fn__4007",
+          "file-name": "core.clj",
+          "line-number": 119,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "yardstick.core$run$fn__3996$fn__4002",
+          "file-name": "core.clj",
+          "line-number": 116,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "yardstick.core$run$fn__3996",
+          "file-name": "core.clj",
+          "line-number": 111,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "yardstick.core$run",
+          "file-name": "core.clj",
+          "line-number": 102,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "yardstick.core$run",
+          "file-name": "core.clj",
+          "line-number": 77,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "yardstick.core$run",
+          "file-name": "core.clj",
+          "line-number": 78,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "yardstick.core$run",
+          "file-name": "core.clj",
+          "line-number": 77,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "example.runner$fn__4425",
+          "file-name": "runner.clj",
+          "line-number": 20,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "example.runner$fn__4425",
+          "file-name": "runner.clj",
+          "line-number": 12,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.test$test_var$fn__9209",
+          "file-name": "test.clj",
+          "line-number": 716,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.test$test_var",
+          "file-name": "test.clj",
+          "line-number": 716,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.test$test_var",
+          "file-name": "test.clj",
+          "line-number": 707,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "user$eval4430$fn__4465$fn__4466$fn__4467",
+          "file-name": "form-init8341403935590923813.clj",
+          "line-number": 1,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.test$default_fixture",
+          "file-name": "test.clj",
+          "line-number": 686,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.test$default_fixture",
+          "file-name": "test.clj",
+          "line-number": 682,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "user$eval4430$fn__4465$fn__4466",
+          "file-name": "form-init8341403935590923813.clj",
+          "line-number": 1,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.test$default_fixture",
+          "file-name": "test.clj",
+          "line-number": 686,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.test$default_fixture",
+          "file-name": "test.clj",
+          "line-number": 682,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "user$eval4430$fn__4465",
+          "file-name": "form-init8341403935590923813.clj",
+          "line-number": 1,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.core$with_redefs_fn",
+          "file-name": "core.clj",
+          "line-number": 7434,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.core$with_redefs_fn",
+          "file-name": "core.clj",
+          "line-number": 7418,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "user$eval4430",
+          "file-name": "form-init8341403935590923813.clj",
+          "line-number": 1,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "user$eval4430",
+          "file-name": "form-init8341403935590923813.clj",
+          "line-number": 1,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.lang.Compiler",
+          "file-name": "Compiler.java",
+          "line-number": 7062,
+          "method-name": "eval"
+        },
+        {
+          "class-name": "clojure.lang.Compiler",
+          "file-name": "Compiler.java",
+          "line-number": 7025,
+          "method-name": "eval"
+        },
+        {
+          "class-name": "clojure.core$eval",
+          "file-name": "core.clj",
+          "line-number": 3206,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.core$eval",
+          "file-name": "core.clj",
+          "line-number": 3202,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.main$repl$read_eval_print__8572$fn__8575",
+          "file-name": "main.clj",
+          "line-number": 243,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.main$repl$read_eval_print__8572",
+          "file-name": "main.clj",
+          "line-number": 243,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.main$repl$fn__8581",
+          "file-name": "main.clj",
+          "line-number": 261,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.main$repl",
+          "file-name": "main.clj",
+          "line-number": 261,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.main$repl",
+          "file-name": "main.clj",
+          "line-number": 177,
+          "method-name": "doInvoke"
+        },
+        {
+          "class-name": "clojure.lang.RestFn",
+          "file-name": "RestFn.java",
+          "line-number": 1523,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.tools.nrepl.middleware.interruptible_eval$evaluate$fn__820",
+          "file-name": "interruptible_eval.clj",
+          "line-number": 87,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.lang.AFn",
+          "file-name": "AFn.java",
+          "line-number": 152,
+          "method-name": "applyToHelper"
+        },
+        {
+          "class-name": "clojure.lang.AFn",
+          "file-name": "AFn.java",
+          "line-number": 144,
+          "method-name": "applyTo"
+        },
+        {
+          "class-name": "clojure.core$apply",
+          "file-name": "core.clj",
+          "line-number": 657,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.core$with_bindings_STAR_",
+          "file-name": "core.clj",
+          "line-number": 1965,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.core$with_bindings_STAR_",
+          "file-name": "core.clj",
+          "line-number": 1965,
+          "method-name": "doInvoke"
+        },
+        {
+          "class-name": "clojure.lang.RestFn",
+          "file-name": "RestFn.java",
+          "line-number": 425,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.tools.nrepl.middleware.interruptible_eval$evaluate",
+          "file-name": "interruptible_eval.clj",
+          "line-number": 85,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.tools.nrepl.middleware.interruptible_eval$evaluate",
+          "file-name": "interruptible_eval.clj",
+          "line-number": 55,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.tools.nrepl.middleware.interruptible_eval$interruptible_eval$fn__865$fn__868",
+          "file-name": "interruptible_eval.clj",
+          "line-number": 222,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.tools.nrepl.middleware.interruptible_eval$run_next$fn__860",
+          "file-name": "interruptible_eval.clj",
+          "line-number": 190,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.lang.AFn",
+          "file-name": "AFn.java",
+          "line-number": 22,
+          "method-name": "run"
+        },
+        {
+          "class-name": "java.util.concurrent.ThreadPoolExecutor",
+          "file-name": "ThreadPoolExecutor.java",
+          "line-number": 1149,
+          "method-name": "runWorker"
+        },
+        {
+          "class-name": "java.util.concurrent.ThreadPoolExecutor$Worker",
+          "file-name": "ThreadPoolExecutor.java",
+          "line-number": 624,
+          "method-name": "run"
+        },
+        {
+          "class-name": "java.lang.Thread",
+          "file-name": "Thread.java",
+          "line-number": 748,
+          "method-name": "run"
+        }
+      ]
+    }
+  },
+  {
+    "error": {
+      "type": "class java.lang.Exception",
+      "message": "This is another example exception",
+      "stack-trace": [
+        {
+          "class-name": "example.hooks$def_hooks$fn__4323",
+          "file-name": "hooks.clj",
+          "line-number": 14,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.core$juxt$fn__5542",
+          "file-name": "core.clj",
+          "line-number": 2580,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "yardstick.core$run$fn__3996$fn__4002$fn__4015",
+          "file-name": "core.clj",
+          "line-number": 134,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "yardstick.core$run$fn__3996$fn__4002",
+          "file-name": "core.clj",
+          "line-number": 133,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "yardstick.core$run$fn__3996",
+          "file-name": "core.clj",
+          "line-number": 111,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "yardstick.core$run",
+          "file-name": "core.clj",
+          "line-number": 102,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "yardstick.core$run",
+          "file-name": "core.clj",
+          "line-number": 77,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "yardstick.core$run",
+          "file-name": "core.clj",
+          "line-number": 78,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "yardstick.core$run",
+          "file-name": "core.clj",
+          "line-number": 77,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "example.runner$fn__4425",
+          "file-name": "runner.clj",
+          "line-number": 20,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "example.runner$fn__4425",
+          "file-name": "runner.clj",
+          "line-number": 12,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.test$test_var$fn__9209",
+          "file-name": "test.clj",
+          "line-number": 716,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.test$test_var",
+          "file-name": "test.clj",
+          "line-number": 716,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.test$test_var",
+          "file-name": "test.clj",
+          "line-number": 707,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "user$eval4430$fn__4465$fn__4466$fn__4467",
+          "file-name": "form-init8341403935590923813.clj",
+          "line-number": 1,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.test$default_fixture",
+          "file-name": "test.clj",
+          "line-number": 686,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.test$default_fixture",
+          "file-name": "test.clj",
+          "line-number": 682,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "user$eval4430$fn__4465$fn__4466",
+          "file-name": "form-init8341403935590923813.clj",
+          "line-number": 1,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.test$default_fixture",
+          "file-name": "test.clj",
+          "line-number": 686,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.test$default_fixture",
+          "file-name": "test.clj",
+          "line-number": 682,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "user$eval4430$fn__4465",
+          "file-name": "form-init8341403935590923813.clj",
+          "line-number": 1,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.core$with_redefs_fn",
+          "file-name": "core.clj",
+          "line-number": 7434,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.core$with_redefs_fn",
+          "file-name": "core.clj",
+          "line-number": 7418,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "user$eval4430",
+          "file-name": "form-init8341403935590923813.clj",
+          "line-number": 1,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "user$eval4430",
+          "file-name": "form-init8341403935590923813.clj",
+          "line-number": 1,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.lang.Compiler",
+          "file-name": "Compiler.java",
+          "line-number": 7062,
+          "method-name": "eval"
+        },
+        {
+          "class-name": "clojure.lang.Compiler",
+          "file-name": "Compiler.java",
+          "line-number": 7025,
+          "method-name": "eval"
+        },
+        {
+          "class-name": "clojure.core$eval",
+          "file-name": "core.clj",
+          "line-number": 3206,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.core$eval",
+          "file-name": "core.clj",
+          "line-number": 3202,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.main$repl$read_eval_print__8572$fn__8575",
+          "file-name": "main.clj",
+          "line-number": 243,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.main$repl$read_eval_print__8572",
+          "file-name": "main.clj",
+          "line-number": 243,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.main$repl$fn__8581",
+          "file-name": "main.clj",
+          "line-number": 261,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.main$repl",
+          "file-name": "main.clj",
+          "line-number": 261,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.main$repl",
+          "file-name": "main.clj",
+          "line-number": 177,
+          "method-name": "doInvoke"
+        },
+        {
+          "class-name": "clojure.lang.RestFn",
+          "file-name": "RestFn.java",
+          "line-number": 1523,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.tools.nrepl.middleware.interruptible_eval$evaluate$fn__820",
+          "file-name": "interruptible_eval.clj",
+          "line-number": 87,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.lang.AFn",
+          "file-name": "AFn.java",
+          "line-number": 152,
+          "method-name": "applyToHelper"
+        },
+        {
+          "class-name": "clojure.lang.AFn",
+          "file-name": "AFn.java",
+          "line-number": 144,
+          "method-name": "applyTo"
+        },
+        {
+          "class-name": "clojure.core$apply",
+          "file-name": "core.clj",
+          "line-number": 657,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.core$with_bindings_STAR_",
+          "file-name": "core.clj",
+          "line-number": 1965,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.core$with_bindings_STAR_",
+          "file-name": "core.clj",
+          "line-number": 1965,
+          "method-name": "doInvoke"
+        },
+        {
+          "class-name": "clojure.lang.RestFn",
+          "file-name": "RestFn.java",
+          "line-number": 425,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.tools.nrepl.middleware.interruptible_eval$evaluate",
+          "file-name": "interruptible_eval.clj",
+          "line-number": 85,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.tools.nrepl.middleware.interruptible_eval$evaluate",
+          "file-name": "interruptible_eval.clj",
+          "line-number": 55,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.tools.nrepl.middleware.interruptible_eval$interruptible_eval$fn__865$fn__868",
+          "file-name": "interruptible_eval.clj",
+          "line-number": 222,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.tools.nrepl.middleware.interruptible_eval$run_next$fn__860",
+          "file-name": "interruptible_eval.clj",
+          "line-number": 190,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.lang.AFn",
+          "file-name": "AFn.java",
+          "line-number": 22,
+          "method-name": "run"
+        },
+        {
+          "class-name": "java.util.concurrent.ThreadPoolExecutor",
+          "file-name": "ThreadPoolExecutor.java",
+          "line-number": 1149,
+          "method-name": "runWorker"
+        },
+        {
+          "class-name": "java.util.concurrent.ThreadPoolExecutor$Worker",
+          "file-name": "ThreadPoolExecutor.java",
+          "line-number": 624,
+          "method-name": "run"
+        },
+        {
+          "class-name": "java.lang.Thread",
+          "file-name": "Thread.java",
+          "line-number": 748,
+          "method-name": "run"
+        }
+      ]
+    },
+    "event": "after-scenario",
+    "spec": "Signup",
+    "scenario": "Register a customer"
+  },
+  {
+    "event": "scenario-end",
+    "spec": "Signup",
+    "scenario": "Register a customer"
+  },
+  {
+    "error": {
+      "type": "class java.lang.AssertionError",
+      "message": "This is also an example exception",
+      "stack-trace": [
+        {
+          "class-name": "org.junit.Assert",
+          "file-name": "Assert.java",
+          "line-number": 88,
+          "method-name": "fail"
+        },
+        {
+          "class-name": "org.junit.Assert",
+          "file-name": "Assert.java",
+          "line-number": 41,
+          "method-name": "assertTrue"
+        },
+        {
+          "class-name": "example.hooks$def_hooks$fn__4321",
+          "file-name": "hooks.clj",
+          "line-number": 10,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.core$juxt$fn__5542",
+          "file-name": "core.clj",
+          "line-number": 2579,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "yardstick.core$run$fn__3996$fn__4039",
+          "file-name": "core.clj",
+          "line-number": 145,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "yardstick.core$run$fn__3996",
+          "file-name": "core.clj",
+          "line-number": 144,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "yardstick.core$run",
+          "file-name": "core.clj",
+          "line-number": 102,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "yardstick.core$run",
+          "file-name": "core.clj",
+          "line-number": 77,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "yardstick.core$run",
+          "file-name": "core.clj",
+          "line-number": 78,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "yardstick.core$run",
+          "file-name": "core.clj",
+          "line-number": 77,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "example.runner$fn__4425",
+          "file-name": "runner.clj",
+          "line-number": 20,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "example.runner$fn__4425",
+          "file-name": "runner.clj",
+          "line-number": 12,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.test$test_var$fn__9209",
+          "file-name": "test.clj",
+          "line-number": 716,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.test$test_var",
+          "file-name": "test.clj",
+          "line-number": 716,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.test$test_var",
+          "file-name": "test.clj",
+          "line-number": 707,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "user$eval4430$fn__4465$fn__4466$fn__4467",
+          "file-name": "form-init8341403935590923813.clj",
+          "line-number": 1,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.test$default_fixture",
+          "file-name": "test.clj",
+          "line-number": 686,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.test$default_fixture",
+          "file-name": "test.clj",
+          "line-number": 682,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "user$eval4430$fn__4465$fn__4466",
+          "file-name": "form-init8341403935590923813.clj",
+          "line-number": 1,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.test$default_fixture",
+          "file-name": "test.clj",
+          "line-number": 686,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.test$default_fixture",
+          "file-name": "test.clj",
+          "line-number": 682,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "user$eval4430$fn__4465",
+          "file-name": "form-init8341403935590923813.clj",
+          "line-number": 1,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.core$with_redefs_fn",
+          "file-name": "core.clj",
+          "line-number": 7434,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.core$with_redefs_fn",
+          "file-name": "core.clj",
+          "line-number": 7418,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "user$eval4430",
+          "file-name": "form-init8341403935590923813.clj",
+          "line-number": 1,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "user$eval4430",
+          "file-name": "form-init8341403935590923813.clj",
+          "line-number": 1,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.lang.Compiler",
+          "file-name": "Compiler.java",
+          "line-number": 7062,
+          "method-name": "eval"
+        },
+        {
+          "class-name": "clojure.lang.Compiler",
+          "file-name": "Compiler.java",
+          "line-number": 7025,
+          "method-name": "eval"
+        },
+        {
+          "class-name": "clojure.core$eval",
+          "file-name": "core.clj",
+          "line-number": 3206,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.core$eval",
+          "file-name": "core.clj",
+          "line-number": 3202,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.main$repl$read_eval_print__8572$fn__8575",
+          "file-name": "main.clj",
+          "line-number": 243,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.main$repl$read_eval_print__8572",
+          "file-name": "main.clj",
+          "line-number": 243,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.main$repl$fn__8581",
+          "file-name": "main.clj",
+          "line-number": 261,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.main$repl",
+          "file-name": "main.clj",
+          "line-number": 261,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.main$repl",
+          "file-name": "main.clj",
+          "line-number": 177,
+          "method-name": "doInvoke"
+        },
+        {
+          "class-name": "clojure.lang.RestFn",
+          "file-name": "RestFn.java",
+          "line-number": 1523,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.tools.nrepl.middleware.interruptible_eval$evaluate$fn__820",
+          "file-name": "interruptible_eval.clj",
+          "line-number": 87,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.lang.AFn",
+          "file-name": "AFn.java",
+          "line-number": 152,
+          "method-name": "applyToHelper"
+        },
+        {
+          "class-name": "clojure.lang.AFn",
+          "file-name": "AFn.java",
+          "line-number": 144,
+          "method-name": "applyTo"
+        },
+        {
+          "class-name": "clojure.core$apply",
+          "file-name": "core.clj",
+          "line-number": 657,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.core$with_bindings_STAR_",
+          "file-name": "core.clj",
+          "line-number": 1965,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.core$with_bindings_STAR_",
+          "file-name": "core.clj",
+          "line-number": 1965,
+          "method-name": "doInvoke"
+        },
+        {
+          "class-name": "clojure.lang.RestFn",
+          "file-name": "RestFn.java",
+          "line-number": 425,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.tools.nrepl.middleware.interruptible_eval$evaluate",
+          "file-name": "interruptible_eval.clj",
+          "line-number": 85,
+          "method-name": "invokeStatic"
+        },
+        {
+          "class-name": "clojure.tools.nrepl.middleware.interruptible_eval$evaluate",
+          "file-name": "interruptible_eval.clj",
+          "line-number": 55,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.tools.nrepl.middleware.interruptible_eval$interruptible_eval$fn__865$fn__868",
+          "file-name": "interruptible_eval.clj",
+          "line-number": 222,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.tools.nrepl.middleware.interruptible_eval$run_next$fn__860",
+          "file-name": "interruptible_eval.clj",
+          "line-number": 190,
+          "method-name": "invoke"
+        },
+        {
+          "class-name": "clojure.lang.AFn",
+          "file-name": "AFn.java",
+          "line-number": 22,
+          "method-name": "run"
+        },
+        {
+          "class-name": "java.util.concurrent.ThreadPoolExecutor",
+          "file-name": "ThreadPoolExecutor.java",
+          "line-number": 1149,
+          "method-name": "runWorker"
+        },
+        {
+          "class-name": "java.util.concurrent.ThreadPoolExecutor$Worker",
+          "file-name": "ThreadPoolExecutor.java",
+          "line-number": 624,
+          "method-name": "run"
+        },
+        {
+          "class-name": "java.lang.Thread",
+          "file-name": "Thread.java",
+          "line-number": 748,
+          "method-name": "run"
+        }
+      ]
+    },
+    "event": "after-spec",
+    "spec": "Signup"
+  },
+  {
+    "event": "suite-end",
+    "spec": "Signup"
+  }
+]

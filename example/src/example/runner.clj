@@ -16,15 +16,13 @@
         (fn [event]
           (swap! results-atom conj event)
           (p/print-event event)))
-      (def-steps)
       (def-hooks)
-      (let [log-data (with-out-str
-                       (y/run ["example/resources"]))
+      (let [_ (y/run ["example/resources"])
             results @results-atom
             filename "example/resources/results.xml"]
         (t/print-results-as-xml results filename)
-        (spit "example/resources/results.json" (json/write-str results :value-fn t/write-json-custom))
-        (spit "example/resources/runner.log" log-data))
+        (spit "example/resources/results.json"
+              (json/write-str results :value-fn t/jsonify-exception)))
       (catch ExceptionInfo e
         (println (.getMessage e))
         (pp/pprint (.getData e)))

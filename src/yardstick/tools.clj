@@ -5,12 +5,19 @@
             [clojure.xml :as xml])
   (:import (clojure.lang ExceptionInfo)))
 
-(defmulti write-json-by-type type)
-
-(defmethod write-json-by-type :default [value] value)
-
-(defn write-json-custom [_ value]
-  (write-json-by-type value))
+(defn jsonify-exception [_ value]
+  (if (instance? Throwable value)
+    (let [err ^Throwable value]
+      {:type (str (type err))
+       :message (.getMessage err)
+       :stack-trace (mapv
+                      (fn [^StackTraceElement ste]
+                        {:class-name (.getClassName ste)
+                         :file-name (.getFileName ste)
+                         :line-number (.getLineNumber ste)
+                         :method-name (.getMethodName ste)})
+                      (.getStackTrace err))})
+    value))
 
 (def ^:private cli-options
   [["-i" "--include INCLUDE" "Include tags"

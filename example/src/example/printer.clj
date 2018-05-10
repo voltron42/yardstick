@@ -1,6 +1,7 @@
 (ns example.printer
   (:require [clojure.pprint :as pp])
-  (:import (clojure.lang ExceptionInfo)))
+  (:import (clojure.lang ExceptionInfo))
+  (:gen-class))
 
 (defmulti print-event :event)
 

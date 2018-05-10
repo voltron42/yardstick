@@ -5,32 +5,21 @@
             [clojure.string :as str]
             [clojure.set :as set]
             [clojure.pprint :as pp]
-            [clojure.data.json :as json])
+            [clojure.data.json :as json]
+            )
   (:import (clojure.lang PersistentVector Keyword)
            (java.io File)
            (java.util Set)))
 
-(def ^:private steps (atom {}))
-
-(defn register-step [step-str step-func]
-  (swap! steps assoc step-str step-func)
-  nil)
-
-(defmacro def-step [step-str bindings & body]
-  `(let [step-func# (fn ~bindings ~@body)]
-     (register-step ~step-str step-func#)))
+(defmulti do-step (fn [action & args] action))
 
 (defn- get-step [action args]
   (apply format action (map json/write-str args)))
 
-(defn- do-step [action & args]
-  (println action)
-  (println (contains? @steps action))
-  (if-let [step (get @steps action)]
-    (apply step args)
-    (throw (IllegalArgumentException.
-             (str "Step Not Implemented: "
-                  (get-step action args))))))
+(defmethod do-step :default [action & args]
+  (throw (IllegalArgumentException.
+           (str "Step Not Implemented: "
+                (get-step action args)))))
 
 (def ^:private hooks (atom {:before-spec {}
                   :after-spec {}
@@ -47,18 +36,18 @@
   ([^Keyword hook ^String tags func]
   (when-not (valid-hooks hook)
     (throw (IllegalArgumentException. (str hook " is invalid, must be one of " valid-hooks))))
-  (swap! hooks update-in [hook] assoc (t/parse-tag-validator tags) func)))
+  (swap! hooks update-in [hook] assoc (t/parse-tag-set tags) func)))
 
 (defn- filter-down-func [my-map my-key]
-  (let [my-results (filter #((first %) my-key) my-map)]
+  (let [my-results (filterv #((first %) my-key) my-map)]
     (if (empty? my-results)
       (constantly nil)
       (->> my-results
-           (map second)
+           (mapv second)
            (apply juxt)))))
 
 (defn- resolve-hook [hook tags]
-  (filter-down-func (get @hooks hook) tags))
+  (filter-down-func (reduce-kv #(assoc %1 (t/make-tag-validator %2) %3) {} (get @hooks hook)) tags))
 
 (def ^:private consumers (atom {}))
 
@@ -88,13 +77,10 @@
 (defn run
   ([^PersistentVector paths] (run paths ""))
   ([^PersistentVector paths ^String tags]
-   (println "steps:")
-   (pp/pprint @steps)
-   (println)
    (println "hooks:")
    (pp/pprint @hooks)
    (println)
-   (let [tag-resolver (t/parse-tag-validator tags)
+   (let [tag-resolver (t/make-tag-validator (t/parse-tag-set tags))
          tag-resolve #(tag-resolver (:tags %))
          files (filter #(.endsWith ^String % ".spec") (reduce get-tests [] paths))
          {:keys [specs bad-files]} (reduce

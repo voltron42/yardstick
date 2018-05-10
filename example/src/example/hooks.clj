@@ -1,7 +1,8 @@
 (ns example.hooks
   (:require [yardstick.core :as y]
             [clojure.test :refer :all])
-  (:import (org.junit Assert)))
+  (:import (org.junit Assert))
+  (:gen-class))
 
 (defn def-hooks []
   (y/def-hook :after-spec
