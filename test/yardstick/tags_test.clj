@@ -15,11 +15,68 @@
           r (power-set (rest base-set))]
       (set/union r (set (map #(conj % p) r))))))
 
-(deftest test-tag-parsing
-  (let [validators (reduce #(assoc %1 %2 (parse-tag-validator %2)) {} expressions)]
+(deftest test-parse-tags
+  (let [tag-sets (reduce #(assoc %1 %2 (parse-tag-set %2)) {} expressions)]
+    (is (= tag-sets
+           {"!(TagA & TagB) | TagC" [:or
+                                     #{[:not
+                                        [:and
+                                         #{[:tag
+                                            "TagA"]
+                                           [:tag
+                                            "TagB"]}]]
+                                       [:tag
+                                        "TagC"]}]
+            "!TagA"                 [:not
+                                     [:tag
+                                      "TagA"]]
+            ""                      [:empty]
+            "(TagA & TagB) | TagC"  [:or
+                                     #{[:and
+                                        #{[:tag
+                                           "TagA"]
+                                          [:tag
+                                           "TagB"]}]
+                                       [:tag
+                                        "TagC"]}]
+            "(TagA | TagB) & TagC"  [:and
+                                     #{[:or
+                                        #{[:tag
+                                           "TagA"]
+                                          [:tag
+                                           "TagB"]}]
+                                       [:tag
+                                        "TagC"]}]
+            "TagA & !TagB"          [:and
+                                     #{[:not
+                                        [:tag
+                                         "TagB"]]
+                                       [:tag
+                                        "TagA"]}]
+            "TagA & TagB"           [:and
+                                     #{[:tag
+                                        "TagA"]
+                                       [:tag
+                                        "TagB"]}]
+            "TagA | TagB"           [:or
+                                     #{[:tag
+                                        "TagA"]
+                                       [:tag
+                                        "TagB"]}]}))))
+
+(deftest test-parse-tag-validator
+  (let [validators (reduce #(assoc %1 %2 (make-tag-validator (parse-tag-set %2))) {} expressions)]
     (is (= (into {} (for [x expressions y (power-set base-tag-set)]
                       [[x y] ((get validators x) y)]))
-               {["!(TagA & TagB) | TagC" #{"TagC"}] true,
+               {["" #{"TagA" "TagB" "TagC"}] true
+                ["" #{"TagA" "TagB"}] true
+                ["" #{"TagA" "TagC"}] true
+                ["" #{"TagA"}] true
+                ["" #{"TagB" "TagC"}] true
+                ["" #{"TagB"}] true
+                ["" #{"TagC"}] true
+                ["" #{}] true
+                ["!(TagA & TagB) | TagC" #{"TagC"}] true,
                 ["TagA & !TagB" #{"TagA" "TagC"}] true,
                 ["(TagA & TagB) | TagC" #{"TagA" "TagC"}] true,
                 ["(TagA & TagB) | TagC" #{"TagB"}] false,
