@@ -3,7 +3,7 @@
             [yardstick.parse :refer :all]))
 
 (deftest test-parse-customer
-  (is (= (parse-test-file (slurp "example/resources/customer.spec"))
+  (is (= (parse-test-file (slurp "resources/customer.spec"))
         {:spec "Customers",
          :tags #{},
          :for-each [["On the customer page"]],
@@ -20,7 +20,7 @@
                      {"# users" "ScroogeMcduck"}]]]}]})))
 
 (deftest test-parse-products
-  (is (= (parse-test-file (slurp "example/resources/products.spec"))
+  (is (= (parse-test-file (slurp "resources/products.spec"))
          {:spec "Products",
           :tags #{},
           :for-each [],
@@ -70,7 +70,7 @@
             :steps [["Delete product %1s" "Learning Go"]]}]})))
 
 (deftest test-parse-user
-  (is (= (parse-test-file (slurp "example/resources/user.spec"))
+  (is (= (parse-test-file (slurp "resources/user.spec"))
          {:spec "Signup",
           :tags #{},
           :for-each [],

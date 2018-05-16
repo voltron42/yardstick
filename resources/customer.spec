@@ -20,4 +20,4 @@ Verify a bunch of customers
 tags: admin, customer, search
 Can use a csv datasource!
 
-* Search for customers <table:example/resources/user.csv>
+* Search for customers <table:resources/user.csv>

@@ -9,11 +9,19 @@
   ;TODO
   )
 
+(defmulti print-error type)
+
+(defmethod print-error :default [^Throwable t]
+  (println (str "\t" (.getMessage t))))
+
+(defmethod print-error ExceptionInfo [^ExceptionInfo t]
+  (println (str "\t" (.getMessage t)))
+  (pp/pprint (.getData t)))
+
 (defmethod print-event :bad-file [{:keys [file ^ExceptionInfo error]}]
   (println "The following file could not be parsed due to the following reason:")
   (println (str "\t" file))
-  (println (str "\t" (.getMessage error)))
-  (pp/pprint (.getData error)))
+  (print-error error))
 
 (defmethod print-event :step-before-each-scenario [{:keys [spec scenario step ^Throwable error]}]
   (if (nil? error)

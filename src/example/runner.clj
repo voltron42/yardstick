@@ -17,11 +17,11 @@
           (swap! results-atom conj event)
           (p/print-event event)))
       (def-hooks)
-      (let [_ (y/run ["example/resources"])
+      (let [_ (y/run ["resources"])
             results @results-atom
-            filename "example/resources/results.xml"]
+            filename "resources/results.xml"]
         (t/print-results-as-xml results filename)
-        (spit "example/resources/results.json"
+        (spit "resources/results.json"
               (json/write-str results :value-fn t/jsonify-exception)))
       (catch ExceptionInfo e
         (println (.getMessage e))
