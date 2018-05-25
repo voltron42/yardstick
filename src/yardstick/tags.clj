@@ -75,6 +75,9 @@
 (defmethod ^:private parse-tag-expr :empty [expr]
   expr)
 
+(defmethod ^:private parse-tag-expr :default [expr]
+  (throw (IllegalArgumentException. (pr-str expr))))
+
 (def ^:private parse-tags
   (insta/parser
     "expression = and | or | not | tag | empty
