@@ -1,5 +1,5 @@
 (ns example.hooks
-  (:require [yardstick.core :as y]
+  (:require [yardstick.core1 :as y]
             [clojure.test :refer :all])
   (:import (org.junit Assert))
   (:gen-class))

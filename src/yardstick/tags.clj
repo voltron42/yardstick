@@ -1,14 +1,21 @@
 (ns yardstick.tags
   (:require [instaparse.core :as insta]
-            [clojure.spec.alpha :as s]))
+            [clojure.spec.alpha :as s]
+            [clojure.pprint :as pp])
+  (:import (clojure.lang ExceptionInfo)))
+
+(s/def ::root (s/or :empty ::empty
+                    :expr ::expr))
+
+(s/def ::empty (s/and vector? (s/cat :label #{:empty})))
 
 (s/def ::expr (s/or :tag ::tag
                     :not ::not
                     :and ::and
                     :or ::or))
 
-(s/def ::not (s/and vector?
-                    (s/cat :label #{:not}
+(s/def ::tag (s/and vector?
+                    (s/cat :label #{:tag}
                            :content (partial re-matches #"[a-zA-Z][a-zA-Z0-9]+"))))
 
 (s/def ::not (s/and vector?
@@ -92,4 +99,7 @@
   (parse-tag-expr (parse-tags expression)))
 
 (defn make-tag-validator [tag-set]
+  (when-let [errors (s/explain-data ::root tag-set)]
+    (pp/pprint errors)
+    (throw (ExceptionInfo. "invalid tag set; cannot build validator" errors)))
   (build-tag-validator tag-set))

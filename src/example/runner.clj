@@ -1,5 +1,5 @@
 (ns example.runner
-  (:require [yardstick.core :as y]
+  (:require [yardstick.core1 :as y]
             [clojure.test :refer :all]
             [clojure.pprint :as pp]
             [example.steps :refer :all]

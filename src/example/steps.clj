@@ -1,5 +1,5 @@
 (ns example.steps
-  (:require [yardstick.core :as y]
+  (:require [yardstick.core1 :as y]
             [clojure.pprint :as pp])
   (:gen-class))
 
